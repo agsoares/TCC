@@ -1,0 +1,6 @@
+input_dir: Sources/Resources
+output_dir: Sources/Resources/Generated/
+xcassets:
+  paths: Assets.xcassets
+  templateName: swift4
+  output: Assets.generated.swift
