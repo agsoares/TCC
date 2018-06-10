@@ -1,0 +1,14 @@
+before_install:
+  - bundle install
+install:
+  - ./decrypt.sh
+  - bundle exec pod install
+
+language: objective-c
+osx_image: xcode9.3
+xcode_project: TCC.xcworkspace
+xcode_scheme: TCC
+xcode_sdk: iphonesimulator9.3
+
+notifications:
+  email: false
