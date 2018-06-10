@@ -1,3 +1,5 @@
+.env
+Sources/Application/GoogleService-Info.plist
 Sources/Resources/Generated/
 
 # Created by https://www.gitignore.io/api/xcode,cocoapods

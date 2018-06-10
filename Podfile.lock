@@ -6,7 +6,7 @@ PODS:
   - SwiftLint (0.25.1)
 
 DEPENDENCIES:
-  - ReactorKit
+  - ReactorKit (~> 1.0)
   - RxSwift (~> 4.0)
   - SwiftGen
   - SwiftLint
@@ -24,6 +24,6 @@ SPEC CHECKSUMS:
   SwiftGen: 4379bd3640b0a212a0f6ea3c494adba385513d10
   SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
 
-PODFILE CHECKSUM: 5ac7b7f61ffbaef61729441ff944f5c36b6fea28
+PODFILE CHECKSUM: 7f3c27f7e5e0fe09fa4803ab1c12b38e3636bd48
 
 COCOAPODS: 1.5.3
