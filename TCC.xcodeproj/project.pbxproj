@@ -13,6 +13,7 @@
 		B93F61BF20CDD1E300E9D678 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93F61BE20CDD1E300E9D678 /* LoginViewController.swift */; };
 		B93F61C120CDD2A700E9D678 /* LoginReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93F61C020CDD2A700E9D678 /* LoginReactor.swift */; };
 		B93F61C320CDD8AA00E9D678 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B93F61C220CDD8AA00E9D678 /* GoogleService-Info.plist */; };
+		B93F61C520CE01F000E9D678 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93F61C420CE01F000E9D678 /* AppRouter.swift */; };
 		B9715D2320CD9CEE007C06E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9715D2220CD9CEE007C06E6 /* AppDelegate.swift */; };
 		B9715D2520CD9CEE007C06E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9715D2420CD9CEE007C06E6 /* ViewController.swift */; };
 		B9715D2A20CD9CEE007C06E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9715D2920CD9CEE007C06E6 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		B93F61BE20CDD1E300E9D678 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B93F61C020CDD2A700E9D678 /* LoginReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactor.swift; sourceTree = "<group>"; };
 		B93F61C220CDD8AA00E9D678 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B93F61C420CE01F000E9D678 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		B9715D1F20CD9CEE007C06E6 /* TCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9715D2220CD9CEE007C06E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9715D2420CD9CEE007C06E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				B9715D2220CD9CEE007C06E6 /* AppDelegate.swift */,
+				B93F61C420CE01F000E9D678 /* AppRouter.swift */,
 				B9715D2E20CD9CEE007C06E6 /* Info.plist */,
 				B93F61C220CDD8AA00E9D678 /* GoogleService-Info.plist */,
 			);
@@ -315,7 +318,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen";
+			shellScript = $PODS_ROOT/SwiftGen/bin/swiftgen;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -326,6 +329,7 @@
 			files = (
 				B93F61C120CDD2A700E9D678 /* LoginReactor.swift in Sources */,
 				B93F61BF20CDD1E300E9D678 /* LoginViewController.swift in Sources */,
+				B93F61C520CE01F000E9D678 /* AppRouter.swift in Sources */,
 				B9715D2520CD9CEE007C06E6 /* ViewController.swift in Sources */,
 				B9715D2320CD9CEE007C06E6 /* AppDelegate.swift in Sources */,
 				B93F61BB20CDB05600E9D678 /* Assets.generated.swift in Sources */,
