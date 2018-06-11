@@ -4,7 +4,7 @@ install:
   - ./decrypt.sh
   - bundle exec pod install --repo-update
 script:
-    - xcodebuild clean build -sdk iphonesimulator9.3 -workspace TCC.xcworkspace -scheme TCC CODE_SIGNING_REQUIRED=NO
+    - xcodebuild clean build -sdk iphonesimulator11.3 -workspace TCC.xcworkspace -scheme TCC CODE_SIGNING_REQUIRED=NO
 
 language: objective-c
 cache:
@@ -13,7 +13,7 @@ cache:
 osx_image: xcode9.3
 xcode_project: TCC.xcworkspace
 xcode_scheme: TCC
-xcode_sdk: iphonesimulator9.3
+xcode_sdk: iphonesimulator11.3
 
 notifications:
   email: false
