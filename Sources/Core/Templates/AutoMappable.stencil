@@ -1,3 +1,5 @@
+// swiftlint:disable superfluous_disable_command
+// swiftlint:disable file_length trailing_whitespace
 import ObjectMapper
 {% for type in types.implementing.AutoMappable %}
 

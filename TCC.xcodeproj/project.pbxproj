@@ -13,9 +13,12 @@
 		B92A744620D5A9470064D75C /* AutoMappable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = B92A744520D5A9470064D75C /* AutoMappable.stencil */; };
 		B92A744820D5ABF50064D75C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A744720D5ABF50064D75C /* User.swift */; };
 		B92A744A20D5AC9E0064D75C /* AutoMappable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A744920D5AC9E0064D75C /* AutoMappable.generated.swift */; };
+		B92A744E20D5C1980064D75C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A744D20D5C1980064D75C /* AuthService.swift */; };
+		B92A745220D5D49B0064D75C /* GlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A745120D5D49B0064D75C /* GlobalState.swift */; };
+		B92A745420D5D6A20064D75C /* DashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A745320D5D6A20064D75C /* DashViewController.swift */; };
 		B93F61B820CDAB7B00E9D678 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B93F61B720CDAB7B00E9D678 /* .swiftlint.yml */; };
-		B93F61BF20CDD1E300E9D678 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93F61BE20CDD1E300E9D678 /* LoginViewController.swift */; };
-		B93F61C120CDD2A700E9D678 /* LoginReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93F61C020CDD2A700E9D678 /* LoginReactor.swift */; };
+		B93F61BF20CDD1E300E9D678 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93F61BE20CDD1E300E9D678 /* AuthViewController.swift */; };
+		B93F61C120CDD2A700E9D678 /* AuthReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93F61C020CDD2A700E9D678 /* AuthReactor.swift */; };
 		B93F61C320CDD8AA00E9D678 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B93F61C220CDD8AA00E9D678 /* GoogleService-Info.plist */; };
 		B93F61C520CE01F000E9D678 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93F61C420CE01F000E9D678 /* AppRouter.swift */; };
 		B9715D2320CD9CEE007C06E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9715D2220CD9CEE007C06E6 /* AppDelegate.swift */; };
@@ -45,9 +48,12 @@
 		B92A744520D5A9470064D75C /* AutoMappable.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoMappable.stencil; sourceTree = "<group>"; };
 		B92A744720D5ABF50064D75C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B92A744920D5AC9E0064D75C /* AutoMappable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMappable.generated.swift; sourceTree = "<group>"; };
+		B92A744D20D5C1980064D75C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		B92A745120D5D49B0064D75C /* GlobalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalState.swift; sourceTree = "<group>"; };
+		B92A745320D5D6A20064D75C /* DashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashViewController.swift; sourceTree = "<group>"; };
 		B93F61B720CDAB7B00E9D678 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
-		B93F61BE20CDD1E300E9D678 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		B93F61C020CDD2A700E9D678 /* LoginReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactor.swift; sourceTree = "<group>"; };
+		B93F61BE20CDD1E300E9D678 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		B93F61C020CDD2A700E9D678 /* AuthReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthReactor.swift; sourceTree = "<group>"; };
 		B93F61C220CDD8AA00E9D678 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B93F61C420CE01F000E9D678 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		B9715D1F20CD9CEE007C06E6 /* TCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +88,7 @@
 		B92A743C20D59DE60064D75C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B92A745020D5D47F0064D75C /* States */,
 				B92A743D20D59DF90064D75C /* Models */,
 				B92A744120D5A37B0064D75C /* Templates */,
 				B92A744220D5A8B60064D75C /* Protocols */,
@@ -122,13 +129,30 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		B93F61BD20CDD1B900E9D678 /* Login */ = {
+		B92A744F20D5D4300064D75C /* Dash */ = {
 			isa = PBXGroup;
 			children = (
-				B93F61BE20CDD1E300E9D678 /* LoginViewController.swift */,
-				B93F61C020CDD2A700E9D678 /* LoginReactor.swift */,
+				B92A745320D5D6A20064D75C /* DashViewController.swift */,
 			);
-			path = Login;
+			path = Dash;
+			sourceTree = "<group>";
+		};
+		B92A745020D5D47F0064D75C /* States */ = {
+			isa = PBXGroup;
+			children = (
+				B92A745120D5D49B0064D75C /* GlobalState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		B93F61BD20CDD1B900E9D678 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B93F61BE20CDD1E300E9D678 /* AuthViewController.swift */,
+				B93F61C020CDD2A700E9D678 /* AuthReactor.swift */,
+				B92A744D20D5C1980064D75C /* AuthService.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		B9715D1620CD9CEE007C06E6 = {
@@ -186,7 +210,8 @@
 		B9715D3620CD9EA8007C06E6 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				B93F61BD20CDD1B900E9D678 /* Login */,
+				B93F61BD20CDD1B900E9D678 /* Auth */,
+				B92A744F20D5D4300064D75C /* Dash */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -332,19 +357,29 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TCC/Pods-TCC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -402,14 +437,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B93F61C120CDD2A700E9D678 /* LoginReactor.swift in Sources */,
+				B93F61C120CDD2A700E9D678 /* AuthReactor.swift in Sources */,
 				B92A744420D5A8DE0064D75C /* AutoMappable.swift in Sources */,
-				B93F61BF20CDD1E300E9D678 /* LoginViewController.swift in Sources */,
+				B93F61BF20CDD1E300E9D678 /* AuthViewController.swift in Sources */,
 				B93F61C520CE01F000E9D678 /* AppRouter.swift in Sources */,
 				B92A744820D5ABF50064D75C /* User.swift in Sources */,
 				B9715D2520CD9CEE007C06E6 /* ViewController.swift in Sources */,
 				B9715D2320CD9CEE007C06E6 /* AppDelegate.swift in Sources */,
+				B92A745220D5D49B0064D75C /* GlobalState.swift in Sources */,
+				B92A744E20D5C1980064D75C /* AuthService.swift in Sources */,
 				B92A744020D59F580064D75C /* Assets.generated.swift in Sources */,
+				B92A745420D5D6A20064D75C /* DashViewController.swift in Sources */,
 				B92A744A20D5AC9E0064D75C /* AutoMappable.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

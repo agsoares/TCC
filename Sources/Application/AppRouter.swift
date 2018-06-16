@@ -2,11 +2,12 @@ import Foundation
 
 class AppRouter {
 
-    class func loginViewController() -> LoginViewController {
+    class func loginViewController() -> AuthViewController {
 
-        let reactor = LoginReactor()
-        let viewController = LoginViewController()
+        let reactor = AuthReactor()
+        let viewController = AuthViewController()
         viewController.reactor = reactor
         return viewController
     }
+    
 }

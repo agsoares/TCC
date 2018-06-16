@@ -1,7 +1,8 @@
 import Foundation
 import ReactorKit
 
-class LoginReactor: Reactor {
+class AuthReactor: Reactor {
+    
     enum Action {
 
     }

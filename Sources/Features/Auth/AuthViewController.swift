@@ -1,14 +1,15 @@
 import UIKit
 import ReactorKit
 
-class LoginViewController: ViewController, View {
-    typealias Reactor = LoginReactor
+class AuthViewController: ViewController, View {
+    typealias Reactor = AuthReactor
 
     override func viewWillAppear(_ animated: Bool) {
         view.backgroundColor = UIColor.blue
     }
 
-    func bind(reactor: LoginReactor) {
+    func bind(reactor: AuthReactor) {
 
     }
+    
 }
