@@ -1,0 +1,15 @@
+import ObjectMapper
+{% for type in types.implementing.AutoMappable %}
+
+extension {{ type.name }} {
+    enum Parameter: String {
+        {% for variable in type.storedVariables %}case {{ variable.name }}{% if type.variables|annotated:"key" %} = "{{ variable.annotations.key }}"{% endif%} 
+        {% endfor %}
+    }
+
+    mutating func mapping(map: Map) {
+        {% for variable in type.storedVariables %}{{ variable.name }} <- map[Parameter.{{ variable.name }}.rawValue]
+        {% endfor %}
+    }
+}
+{% endfor %}

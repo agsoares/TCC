@@ -1,0 +1,7 @@
+sources:
+  - Sources
+templates:
+  include: 
+    - Sources/Core/Templates
+output:
+  path: Sources/Core/Generated

@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		74D8A3204C42DD05BA5C463E /* Pods_TCC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB084F10BB0315B84309F56 /* Pods_TCC.framework */; };
+		B92A744020D59F580064D75C /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A743F20D59F580064D75C /* Assets.generated.swift */; };
+		B92A744420D5A8DE0064D75C /* AutoMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A744320D5A8DE0064D75C /* AutoMappable.swift */; };
+		B92A744620D5A9470064D75C /* AutoMappable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = B92A744520D5A9470064D75C /* AutoMappable.stencil */; };
+		B92A744820D5ABF50064D75C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A744720D5ABF50064D75C /* User.swift */; };
+		B92A744A20D5AC9E0064D75C /* AutoMappable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A744920D5AC9E0064D75C /* AutoMappable.generated.swift */; };
 		B93F61B820CDAB7B00E9D678 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B93F61B720CDAB7B00E9D678 /* .swiftlint.yml */; };
-		B93F61BB20CDB05600E9D678 /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93F61BA20CDB05600E9D678 /* Assets.generated.swift */; };
 		B93F61BF20CDD1E300E9D678 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93F61BE20CDD1E300E9D678 /* LoginViewController.swift */; };
 		B93F61C120CDD2A700E9D678 /* LoginReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93F61C020CDD2A700E9D678 /* LoginReactor.swift */; };
 		B93F61C320CDD8AA00E9D678 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B93F61C220CDD8AA00E9D678 /* GoogleService-Info.plist */; };
@@ -20,12 +24,28 @@
 		B9715D2D20CD9CEE007C06E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9715D2B20CD9CEE007C06E6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B92A744B20D5AD310064D75C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		18964A55EC528332714F35E9 /* Pods-TCC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCC.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCC/Pods-TCC.release.xcconfig"; sourceTree = "<group>"; };
 		1D2839A0BF1E54773E0E9C17 /* Pods-TCC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCC/Pods-TCC.debug.xcconfig"; sourceTree = "<group>"; };
 		4BB084F10BB0315B84309F56 /* Pods_TCC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B92A743F20D59F580064D75C /* Assets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.generated.swift; sourceTree = "<group>"; };
+		B92A744320D5A8DE0064D75C /* AutoMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMappable.swift; sourceTree = "<group>"; };
+		B92A744520D5A9470064D75C /* AutoMappable.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoMappable.stencil; sourceTree = "<group>"; };
+		B92A744720D5ABF50064D75C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B92A744920D5AC9E0064D75C /* AutoMappable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMappable.generated.swift; sourceTree = "<group>"; };
 		B93F61B720CDAB7B00E9D678 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
-		B93F61BA20CDB05600E9D678 /* Assets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.generated.swift; sourceTree = "<group>"; };
 		B93F61BE20CDD1E300E9D678 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B93F61C020CDD2A700E9D678 /* LoginReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactor.swift; sourceTree = "<group>"; };
 		B93F61C220CDD8AA00E9D678 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -59,12 +79,47 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B93F61B920CDAC4B00E9D678 /* Generated */ = {
+		B92A743C20D59DE60064D75C /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				B93F61BA20CDB05600E9D678 /* Assets.generated.swift */,
+				B92A743D20D59DF90064D75C /* Models */,
+				B92A744120D5A37B0064D75C /* Templates */,
+				B92A744220D5A8B60064D75C /* Protocols */,
+				B92A743E20D59E010064D75C /* Generated */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B92A743D20D59DF90064D75C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B92A744720D5ABF50064D75C /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B92A743E20D59E010064D75C /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				B92A744920D5AC9E0064D75C /* AutoMappable.generated.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		B92A744120D5A37B0064D75C /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				B92A744520D5A9470064D75C /* AutoMappable.stencil */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		B92A744220D5A8B60064D75C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B92A744320D5A8DE0064D75C /* AutoMappable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		B93F61BD20CDD1B900E9D678 /* Login */ = {
@@ -101,6 +156,7 @@
 				B9715D3420CD9E93007C06E6 /* Application */,
 				B9715D3720CD9EC3007C06E6 /* Resources */,
 				B9715D3620CD9EA8007C06E6 /* Features */,
+				B92A743C20D59DE60064D75C /* Core */,
 				B9715D3520CD9E9E007C06E6 /* Components */,
 			);
 			path = Sources;
@@ -140,7 +196,7 @@
 			children = (
 				B9715D2B20CD9CEE007C06E6 /* LaunchScreen.storyboard */,
 				B9715D2920CD9CEE007C06E6 /* Assets.xcassets */,
-				B93F61B920CDAC4B00E9D678 /* Generated */,
+				B92A743F20D59F580064D75C /* Assets.generated.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -183,12 +239,14 @@
 			buildConfigurationList = B9715D3120CD9CEE007C06E6 /* Build configuration list for PBXNativeTarget "TCC" */;
 			buildPhases = (
 				095834FAC3E0745385712E20 /* [CP] Check Pods Manifest.lock */,
+				B92A744C20D5AD3B0064D75C /* Sourcery */,
 				B93F61BC20CDB9FE00E9D678 /* SwiftGen */,
 				B9715D1B20CD9CEE007C06E6 /* Sources */,
 				B93F61B520CDA54400E9D678 /* SwiftLint */,
 				B9715D1C20CD9CEE007C06E6 /* Frameworks */,
 				B9715D1D20CD9CEE007C06E6 /* Resources */,
 				7E1A516AD1335D43E0646708 /* [CP] Embed Pods Frameworks */,
+				B92A744B20D5AD310064D75C /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -239,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B93F61B820CDAB7B00E9D678 /* .swiftlint.yml in Resources */,
+				B92A744620D5A9470064D75C /* AutoMappable.stencil in Resources */,
 				B93F61C320CDD8AA00E9D678 /* GoogleService-Info.plist in Resources */,
 				B9715D2D20CD9CEE007C06E6 /* LaunchScreen.storyboard in Resources */,
 				B9715D2A20CD9CEE007C06E6 /* Assets.xcassets in Resources */,
@@ -275,6 +334,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TCC/Pods-TCC-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -283,6 +343,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -291,6 +352,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TCC/Pods-TCC-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B92A744C20D5AD3B0064D75C /* Sourcery */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Sourcery;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Sourcery/bin/sourcery\"";
 		};
 		B93F61B520CDA54400E9D678 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -304,7 +379,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 		B93F61BC20CDB9FE00E9D678 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -318,7 +393,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = $PODS_ROOT/SwiftGen/bin/swiftgen;
+			shellScript = "\"${PODS_ROOT}/SwiftGen/bin/swiftgen\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -328,11 +403,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B93F61C120CDD2A700E9D678 /* LoginReactor.swift in Sources */,
+				B92A744420D5A8DE0064D75C /* AutoMappable.swift in Sources */,
 				B93F61BF20CDD1E300E9D678 /* LoginViewController.swift in Sources */,
 				B93F61C520CE01F000E9D678 /* AppRouter.swift in Sources */,
+				B92A744820D5ABF50064D75C /* User.swift in Sources */,
 				B9715D2520CD9CEE007C06E6 /* ViewController.swift in Sources */,
 				B9715D2320CD9CEE007C06E6 /* AppDelegate.swift in Sources */,
-				B93F61BB20CDB05600E9D678 /* Assets.generated.swift in Sources */,
+				B92A744020D59F580064D75C /* Assets.generated.swift in Sources */,
+				B92A744A20D5AC9E0064D75C /* AutoMappable.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
