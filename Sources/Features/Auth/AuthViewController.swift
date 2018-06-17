@@ -1,11 +1,8 @@
 import UIKit
 import RxCocoa
 import RxSwift
-import ReactorKit
 
-class AuthViewController: ViewController, View {
-    typealias Reactor = AuthReactor
-
+class AuthViewController: ViewController {
     let emailTextField: TextField = {
         let v = TextField()
         v.keyboardType = .emailAddress
@@ -24,9 +21,24 @@ class AuthViewController: ViewController, View {
         return button
     }()
 
+    var viewModel: AuthViewModel!
+
+    init(viewModel: AuthViewModel) {
+        super.init()
+        self.viewModel = viewModel
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupRx()
 
+    }
+
+    func setupViews() {
         view.addSubview(emailTextField)
         NSLayoutConstraint.activate([
             emailTextField.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -43,16 +55,6 @@ class AuthViewController: ViewController, View {
         ])
     }
 
-    func bind(reactor: AuthReactor) {
-        sendEmailButton.rx.tap
-            .map({ [weak self] in Reactor.Action.signIn(email: self?.emailTextField.text ?? "") })
-            .bind(to: reactor.action)
-            .disposed(by: disposeBag)
-
-        reactor.state.subscribe(onNext: { _ in
-
-        })
-        .disposed(by: disposeBag)
+    func setupRx() {
     }
-
 }

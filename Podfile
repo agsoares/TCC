@@ -3,12 +3,10 @@ inhibit_all_warnings!
 use_frameworks!
 
 target 'TCC' do
-  pod 'Moya-ObjectMapper/RxSwift', '~> 2.6'
   pod 'ObjectMapper',   '~> 3.2'
 
   pod 'RxSwift',        '~> 4.0'
   pod 'RxCocoa',        '~> 4.0'
-  pod 'ReactorKit',     '~> 1.0'
 
   pod 'Firebase/Core',  '~> 5.0'
   pod 'Firebase/Auth',  '~> 5.0'
