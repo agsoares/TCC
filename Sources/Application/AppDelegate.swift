@@ -14,7 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow(frame: UIScreen.main.bounds)
         let initialViewController: UIViewController?
-        if globalState.value.user != nil {
+
+        if globalState.value.user == nil {
             initialViewController = AppRouter.loginViewController()
         } else {
             initialViewController = DashViewController()
@@ -25,5 +26,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         return true
     }
-    
+
 }

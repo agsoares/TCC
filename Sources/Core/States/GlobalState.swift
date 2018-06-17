@@ -5,5 +5,5 @@ struct GlobalState {
 
     init() {
     }
-    
+
 }

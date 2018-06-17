@@ -16,6 +16,10 @@
 		B92A744E20D5C1980064D75C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A744D20D5C1980064D75C /* AuthService.swift */; };
 		B92A745220D5D49B0064D75C /* GlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A745120D5D49B0064D75C /* GlobalState.swift */; };
 		B92A745420D5D6A20064D75C /* DashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A745320D5D6A20064D75C /* DashViewController.swift */; };
+		B92A745720D5DF4D0064D75C /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A745620D5DF4D0064D75C /* TextField.swift */; };
+		B92A745920D5DFFC0064D75C /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A745820D5DFFC0064D75C /* Button.swift */; };
+		B92A745B20D61F130064D75C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A745A20D61F130064D75C /* Color.swift */; };
+		B92A745E20D624630064D75C /* FunctionalOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A745D20D624630064D75C /* FunctionalOperators.swift */; };
 		B93F61B820CDAB7B00E9D678 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B93F61B720CDAB7B00E9D678 /* .swiftlint.yml */; };
 		B93F61BF20CDD1E300E9D678 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93F61BE20CDD1E300E9D678 /* AuthViewController.swift */; };
 		B93F61C120CDD2A700E9D678 /* AuthReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93F61C020CDD2A700E9D678 /* AuthReactor.swift */; };
@@ -51,6 +55,10 @@
 		B92A744D20D5C1980064D75C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		B92A745120D5D49B0064D75C /* GlobalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalState.swift; sourceTree = "<group>"; };
 		B92A745320D5D6A20064D75C /* DashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashViewController.swift; sourceTree = "<group>"; };
+		B92A745620D5DF4D0064D75C /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		B92A745820D5DFFC0064D75C /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		B92A745A20D61F130064D75C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		B92A745D20D624630064D75C /* FunctionalOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalOperators.swift; sourceTree = "<group>"; };
 		B93F61B720CDAB7B00E9D678 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B93F61BE20CDD1E300E9D678 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		B93F61C020CDD2A700E9D678 /* AuthReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthReactor.swift; sourceTree = "<group>"; };
@@ -92,6 +100,7 @@
 				B92A743D20D59DF90064D75C /* Models */,
 				B92A744120D5A37B0064D75C /* Templates */,
 				B92A744220D5A8B60064D75C /* Protocols */,
+				B92A745C20D624450064D75C /* Operators */,
 				B92A743E20D59E010064D75C /* Generated */,
 			);
 			path = Core;
@@ -143,6 +152,14 @@
 				B92A745120D5D49B0064D75C /* GlobalState.swift */,
 			);
 			path = States;
+			sourceTree = "<group>";
+		};
+		B92A745C20D624450064D75C /* Operators */ = {
+			isa = PBXGroup;
+			children = (
+				B92A745D20D624630064D75C /* FunctionalOperators.swift */,
+			);
+			path = Operators;
 			sourceTree = "<group>";
 		};
 		B93F61BD20CDD1B900E9D678 /* Auth */ = {
@@ -229,6 +246,7 @@
 		B9715D3820CD9EDE007C06E6 /* Atoms */ = {
 			isa = PBXGroup;
 			children = (
+				B92A745A20D61F130064D75C /* Color.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -237,6 +255,8 @@
 			isa = PBXGroup;
 			children = (
 				B9715D2420CD9CEE007C06E6 /* ViewController.swift */,
+				B92A745620D5DF4D0064D75C /* TextField.swift */,
+				B92A745820D5DFFC0064D75C /* Button.swift */,
 			);
 			path = Molecules;
 			sourceTree = "<group>";
@@ -442,7 +462,11 @@
 				B93F61BF20CDD1E300E9D678 /* AuthViewController.swift in Sources */,
 				B93F61C520CE01F000E9D678 /* AppRouter.swift in Sources */,
 				B92A744820D5ABF50064D75C /* User.swift in Sources */,
+				B92A745720D5DF4D0064D75C /* TextField.swift in Sources */,
+				B92A745E20D624630064D75C /* FunctionalOperators.swift in Sources */,
 				B9715D2520CD9CEE007C06E6 /* ViewController.swift in Sources */,
+				B92A745920D5DFFC0064D75C /* Button.swift in Sources */,
+				B92A745B20D61F130064D75C /* Color.swift in Sources */,
 				B9715D2320CD9CEE007C06E6 /* AppDelegate.swift in Sources */,
 				B92A745220D5D49B0064D75C /* GlobalState.swift in Sources */,
 				B92A744E20D5C1980064D75C /* AuthService.swift in Sources */,
@@ -582,7 +606,7 @@
 				DEVELOPMENT_TEAM = M7SM6673Q8;
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.agsoares.TCC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.agsoares.tcc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -598,7 +622,7 @@
 				DEVELOPMENT_TEAM = M7SM6673Q8;
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.agsoares.TCC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.agsoares.tcc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
