@@ -9,7 +9,7 @@ class AuthViewModel: ViewModel {
     }
 
     func signIn(email: String, password: String) {
-        authService.createUser(withEmail: email, andPassword: password)
+        authService.signUp(withEmail: email, andPassword: password)
             .subscribe(onNext: { globalState.value.user = $0 })
             .disposed(by: self.disposeBag)
     }
