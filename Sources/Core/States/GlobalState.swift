@@ -7,5 +7,4 @@ struct GlobalState {
     init() {
         user = Auth.auth().currentUser
     }
-
 }

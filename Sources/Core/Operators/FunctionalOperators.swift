@@ -5,7 +5,7 @@ precedencegroup ForwardPipe {
     higherThan: LogicalConjunctionPrecedence
 }
 
-infix operator |> : ForwardPipe
+infix operator |>: ForwardPipe
 
 public func |> <T, U>(value: T, function: ((T) -> U)) -> U {
     return function(value)
