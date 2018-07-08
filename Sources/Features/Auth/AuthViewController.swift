@@ -4,7 +4,7 @@ import RxSwift
 
 class AuthViewController: ViewController {
     let emailTextField: TextField = {
-        let v = TextField()
+        let v = TextField().rounded()
         v.keyboardType = .emailAddress
         v.autocapitalizationType = .none
         v.autocorrectionType = .no
@@ -14,8 +14,6 @@ class AuthViewController: ViewController {
 
     let sendEmailButton: Button = {
         let button = Button()
-            .round()
-            .primaryStyle()
         button.titleLabel?.text = "Entrar"
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -34,6 +32,7 @@ class AuthViewController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupViews()
         self.setupRx()
 
     }
@@ -41,15 +40,17 @@ class AuthViewController: ViewController {
     func setupViews() {
         view.addSubview(emailTextField)
         NSLayoutConstraint.activate([
+            emailTextField.heightAnchor.constraint(equalToConstant: TextField.Constants.defaultHeight),
             emailTextField.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             emailTextField.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            emailTextField.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            emailTextField.leadingAnchor.constraint(equalTo: self.view.leadingAnchor)
+            self.view.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor, constant: Spacing.base),
+            emailTextField.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: Spacing.base)
         ])
 
         view.addSubview(sendEmailButton)
         NSLayoutConstraint.activate([
             sendEmailButton.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 10),
+            sendEmailButton.heightAnchor.constraint(equalToConstant: Button.Constants.defaultHeight),
             sendEmailButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
             sendEmailButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor)
         ])

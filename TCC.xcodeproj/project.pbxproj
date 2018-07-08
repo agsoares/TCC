@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C801B6420EDC0C300516FC3 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C801B6320EDC0C300516FC3 /* Spacing.swift */; };
+		3C801B6720EDC68B00516FC3 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C801B6620EDC68B00516FC3 /* Font.swift */; };
+		3C8CC23E20F2A17900E913BF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8CC23D20F2A17900E913BF /* Coordinator.swift */; };
 		74D8A3204C42DD05BA5C463E /* Pods_TCC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB084F10BB0315B84309F56 /* Pods_TCC.framework */; };
 		B92A744020D59F580064D75C /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A743F20D59F580064D75C /* Assets.generated.swift */; };
 		B92A744420D5A8DE0064D75C /* AutoMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A744320D5A8DE0064D75C /* AutoMappable.swift */; };
@@ -46,6 +49,9 @@
 /* Begin PBXFileReference section */
 		18964A55EC528332714F35E9 /* Pods-TCC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCC.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCC/Pods-TCC.release.xcconfig"; sourceTree = "<group>"; };
 		1D2839A0BF1E54773E0E9C17 /* Pods-TCC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCC/Pods-TCC.debug.xcconfig"; sourceTree = "<group>"; };
+		3C801B6320EDC0C300516FC3 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		3C801B6620EDC68B00516FC3 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		3C8CC23D20F2A17900E913BF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		4BB084F10BB0315B84309F56 /* Pods_TCC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92A743F20D59F580064D75C /* Assets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.generated.swift; sourceTree = "<group>"; };
 		B92A744320D5A8DE0064D75C /* AutoMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMappable.swift; sourceTree = "<group>"; };
@@ -84,6 +90,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C801B6520EDC4D000516FC3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4D933C33753E241BDE99D5A7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +111,7 @@
 			children = (
 				B92A745020D5D47F0064D75C /* States */,
 				B92A743D20D59DF90064D75C /* Models */,
+				3C801B6520EDC4D000516FC3 /* Extensions */,
 				B92A744120D5A37B0064D75C /* Templates */,
 				B92A744220D5A8B60064D75C /* Protocols */,
 				B92A745C20D624450064D75C /* Operators */,
@@ -133,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				B92A744320D5A8DE0064D75C /* AutoMappable.swift */,
+				3C8CC23D20F2A17900E913BF /* Coordinator.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -246,6 +261,8 @@
 			isa = PBXGroup;
 			children = (
 				B92A745A20D61F130064D75C /* Color.swift */,
+				3C801B6320EDC0C300516FC3 /* Spacing.swift */,
+				3C801B6620EDC68B00516FC3 /* Font.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -410,7 +427,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Sourcery/bin/sourcery\"\n";
+			shellScript = "\"sourcery\"\n";
 		};
 		B93F61B520CDA54400E9D678 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -451,7 +468,9 @@
 				B92A744420D5A8DE0064D75C /* AutoMappable.swift in Sources */,
 				B93F61BF20CDD1E300E9D678 /* AuthViewController.swift in Sources */,
 				B93F61C520CE01F000E9D678 /* AppRouter.swift in Sources */,
+				3C801B6420EDC0C300516FC3 /* Spacing.swift in Sources */,
 				B92A745720D5DF4D0064D75C /* TextField.swift in Sources */,
+				3C8CC23E20F2A17900E913BF /* Coordinator.swift in Sources */,
 				B92A745E20D624630064D75C /* FunctionalOperators.swift in Sources */,
 				B92A746020D6D7D50064D75C /* ViewModel.swift in Sources */,
 				B9715D2520CD9CEE007C06E6 /* ViewController.swift in Sources */,
@@ -460,6 +479,7 @@
 				B9715D2320CD9CEE007C06E6 /* AppDelegate.swift in Sources */,
 				B92A745220D5D49B0064D75C /* GlobalState.swift in Sources */,
 				B92A744E20D5C1980064D75C /* AuthService.swift in Sources */,
+				3C801B6720EDC68B00516FC3 /* Font.swift in Sources */,
 				B92A744020D59F580064D75C /* Assets.generated.swift in Sources */,
 				B92A745420D5D6A20064D75C /* DashViewController.swift in Sources */,
 				B92A744A20D5AC9E0064D75C /* AutoMappable.generated.swift in Sources */,

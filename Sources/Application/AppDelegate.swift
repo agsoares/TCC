@@ -12,9 +12,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        FirebaseApp.configure()
+
         window = UIWindow(frame: UIScreen.main.bounds)
         let initialViewController: UIViewController?
 
+        // TODO: change to authentication flow
+        Auth.auth().signInAnonymously { (_, _) in
+
+        }
         if globalState.value.user == nil {
             initialViewController = AppRouter.loginViewController()
         } else {
@@ -23,8 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
 
-        FirebaseApp.configure()
         return true
     }
-
 }

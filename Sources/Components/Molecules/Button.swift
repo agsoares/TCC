@@ -5,17 +5,20 @@ import RxCocoa
 class Button: UIButton {
 
     var disposeBag = DisposeBag()
-
 }
 
 extension Button {
+
+    struct Constants {
+        static let defaultHeight: CGFloat = 50
+    }
 
     func primaryStyle() -> Button {
         self.backgroundColor = Color.primary.uiColor()
         return self
     }
 
-    func round() -> Button {
+    func rounded() -> Button {
         self.clipsToBounds = true
         self.rx.methodInvoked(#selector(layoutSubviews))
             .bind(onNext: { [weak self] _ in
