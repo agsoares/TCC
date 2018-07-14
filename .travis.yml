@@ -1,7 +1,7 @@
 before_install:
   - bundle install
 install:
-  - .scripts/decrypt.sh
+  - ./scripts/decrypt.sh
   - bundle exec pod install --repo-update
 script:
     - xcodebuild clean build -sdk iphonesimulator11.3 -workspace TCC.xcworkspace -scheme TCC CODE_SIGNING_REQUIRED=NO
