@@ -1,6 +1,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import Firebase
 
 class AuthViewController: ViewController {
     let emailTextField: TextField = {
@@ -16,6 +17,7 @@ class AuthViewController: ViewController {
         let button = Button()
         button.titleLabel?.text = "Entrar"
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = UIColor.red
         return button
     }()
 
@@ -34,7 +36,6 @@ class AuthViewController: ViewController {
         super.viewDidLoad()
         self.setupViews()
         self.setupRx()
-
     }
 
     func setupViews() {
@@ -57,5 +58,18 @@ class AuthViewController: ViewController {
     }
 
     func setupRx() {
+
+        self.sendEmailButton
+            .rx.tap
+            .flatMap(self.viewModel.signIn)
+            .asObservable()
+            .subscribe(onNext: { [weak self] (user) in
+
+                DispatchQueue.main.async {
+
+                    self?.present(AppRouter.home(), animated: true, completion: nil)
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }

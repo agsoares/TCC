@@ -1,5 +1,6 @@
 import Foundation
 import RxSwift
+import Firebase
 
 class AuthViewModel: ViewModel {
     let authService: AuthService
@@ -8,9 +9,9 @@ class AuthViewModel: ViewModel {
         self.authService = authService
     }
 
-    func signIn(email: String, password: String) {
-        authService.signUp(withEmail: email, andPassword: password)
-            .subscribe(onNext: { globalState.value.user = $0 })
-            .disposed(by: self.disposeBag)
+    
+    func signIn() -> Observable<User> {
+
+        return authService.singIn()
     }
 }

@@ -2,8 +2,6 @@ import UIKit
 import RxSwift
 import Firebase
 
-let globalState: Variable<GlobalState> = Variable(GlobalState())
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -14,21 +12,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         FirebaseApp.configure()
 
-        window = UIWindow(frame: UIScreen.main.bounds)
-        let initialViewController: UIViewController?
+        let window  = UIWindow(frame: UIScreen.main.bounds)
 
-        // TODO: change to authentication flow
-        Auth.auth().signInAnonymously { (_, _) in
-
-        }
-        if globalState.value.user == nil {
-            initialViewController = AppRouter.loginViewController()
+        let initialViewController: UIViewController
+        if let user = Auth.auth().currentUser {
+            initialViewController = AppRouter.home()
         } else {
-            initialViewController = DashViewController()
+            initialViewController = AppRouter.auth()
         }
-        window?.rootViewController = initialViewController
-        window?.makeKeyAndVisible()
 
+        window.rootViewController = initialViewController
+        window.makeKeyAndVisible()
+
+        self.window = window
         return true
     }
 }
