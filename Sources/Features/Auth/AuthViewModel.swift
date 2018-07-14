@@ -9,7 +9,6 @@ class AuthViewModel: ViewModel {
         self.authService = authService
     }
 
-    
     func signIn() -> Observable<User> {
 
         return authService.singIn()

@@ -63,7 +63,7 @@ class AuthViewController: ViewController {
             .rx.tap
             .flatMap(self.viewModel.signIn)
             .asObservable()
-            .subscribe(onNext: { [weak self] (user) in
+            .subscribe(onNext: { [weak self] (_) in
 
                 DispatchQueue.main.async {
 
