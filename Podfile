@@ -7,6 +7,7 @@ target 'TCC' do
 
   pod 'RxSwift',        '~> 4.0'
   pod 'RxCocoa',        '~> 4.0'
+  pod 'RxDataSources'
 
   pod 'Firebase/Core',  '~> 5.0'
   pod 'Firebase/Auth',  '~> 5.0'

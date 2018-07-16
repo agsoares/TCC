@@ -12,7 +12,7 @@ class AppRouter {
     class func home() -> UITabBarController {
 
         let dashViewModel = DashViewModel()
-        let dashViewController = DashViewController()
+        let dashViewController = DashViewController(viewModel: dashViewModel)
 
         let viewControllers = [dashViewController]
 

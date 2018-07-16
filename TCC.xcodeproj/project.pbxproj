@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C3121CF20FC07F0006313EB /* TableViewColectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3121CE20FC07F0006313EB /* TableViewColectionViewModel.swift */; };
+		3C3121D120FC08BE006313EB /* AccountsCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3121D020FC08BE006313EB /* AccountsCollectionViewModel.swift */; };
+		3C3121D320FC0A88006313EB /* TableViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3121D220FC0A88006313EB /* TableViewCollectionCell.swift */; };
 		3C801B6420EDC0C300516FC3 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C801B6320EDC0C300516FC3 /* Spacing.swift */; };
 		3C801B6720EDC68B00516FC3 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C801B6620EDC68B00516FC3 /* Font.swift */; };
 		3C8CC23E20F2A17900E913BF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8CC23D20F2A17900E913BF /* Coordinator.swift */; };
@@ -22,7 +25,6 @@
 		B92A745720D5DF4D0064D75C /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A745620D5DF4D0064D75C /* TextField.swift */; };
 		B92A745920D5DFFC0064D75C /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A745820D5DFFC0064D75C /* Button.swift */; };
 		B92A745B20D61F130064D75C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A745A20D61F130064D75C /* Color.swift */; };
-		B92A745E20D624630064D75C /* FunctionalOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A745D20D624630064D75C /* FunctionalOperators.swift */; };
 		B92A746020D6D7D50064D75C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A745F20D6D7D50064D75C /* ViewModel.swift */; };
 		B93F61B820CDAB7B00E9D678 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B93F61B720CDAB7B00E9D678 /* .swiftlint.yml */; };
 		B93F61BF20CDD1E300E9D678 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93F61BE20CDD1E300E9D678 /* AuthViewController.swift */; };
@@ -50,6 +52,9 @@
 /* Begin PBXFileReference section */
 		18964A55EC528332714F35E9 /* Pods-TCC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCC.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCC/Pods-TCC.release.xcconfig"; sourceTree = "<group>"; };
 		1D2839A0BF1E54773E0E9C17 /* Pods-TCC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCC/Pods-TCC.debug.xcconfig"; sourceTree = "<group>"; };
+		3C3121CE20FC07F0006313EB /* TableViewColectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewColectionViewModel.swift; path = Sources/Components/Molecules/TableViewColectionViewModel.swift; sourceTree = SOURCE_ROOT; };
+		3C3121D020FC08BE006313EB /* AccountsCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountsCollectionViewModel.swift; path = Sources/Features/Dash/AccountsCollectionViewModel.swift; sourceTree = SOURCE_ROOT; };
+		3C3121D220FC0A88006313EB /* TableViewCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCollectionCell.swift; sourceTree = "<group>"; };
 		3C801B6320EDC0C300516FC3 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		3C801B6620EDC68B00516FC3 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		3C8CC23D20F2A17900E913BF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -65,7 +70,6 @@
 		B92A745620D5DF4D0064D75C /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		B92A745820D5DFFC0064D75C /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		B92A745A20D61F130064D75C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		B92A745D20D624630064D75C /* FunctionalOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalOperators.swift; sourceTree = "<group>"; };
 		B92A745F20D6D7D50064D75C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		B93F61B720CDAB7B00E9D678 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B93F61BE20CDD1E300E9D678 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -116,7 +120,6 @@
 				3C801B6520EDC4D000516FC3 /* Extensions */,
 				B92A744120D5A37B0064D75C /* Templates */,
 				B92A744220D5A8B60064D75C /* Protocols */,
-				B92A745C20D624450064D75C /* Operators */,
 				B92A743E20D59E010064D75C /* Generated */,
 			);
 			path = Core;
@@ -157,8 +160,10 @@
 		B92A744F20D5D4300064D75C /* Dash */ = {
 			isa = PBXGroup;
 			children = (
+				3C3121D020FC08BE006313EB /* AccountsCollectionViewModel.swift */,
 				B92A745320D5D6A20064D75C /* DashViewController.swift */,
 				3C8CC24520F2B55C00E913BF /* DashViewModel.swift */,
+				3C3121D220FC0A88006313EB /* TableViewCollectionCell.swift */,
 			);
 			path = Dash;
 			sourceTree = "<group>";
@@ -169,14 +174,6 @@
 				B92A745120D5D49B0064D75C /* GlobalState.swift */,
 			);
 			path = States;
-			sourceTree = "<group>";
-		};
-		B92A745C20D624450064D75C /* Operators */ = {
-			isa = PBXGroup;
-			children = (
-				B92A745D20D624630064D75C /* FunctionalOperators.swift */,
-			);
-			path = Operators;
 			sourceTree = "<group>";
 		};
 		B93F61BD20CDD1B900E9D678 /* Auth */ = {
@@ -275,6 +272,7 @@
 			children = (
 				B9715D2420CD9CEE007C06E6 /* ViewController.swift */,
 				B92A745F20D6D7D50064D75C /* ViewModel.swift */,
+				3C3121CE20FC07F0006313EB /* TableViewColectionViewModel.swift */,
 				B92A745620D5DF4D0064D75C /* TextField.swift */,
 				B92A745820D5DFFC0064D75C /* Button.swift */,
 			);
@@ -397,19 +395,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TCC/Pods-TCC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -473,8 +475,9 @@
 				B93F61C520CE01F000E9D678 /* AppRouter.swift in Sources */,
 				3C801B6420EDC0C300516FC3 /* Spacing.swift in Sources */,
 				B92A745720D5DF4D0064D75C /* TextField.swift in Sources */,
+				3C3121D120FC08BE006313EB /* AccountsCollectionViewModel.swift in Sources */,
+				3C3121D320FC0A88006313EB /* TableViewCollectionCell.swift in Sources */,
 				3C8CC23E20F2A17900E913BF /* Coordinator.swift in Sources */,
-				B92A745E20D624630064D75C /* FunctionalOperators.swift in Sources */,
 				B92A746020D6D7D50064D75C /* ViewModel.swift in Sources */,
 				B9715D2520CD9CEE007C06E6 /* ViewController.swift in Sources */,
 				B92A745920D5DFFC0064D75C /* Button.swift in Sources */,
@@ -485,6 +488,7 @@
 				3C801B6720EDC68B00516FC3 /* Font.swift in Sources */,
 				B92A744020D59F580064D75C /* Assets.generated.swift in Sources */,
 				B92A745420D5D6A20064D75C /* DashViewController.swift in Sources */,
+				3C3121CF20FC07F0006313EB /* TableViewColectionViewModel.swift in Sources */,
 				3C8CC24620F2B55C00E913BF /* DashViewModel.swift in Sources */,
 				B92A744A20D5AC9E0064D75C /* AutoMappable.generated.swift in Sources */,
 			);

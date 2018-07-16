@@ -34,8 +34,8 @@ class AuthViewController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupViews()
-        self.setupRx()
+        setupViews()
+        setupRx()
     }
 
     func setupViews() {
