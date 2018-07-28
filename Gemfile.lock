@@ -44,6 +44,7 @@ GEM
     cocoapods-try (1.1.0)
     colored2 (3.1.2)
     concurrent-ruby (1.0.5)
+    dotenv (2.5.0)
     escape (0.0.4)
     fourflusher (2.0.1)
     fuzzy_match (2.0.4)
@@ -55,6 +56,7 @@ GEM
     nanaimo (0.2.6)
     nap (1.1.0)
     netrc (0.11.0)
+    rake (12.3.1)
     ruby-macho (1.2.0)
     thread_safe (0.3.6)
     tzinfo (1.2.5)
@@ -71,6 +73,8 @@ PLATFORMS
 
 DEPENDENCIES
   cocoapods
+  dotenv
+  rake
 
 BUNDLED WITH
    1.16.2

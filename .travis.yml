@@ -1,10 +1,10 @@
 before_install:
   - bundle install
 install:
-  - ./scripts/decrypt.sh
+  - bundle exec rake
   - bundle exec pod install --repo-update
 script:
-    - xcodebuild clean build -sdk iphonesimulator11.4 -workspace TCC.xcworkspace -scheme TCC CODE_SIGNING_REQUIRED=NO
+  - xcodebuild clean build -sdk iphonesimulator11.4 -workspace TCC.xcworkspace -scheme TCC CODE_SIGNING_REQUIRED=NO
 
 language: objective-c
 cache:
