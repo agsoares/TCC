@@ -7,27 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1EFB142144953100C2C802 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EFB122144953100C2C802 /* AuthViewController.swift */; };
+		3C1EFB152144953100C2C802 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1EFB132144953100C2C802 /* AuthViewController.xib */; };
+		3C1EFB172144985000C2C802 /* DashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EFB162144985000C2C802 /* DashViewModel.swift */; };
+		3C1EFB1A2144986B00C2C802 /* DashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EFB182144986B00C2C802 /* DashViewController.swift */; };
+		3C1EFB1B2144986B00C2C802 /* DashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1EFB192144986B00C2C802 /* DashViewController.xib */; };
 		3C3121CF20FC07F0006313EB /* TableViewColectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3121CE20FC07F0006313EB /* TableViewColectionViewModel.swift */; };
-		3C3121D120FC08BE006313EB /* AccountsCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3121D020FC08BE006313EB /* AccountsCollectionViewModel.swift */; };
-		3C3121D320FC0A88006313EB /* TableViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3121D220FC0A88006313EB /* TableViewCollectionCell.swift */; };
 		3C801B6420EDC0C300516FC3 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C801B6320EDC0C300516FC3 /* Spacing.swift */; };
 		3C801B6720EDC68B00516FC3 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C801B6620EDC68B00516FC3 /* Font.swift */; };
-		3C8CC23E20F2A17900E913BF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8CC23D20F2A17900E913BF /* Coordinator.swift */; };
-		3C8CC24620F2B55C00E913BF /* DashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8CC24520F2B55C00E913BF /* DashViewModel.swift */; };
 		74D8A3204C42DD05BA5C463E /* Pods_TCC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB084F10BB0315B84309F56 /* Pods_TCC.framework */; };
 		B92A744020D59F580064D75C /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A743F20D59F580064D75C /* Assets.generated.swift */; };
 		B92A744420D5A8DE0064D75C /* AutoMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A744320D5A8DE0064D75C /* AutoMappable.swift */; };
 		B92A744620D5A9470064D75C /* AutoMappable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = B92A744520D5A9470064D75C /* AutoMappable.stencil */; };
 		B92A744A20D5AC9E0064D75C /* AutoMappable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A744920D5AC9E0064D75C /* AutoMappable.generated.swift */; };
 		B92A744E20D5C1980064D75C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A744D20D5C1980064D75C /* AuthService.swift */; };
-		B92A745220D5D49B0064D75C /* GlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A745120D5D49B0064D75C /* GlobalState.swift */; };
-		B92A745420D5D6A20064D75C /* DashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A745320D5D6A20064D75C /* DashViewController.swift */; };
 		B92A745720D5DF4D0064D75C /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A745620D5DF4D0064D75C /* TextField.swift */; };
 		B92A745920D5DFFC0064D75C /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A745820D5DFFC0064D75C /* Button.swift */; };
 		B92A745B20D61F130064D75C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A745A20D61F130064D75C /* Color.swift */; };
 		B92A746020D6D7D50064D75C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A745F20D6D7D50064D75C /* ViewModel.swift */; };
 		B93F61B820CDAB7B00E9D678 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B93F61B720CDAB7B00E9D678 /* .swiftlint.yml */; };
-		B93F61BF20CDD1E300E9D678 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93F61BE20CDD1E300E9D678 /* AuthViewController.swift */; };
 		B93F61C120CDD2A700E9D678 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93F61C020CDD2A700E9D678 /* AuthViewModel.swift */; };
 		B93F61C320CDD8AA00E9D678 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B93F61C220CDD8AA00E9D678 /* GoogleService-Info.plist */; };
 		B93F61C520CE01F000E9D678 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93F61C420CE01F000E9D678 /* AppRouter.swift */; };
@@ -52,27 +50,25 @@
 /* Begin PBXFileReference section */
 		18964A55EC528332714F35E9 /* Pods-TCC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCC.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCC/Pods-TCC.release.xcconfig"; sourceTree = "<group>"; };
 		1D2839A0BF1E54773E0E9C17 /* Pods-TCC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCC/Pods-TCC.debug.xcconfig"; sourceTree = "<group>"; };
+		3C1EFB122144953100C2C802 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		3C1EFB132144953100C2C802 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
+		3C1EFB162144985000C2C802 /* DashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashViewModel.swift; sourceTree = "<group>"; };
+		3C1EFB182144986B00C2C802 /* DashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashViewController.swift; sourceTree = "<group>"; };
+		3C1EFB192144986B00C2C802 /* DashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashViewController.xib; sourceTree = "<group>"; };
 		3C3121CE20FC07F0006313EB /* TableViewColectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewColectionViewModel.swift; path = Sources/Components/Molecules/TableViewColectionViewModel.swift; sourceTree = SOURCE_ROOT; };
-		3C3121D020FC08BE006313EB /* AccountsCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountsCollectionViewModel.swift; path = Sources/Features/Dash/AccountsCollectionViewModel.swift; sourceTree = SOURCE_ROOT; };
-		3C3121D220FC0A88006313EB /* TableViewCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCollectionCell.swift; sourceTree = "<group>"; };
 		3C801B6320EDC0C300516FC3 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		3C801B6620EDC68B00516FC3 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		3C8CC23D20F2A17900E913BF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		3C8CC24520F2B55C00E913BF /* DashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashViewModel.swift; sourceTree = "<group>"; };
 		4BB084F10BB0315B84309F56 /* Pods_TCC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92A743F20D59F580064D75C /* Assets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.generated.swift; sourceTree = "<group>"; };
 		B92A744320D5A8DE0064D75C /* AutoMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMappable.swift; sourceTree = "<group>"; };
 		B92A744520D5A9470064D75C /* AutoMappable.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoMappable.stencil; sourceTree = "<group>"; };
 		B92A744920D5AC9E0064D75C /* AutoMappable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMappable.generated.swift; sourceTree = "<group>"; };
 		B92A744D20D5C1980064D75C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		B92A745120D5D49B0064D75C /* GlobalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalState.swift; sourceTree = "<group>"; };
-		B92A745320D5D6A20064D75C /* DashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashViewController.swift; sourceTree = "<group>"; };
 		B92A745620D5DF4D0064D75C /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		B92A745820D5DFFC0064D75C /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		B92A745A20D61F130064D75C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B92A745F20D6D7D50064D75C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		B93F61B720CDAB7B00E9D678 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
-		B93F61BE20CDD1E300E9D678 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		B93F61C020CDD2A700E9D678 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		B93F61C220CDD8AA00E9D678 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B93F61C420CE01F000E9D678 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
@@ -152,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				B92A744320D5A8DE0064D75C /* AutoMappable.swift */,
-				3C8CC23D20F2A17900E913BF /* Coordinator.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -160,10 +155,9 @@
 		B92A744F20D5D4300064D75C /* Dash */ = {
 			isa = PBXGroup;
 			children = (
-				3C3121D020FC08BE006313EB /* AccountsCollectionViewModel.swift */,
-				B92A745320D5D6A20064D75C /* DashViewController.swift */,
-				3C8CC24520F2B55C00E913BF /* DashViewModel.swift */,
-				3C3121D220FC0A88006313EB /* TableViewCollectionCell.swift */,
+				3C1EFB192144986B00C2C802 /* DashViewController.xib */,
+				3C1EFB182144986B00C2C802 /* DashViewController.swift */,
+				3C1EFB162144985000C2C802 /* DashViewModel.swift */,
 			);
 			path = Dash;
 			sourceTree = "<group>";
@@ -171,7 +165,6 @@
 		B92A745020D5D47F0064D75C /* States */ = {
 			isa = PBXGroup;
 			children = (
-				B92A745120D5D49B0064D75C /* GlobalState.swift */,
 			);
 			path = States;
 			sourceTree = "<group>";
@@ -179,7 +172,8 @@
 		B93F61BD20CDD1B900E9D678 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				B93F61BE20CDD1E300E9D678 /* AuthViewController.swift */,
+				3C1EFB132144953100C2C802 /* AuthViewController.xib */,
+				3C1EFB122144953100C2C802 /* AuthViewController.swift */,
 				B93F61C020CDD2A700E9D678 /* AuthViewModel.swift */,
 				B92A744D20D5C1980064D75C /* AuthService.swift */,
 			);
@@ -359,10 +353,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1EFB1B2144986B00C2C802 /* DashViewController.xib in Resources */,
 				B93F61B820CDAB7B00E9D678 /* .swiftlint.yml in Resources */,
 				B92A744620D5A9470064D75C /* AutoMappable.stencil in Resources */,
 				B93F61C320CDD8AA00E9D678 /* GoogleService-Info.plist in Resources */,
 				B9715D2D20CD9CEE007C06E6 /* LaunchScreen.storyboard in Resources */,
+				3C1EFB152144953100C2C802 /* AuthViewController.xib in Resources */,
 				B9715D2A20CD9CEE007C06E6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,7 +393,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TCC/Pods-TCC-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -408,7 +404,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
@@ -446,7 +442,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" ";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" \n";
 		};
 		B93F61BC20CDB9FE00E9D678 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -469,27 +465,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1EFB142144953100C2C802 /* AuthViewController.swift in Sources */,
 				B93F61C120CDD2A700E9D678 /* AuthViewModel.swift in Sources */,
+				3C1EFB1A2144986B00C2C802 /* DashViewController.swift in Sources */,
 				B92A744420D5A8DE0064D75C /* AutoMappable.swift in Sources */,
-				B93F61BF20CDD1E300E9D678 /* AuthViewController.swift in Sources */,
 				B93F61C520CE01F000E9D678 /* AppRouter.swift in Sources */,
 				3C801B6420EDC0C300516FC3 /* Spacing.swift in Sources */,
 				B92A745720D5DF4D0064D75C /* TextField.swift in Sources */,
-				3C3121D120FC08BE006313EB /* AccountsCollectionViewModel.swift in Sources */,
-				3C3121D320FC0A88006313EB /* TableViewCollectionCell.swift in Sources */,
-				3C8CC23E20F2A17900E913BF /* Coordinator.swift in Sources */,
 				B92A746020D6D7D50064D75C /* ViewModel.swift in Sources */,
 				B9715D2520CD9CEE007C06E6 /* ViewController.swift in Sources */,
 				B92A745920D5DFFC0064D75C /* Button.swift in Sources */,
 				B92A745B20D61F130064D75C /* Color.swift in Sources */,
 				B9715D2320CD9CEE007C06E6 /* AppDelegate.swift in Sources */,
-				B92A745220D5D49B0064D75C /* GlobalState.swift in Sources */,
+				3C1EFB172144985000C2C802 /* DashViewModel.swift in Sources */,
 				B92A744E20D5C1980064D75C /* AuthService.swift in Sources */,
 				3C801B6720EDC68B00516FC3 /* Font.swift in Sources */,
 				B92A744020D59F580064D75C /* Assets.generated.swift in Sources */,
-				B92A745420D5D6A20064D75C /* DashViewController.swift in Sources */,
 				3C3121CF20FC07F0006313EB /* TableViewColectionViewModel.swift in Sources */,
-				3C8CC24620F2B55C00E913BF /* DashViewModel.swift in Sources */,
 				B92A744A20D5AC9E0064D75C /* AutoMappable.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let initialViewController: UIViewController
         if let user = Auth.auth().currentUser {
-            initialViewController = AppRouter.home()
+            initialViewController = AppRouter.auth()
         } else {
             initialViewController = AppRouter.auth()
         }

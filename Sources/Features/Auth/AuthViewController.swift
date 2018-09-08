@@ -1,30 +1,15 @@
 import UIKit
-import RxCocoa
 import RxSwift
-import Firebase
 
-class AuthViewController: ViewController {
-    let emailTextField: TextField = {
-        let v = TextField().rounded()
-        v.keyboardType = .emailAddress
-        v.autocapitalizationType = .none
-        v.autocorrectionType = .no
-        v.translatesAutoresizingMaskIntoConstraints = false
-        return v
-    }()
+class AuthViewController: UIViewController {
 
-    let sendEmailButton: Button = {
-        let button = Button()
-        button.titleLabel?.text = "Entrar"
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = UIColor.red
-        return button
-    }()
-
+    var disposeBag = DisposeBag()
     var viewModel: AuthViewModel!
 
+    @IBOutlet weak var sendEmailButton: UIButton!
+
     init(viewModel: AuthViewModel) {
-        super.init()
+        super.init(nibName: "AuthViewController", bundle: Bundle.init(for: AuthViewController.self))
         self.viewModel = viewModel
     }
 
@@ -34,27 +19,7 @@ class AuthViewController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
         setupRx()
-    }
-
-    func setupViews() {
-        view.addSubview(emailTextField)
-        NSLayoutConstraint.activate([
-            emailTextField.heightAnchor.constraint(equalToConstant: TextField.Constants.defaultHeight),
-            emailTextField.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            emailTextField.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            self.view.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor, constant: Spacing.base),
-            emailTextField.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: Spacing.base)
-        ])
-
-        view.addSubview(sendEmailButton)
-        NSLayoutConstraint.activate([
-            sendEmailButton.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 10),
-            sendEmailButton.heightAnchor.constraint(equalToConstant: Button.Constants.defaultHeight),
-            sendEmailButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
-            sendEmailButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor)
-        ])
     }
 
     func setupRx() {
@@ -67,7 +32,7 @@ class AuthViewController: ViewController {
 
                 DispatchQueue.main.async {
 
-                    self?.present(AppRouter.home(), animated: true, completion: nil)
+                    self?.present(AppRouter.auth(), animated: true, completion: nil)
                 }
             })
             .disposed(by: disposeBag)

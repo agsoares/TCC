@@ -1,31 +1,15 @@
 import UIKit
 import RxSwift
-import RxDataSources
 
-class DashViewController: ViewController {
+class DashViewController: UIViewController {
 
-    let tableView: UITableView = {
-        let t = UITableView()
-        t.translatesAutoresizingMaskIntoConstraints = false
-        return t
-    }()
+    var disposeBag = DisposeBag()
+    var viewModel: DashViewModel!
 
-    let dataSource: RxTableViewSectionedReloadDataSource<DashViewModel.Section>
-    var viewModel: DashViewModel
 
     init(viewModel: DashViewModel) {
-        self.tableView.register(TableViewCollectionViewCell.self,
-                                forCellReuseIdentifier: TableViewCollectionViewCell.identifier)
-
-        self.dataSource = RxTableViewSectionedReloadDataSource<DashViewModel.Section>(configureCell: { (_, tv, ip, item) in
-            let cell = tv.dequeueReusableCell(withIdentifier: TableViewCollectionViewCell.identifier,
-                                              for: ip)
-            cell.textLabel?.text = "\(item)"
-
-            return cell
-        })
+        super.init(nibName: "DashViewController", bundle: Bundle.init(for: AuthViewController.self))
         self.viewModel = viewModel
-        super.init()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -34,24 +18,10 @@ class DashViewController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
         setupRx()
-    }
-
-    func setupViews() {
-        view.addSubview(tableView)
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
     }
 
     func setupRx() {
 
-        viewModel.sections.asObservable()
-            .bind(to: tableView.rx.items(dataSource: dataSource))
-            .disposed(by: disposeBag)
     }
 }
