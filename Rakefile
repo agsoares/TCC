@@ -3,7 +3,7 @@ require 'dotenv/tasks'
 task default: %w[decrypt]
 
 files = [
-    "Sources/Application/GoogleService-Info.plist"
+    'Sources/Application/GoogleService-Info.plist'
 ]
 
 task encrypt: :dotenv do
