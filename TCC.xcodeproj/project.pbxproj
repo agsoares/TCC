@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C02E14E21581CB200F6697B /* AccountServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C02E14D21581CB200F6697B /* AccountServices.swift */; };
+		3C02E15021581E8500F6697B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C02E14F21581E8500F6697B /* UserData.swift */; };
 		3C1EFB142144953100C2C802 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EFB122144953100C2C802 /* AuthViewController.swift */; };
 		3C1EFB152144953100C2C802 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1EFB132144953100C2C802 /* AuthViewController.xib */; };
 		3C1EFB172144985000C2C802 /* DashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EFB162144985000C2C802 /* DashViewModel.swift */; };
 		3C1EFB1A2144986B00C2C802 /* DashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EFB182144986B00C2C802 /* DashViewController.swift */; };
 		3C1EFB1B2144986B00C2C802 /* DashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1EFB192144986B00C2C802 /* DashViewController.xib */; };
 		3C3121CF20FC07F0006313EB /* TableViewColectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3121CE20FC07F0006313EB /* TableViewColectionViewModel.swift */; };
+		3C36B7FA21583DA6000935F3 /* AccountsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36B7F921583DA6000935F3 /* AccountsData.swift */; };
 		3C48696B214DA85900DB9254 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C486969214DA85900DB9254 /* CollectionTableViewCell.swift */; };
 		3C48696C214DA85900DB9254 /* CollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C48696A214DA85900DB9254 /* CollectionTableViewCell.xib */; };
 		3C801B6420EDC0C300516FC3 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C801B6320EDC0C300516FC3 /* Spacing.swift */; };
@@ -52,12 +55,15 @@
 /* Begin PBXFileReference section */
 		18964A55EC528332714F35E9 /* Pods-TCC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCC.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCC/Pods-TCC.release.xcconfig"; sourceTree = "<group>"; };
 		1D2839A0BF1E54773E0E9C17 /* Pods-TCC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCC/Pods-TCC.debug.xcconfig"; sourceTree = "<group>"; };
+		3C02E14D21581CB200F6697B /* AccountServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServices.swift; sourceTree = "<group>"; };
+		3C02E14F21581E8500F6697B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		3C1EFB122144953100C2C802 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		3C1EFB132144953100C2C802 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		3C1EFB162144985000C2C802 /* DashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashViewModel.swift; sourceTree = "<group>"; };
 		3C1EFB182144986B00C2C802 /* DashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashViewController.swift; sourceTree = "<group>"; };
 		3C1EFB192144986B00C2C802 /* DashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashViewController.xib; sourceTree = "<group>"; };
 		3C3121CE20FC07F0006313EB /* TableViewColectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewColectionViewModel.swift; path = Sources/Components/Molecules/TableViewColectionViewModel.swift; sourceTree = SOURCE_ROOT; };
+		3C36B7F921583DA6000935F3 /* AccountsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsData.swift; sourceTree = "<group>"; };
 		3C486969214DA85900DB9254 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
 		3C48696A214DA85900DB9254 /* CollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionTableViewCell.xib; sourceTree = "<group>"; };
 		3C801B6320EDC0C300516FC3 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
@@ -96,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C02E14C21581C8500F6697B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3C02E14D21581CB200F6697B /* AccountServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		3C486967214D9DF400DB9254 /* Header */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,13 +126,6 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		3C801B6520EDC4D000516FC3 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		4D933C33753E241BDE99D5A7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,9 +138,8 @@
 		B92A743C20D59DE60064D75C /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				B92A745020D5D47F0064D75C /* States */,
+				3C02E14C21581C8500F6697B /* Services */,
 				B92A743D20D59DF90064D75C /* Models */,
-				3C801B6520EDC4D000516FC3 /* Extensions */,
 				B92A744120D5A37B0064D75C /* Templates */,
 				B92A744220D5A8B60064D75C /* Protocols */,
 				B92A743E20D59E010064D75C /* Generated */,
@@ -144,6 +150,8 @@
 		B92A743D20D59DF90064D75C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3C02E14F21581E8500F6697B /* UserData.swift */,
+				3C36B7F921583DA6000935F3 /* AccountsData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,13 +190,6 @@
 				3C1EFB162144985000C2C802 /* DashViewModel.swift */,
 			);
 			path = Dash;
-			sourceTree = "<group>";
-		};
-		B92A745020D5D47F0064D75C /* States */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = States;
 			sourceTree = "<group>";
 		};
 		B93F61BD20CDD1B900E9D678 /* Auth */ = {
@@ -415,24 +416,40 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TCC/Pods-TCC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +515,7 @@
 				B92A745720D5DF4D0064D75C /* TextField.swift in Sources */,
 				B92A746020D6D7D50064D75C /* ViewModel.swift in Sources */,
 				B9715D2520CD9CEE007C06E6 /* ViewController.swift in Sources */,
+				3C02E15021581E8500F6697B /* UserData.swift in Sources */,
 				B92A745920D5DFFC0064D75C /* Button.swift in Sources */,
 				B92A745B20D61F130064D75C /* Color.swift in Sources */,
 				B9715D2320CD9CEE007C06E6 /* AppDelegate.swift in Sources */,
@@ -506,8 +524,10 @@
 				3C801B6720EDC68B00516FC3 /* Font.swift in Sources */,
 				B92A744020D59F580064D75C /* Assets.generated.swift in Sources */,
 				3C3121CF20FC07F0006313EB /* TableViewColectionViewModel.swift in Sources */,
+				3C02E14E21581CB200F6697B /* AccountServices.swift in Sources */,
 				3C48696B214DA85900DB9254 /* CollectionTableViewCell.swift in Sources */,
 				B92A744A20D5AC9E0064D75C /* AutoMappable.generated.swift in Sources */,
+				3C36B7FA21583DA6000935F3 /* AccountsData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,13 +662,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = M7SM6673Q8;
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.agsoares.tcc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.agsoares.TCC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -658,13 +678,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = M7SM6673Q8;
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.agsoares.tcc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.agsoares.TCC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

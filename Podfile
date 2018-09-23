@@ -3,7 +3,7 @@ inhibit_all_warnings!
 use_frameworks!
 
 target 'TCC' do
-  pod 'ObjectMapper',   '~> 3.2'
+  pod 'ObjectMapper',   '~> 3.3'
 
   pod 'RxSwift',        '~> 4.0'
   pod 'RxCocoa',        '~> 4.0'
@@ -11,6 +11,7 @@ target 'TCC' do
 
   pod 'Firebase/Core',  '~> 5.0'
   pod 'Firebase/Auth',  '~> 5.0'
+  pod 'Firebase/Firestore'
 
   pod 'SwiftGen'
   pod 'Sourcery'

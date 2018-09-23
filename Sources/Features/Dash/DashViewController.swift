@@ -37,7 +37,16 @@ class DashViewController: UIViewController {
     }
 
     func setupRx() {
+        AccountServices().getAccountsData()
+            .debug()
+            .subscribe(onNext: { _ in
 
+            }, onError: { _ in
+
+            }, onCompleted: {
+
+            })
+            .disposed(by: self.disposeBag)
     }
 }
 

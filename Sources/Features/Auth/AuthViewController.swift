@@ -32,7 +32,7 @@ class AuthViewController: UIViewController {
 
                 DispatchQueue.main.async {
 
-                    self?.present(AppRouter.auth(), animated: true, completion: nil)
+                    self?.present(AppRouter.home(), animated: true, completion: nil)
                 }
             })
             .disposed(by: disposeBag)
