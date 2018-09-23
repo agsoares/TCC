@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window  = UIWindow(frame: UIScreen.main.bounds)
 
         let initialViewController: UIViewController
-        if let _ = Auth.auth().currentUser {
-            initialViewController = AppRouter.home()
+        if let firebaseUser = Auth.auth().currentUser {
+            initialViewController = AppRouter.home(user: firebaseUser)
         } else {
             initialViewController = AppRouter.auth()
         }

@@ -1,4 +1,5 @@
 import UIKit
+import Firebase
 
 class AppRouter {
 
@@ -9,7 +10,7 @@ class AppRouter {
         return viewController
     }
 
-    class func home() -> UITabBarController {
+    class func home(user: User? = nil) -> UITabBarController {
 
         let dashViewModel = DashViewModel()
         let dashViewController = DashViewController(viewModel: dashViewModel)

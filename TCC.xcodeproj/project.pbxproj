@@ -323,9 +323,9 @@
 				B9715D1B20CD9CEE007C06E6 /* Sources */,
 				B93F61B520CDA54400E9D678 /* SwiftLint */,
 				B9715D1C20CD9CEE007C06E6 /* Frameworks */,
-				B9715D1D20CD9CEE007C06E6 /* Resources */,
 				7E1A516AD1335D43E0646708 /* [CP] Embed Pods Frameworks */,
 				B92A744B20D5AD310064D75C /* CopyFiles */,
+				B9715D1D20CD9CEE007C06E6 /* Resources */,
 			);
 			buildRules = (
 			);
