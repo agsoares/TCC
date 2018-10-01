@@ -21,10 +21,12 @@ extension AccountsData {
 
 extension UserData {
     enum Parameter: String {
+        case documentId 
         case balance 
     }
 
     mutating func mapping(map: Map) {
+        documentId <- map[Parameter.documentId.rawValue]
         balance <- map[Parameter.balance.rawValue]
     }
 }

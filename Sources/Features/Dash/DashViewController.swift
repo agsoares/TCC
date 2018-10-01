@@ -5,6 +5,7 @@ import RxDataSources
 class DashViewController: UIViewController {
 
     struct Constants {
+        static let nibName = "DashViewController"
         static let headerHeight: CGFloat = 300
     }
 
@@ -16,7 +17,7 @@ class DashViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     init(viewModel: DashViewModel) {
-        super.init(nibName: "DashViewController", bundle: Bundle.init(for: AuthViewController.self))
+        super.init(nibName: Constants.nibName, bundle: Bundle.init(for: DashViewController.self))
         self.viewModel = viewModel
     }
 
@@ -37,16 +38,7 @@ class DashViewController: UIViewController {
     }
 
     func setupRx() {
-        AccountServices().getAccountsData()
-            .debug()
-            .subscribe(onNext: { _ in
 
-            }, onError: { _ in
-
-            }, onCompleted: {
-
-            })
-            .disposed(by: self.disposeBag)
     }
 }
 
