@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthViewController" customModule="TCC" customModuleProvider="target">
             <connections>
-                <outlet property="sendEmailButton" destination="iBG-Ci-eEQ" id="xIK-8U-999"/>
+                <outlet property="emailTextField" destination="xL5-TQ-aGd" id="irH-aY-AMY"/>
+                <outlet property="passwordTextField" destination="cJM-cd-kjd" id="Aax-qI-P63"/>
+                <outlet property="signInButton" destination="v6Z-S5-sOC" id="yKE-Jk-tOQ"/>
+                <outlet property="signUpButton" destination="iBG-Ci-eEQ" id="uhs-lU-b0D"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,14 +25,79 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBG-Ci-eEQ">
-                    <rect key="frame" x="164" y="318" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBG-Ci-eEQ">
+                    <rect key="frame" x="187.5" y="623" width="187.5" height="44"/>
+                    <color key="backgroundColor" red="0.14466543365403714" green="0.16560071243523311" blue="0.1556846482916264" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="XlF-1o-bi1"/>
+                    </constraints>
+                    <state key="normal" title="Cadastrar">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6Z-S5-sOC">
+                    <rect key="frame" x="0.0" y="623" width="187.5" height="44"/>
+                    <color key="backgroundColor" name="primary"/>
+                    <state key="normal" title="Entrar">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cJM-cd-kjd">
+                    <rect key="frame" x="16" y="321.5" width="343" height="44"/>
+                    <color key="backgroundColor" red="0.25490196078431371" green="0.23529411764705882" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="reE-Fu-rzB"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES" textContentType="password"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="22"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xL5-TQ-aGd">
+                    <rect key="frame" x="16" y="269.5" width="343" height="44"/>
+                    <color key="backgroundColor" red="0.25490196079999999" green="0.23529411759999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="8CL-Q3-Nj6"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" textContentType="email"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="22"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" name="darkBackground"/>
+            <constraints>
+                <constraint firstItem="cJM-cd-kjd" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="6bZ-qn-lEo"/>
+                <constraint firstItem="iBG-Ci-eEQ" firstAttribute="leading" secondItem="v6Z-S5-sOC" secondAttribute="trailing" id="8z3-zT-40d"/>
+                <constraint firstItem="v6Z-S5-sOC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AKe-yn-XFO"/>
+                <constraint firstItem="cJM-cd-kjd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Fyc-me-f62"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cJM-cd-kjd" secondAttribute="trailing" constant="16" id="HGs-pu-hIH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iBG-Ci-eEQ" secondAttribute="bottom" id="Llm-IY-epC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xL5-TQ-aGd" secondAttribute="trailing" constant="16" id="OGI-Dh-Tbx"/>
+                <constraint firstItem="v6Z-S5-sOC" firstAttribute="width" secondItem="iBG-Ci-eEQ" secondAttribute="width" id="ZrW-Lz-X5p"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iBG-Ci-eEQ" secondAttribute="trailing" id="rSJ-pO-SDL"/>
+                <constraint firstItem="xL5-TQ-aGd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="sul-o3-4ld"/>
+                <constraint firstItem="v6Z-S5-sOC" firstAttribute="centerY" secondItem="iBG-Ci-eEQ" secondAttribute="centerY" id="y4K-Rv-0g5"/>
+                <constraint firstItem="v6Z-S5-sOC" firstAttribute="height" secondItem="iBG-Ci-eEQ" secondAttribute="height" id="y71-qg-X9c"/>
+                <constraint firstItem="cJM-cd-kjd" firstAttribute="top" secondItem="xL5-TQ-aGd" secondAttribute="bottom" constant="8" id="yAX-CV-rCf"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="darkBackground">
+            <color red="0.1803921568627451" green="0.16078431372549021" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.10588235294117647" green="0.59999999999999998" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

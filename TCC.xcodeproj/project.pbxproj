@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C02E14E21581CB200F6697B /* AccountServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C02E14D21581CB200F6697B /* AccountServices.swift */; };
 		3C02E15021581E8500F6697B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C02E14F21581E8500F6697B /* UserData.swift */; };
+		3C1809DB216305CF0022A18A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C1809DA216305CF0022A18A /* Colors.xcassets */; };
 		3C1EFB142144953100C2C802 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EFB122144953100C2C802 /* AuthViewController.swift */; };
 		3C1EFB152144953100C2C802 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1EFB132144953100C2C802 /* AuthViewController.xib */; };
 		3C1EFB172144985000C2C802 /* DashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EFB162144985000C2C802 /* DashViewModel.swift */; };
@@ -57,6 +58,7 @@
 		1D2839A0BF1E54773E0E9C17 /* Pods-TCC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCC/Pods-TCC.debug.xcconfig"; sourceTree = "<group>"; };
 		3C02E14D21581CB200F6697B /* AccountServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServices.swift; sourceTree = "<group>"; };
 		3C02E14F21581E8500F6697B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		3C1809DA216305CF0022A18A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		3C1EFB122144953100C2C802 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		3C1EFB132144953100C2C802 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		3C1EFB162144985000C2C802 /* DashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashViewModel.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 			children = (
 				B9715D2B20CD9CEE007C06E6 /* LaunchScreen.storyboard */,
 				B9715D2920CD9CEE007C06E6 /* Assets.xcassets */,
+				3C1809DA216305CF0022A18A /* Colors.xcassets */,
 				B92A743F20D59F580064D75C /* Assets.generated.swift */,
 			);
 			path = Resources;
@@ -377,6 +380,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1809DB216305CF0022A18A /* Colors.xcassets in Resources */,
 				3C1EFB1B2144986B00C2C802 /* DashViewController.xib in Resources */,
 				B93F61B820CDAB7B00E9D678 /* .swiftlint.yml in Resources */,
 				B92A744620D5A9470064D75C /* AutoMappable.stencil in Resources */,
