@@ -23,4 +23,13 @@ class AppRouter {
         return tabBarController
     }
 
+    class func expensesChat() -> UIViewController {
+
+        let viewModel = ExpenseViewModel()
+        let viewController = ChatViewController()
+        viewController.viewModel = viewModel
+
+        return viewController
+    }
+
 }

@@ -21,6 +21,12 @@
 		3C48696C214DA85900DB9254 /* CollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C48696A214DA85900DB9254 /* CollectionTableViewCell.xib */; };
 		3C801B6420EDC0C300516FC3 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C801B6320EDC0C300516FC3 /* Spacing.swift */; };
 		3C801B6720EDC68B00516FC3 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C801B6620EDC68B00516FC3 /* Font.swift */; };
+		3CC0BCFF2166EA70000BAEB2 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0BCFE2166EA70000BAEB2 /* ChatViewModel.swift */; };
+		3CC0BD032166EDC1000BAEB2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0BD012166EDC1000BAEB2 /* ChatViewController.swift */; };
+		3CC0BD042166EDC1000BAEB2 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC0BD022166EDC1000BAEB2 /* ChatViewController.xib */; };
+		3CC0BD072166F515000BAEB2 /* ExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0BD062166F515000BAEB2 /* ExpenseViewModel.swift */; };
+		3CC0BD0A2166FA9A000BAEB2 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0BD082166FA9A000BAEB2 /* ChatTableViewCell.swift */; };
+		3CC0BD0B2166FA9A000BAEB2 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC0BD092166FA9A000BAEB2 /* ChatTableViewCell.xib */; };
 		74D8A3204C42DD05BA5C463E /* Pods_TCC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB084F10BB0315B84309F56 /* Pods_TCC.framework */; };
 		B92A744020D59F580064D75C /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A743F20D59F580064D75C /* Assets.generated.swift */; };
 		B92A744420D5A8DE0064D75C /* AutoMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A744320D5A8DE0064D75C /* AutoMappable.swift */; };
@@ -70,6 +76,12 @@
 		3C48696A214DA85900DB9254 /* CollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionTableViewCell.xib; sourceTree = "<group>"; };
 		3C801B6320EDC0C300516FC3 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		3C801B6620EDC68B00516FC3 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		3CC0BCFE2166EA70000BAEB2 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		3CC0BD012166EDC1000BAEB2 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		3CC0BD022166EDC1000BAEB2 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		3CC0BD062166F515000BAEB2 /* ExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewModel.swift; sourceTree = "<group>"; };
+		3CC0BD082166FA9A000BAEB2 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		3CC0BD092166FA9A000BAEB2 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		4BB084F10BB0315B84309F56 /* Pods_TCC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92A743F20D59F580064D75C /* Assets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.generated.swift; sourceTree = "<group>"; };
 		B92A744320D5A8DE0064D75C /* AutoMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMappable.swift; sourceTree = "<group>"; };
@@ -128,6 +140,26 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		3CC0BD002166ED87000BAEB2 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0BD052166F4F2000BAEB2 /* ViewModels */,
+				3CC0BD012166EDC1000BAEB2 /* ChatViewController.swift */,
+				3CC0BD022166EDC1000BAEB2 /* ChatViewController.xib */,
+				3CC0BD082166FA9A000BAEB2 /* ChatTableViewCell.swift */,
+				3CC0BD092166FA9A000BAEB2 /* ChatTableViewCell.xib */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		3CC0BD052166F4F2000BAEB2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0BD062166F515000BAEB2 /* ExpenseViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		4D933C33753E241BDE99D5A7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				B92A744320D5A8DE0064D75C /* AutoMappable.swift */,
+				3CC0BCFE2166EA70000BAEB2 /* ChatViewModel.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -262,6 +295,7 @@
 			children = (
 				B93F61BD20CDD1B900E9D678 /* Auth */,
 				B92A744F20D5D4300064D75C /* Dash */,
+				3CC0BD002166ED87000BAEB2 /* Chat */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -383,11 +417,13 @@
 				3C1809DB216305CF0022A18A /* Colors.xcassets in Resources */,
 				3C1EFB1B2144986B00C2C802 /* DashViewController.xib in Resources */,
 				B93F61B820CDAB7B00E9D678 /* .swiftlint.yml in Resources */,
+				3CC0BD0B2166FA9A000BAEB2 /* ChatTableViewCell.xib in Resources */,
 				B92A744620D5A9470064D75C /* AutoMappable.stencil in Resources */,
 				3C48696C214DA85900DB9254 /* CollectionTableViewCell.xib in Resources */,
 				B93F61C320CDD8AA00E9D678 /* GoogleService-Info.plist in Resources */,
 				B9715D2D20CD9CEE007C06E6 /* LaunchScreen.storyboard in Resources */,
 				3C1EFB152144953100C2C802 /* AuthViewController.xib in Resources */,
+				3CC0BD042166EDC1000BAEB2 /* ChatViewController.xib in Resources */,
 				B9715D2A20CD9CEE007C06E6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,11 +552,15 @@
 				B92A744420D5A8DE0064D75C /* AutoMappable.swift in Sources */,
 				B93F61C520CE01F000E9D678 /* AppRouter.swift in Sources */,
 				3C801B6420EDC0C300516FC3 /* Spacing.swift in Sources */,
+				3CC0BCFF2166EA70000BAEB2 /* ChatViewModel.swift in Sources */,
 				B92A745720D5DF4D0064D75C /* TextField.swift in Sources */,
 				B92A746020D6D7D50064D75C /* ViewModel.swift in Sources */,
 				B9715D2520CD9CEE007C06E6 /* ViewController.swift in Sources */,
+				3CC0BD032166EDC1000BAEB2 /* ChatViewController.swift in Sources */,
+				3CC0BD0A2166FA9A000BAEB2 /* ChatTableViewCell.swift in Sources */,
 				3C02E15021581E8500F6697B /* UserData.swift in Sources */,
 				B92A745920D5DFFC0064D75C /* Button.swift in Sources */,
+				3CC0BD072166F515000BAEB2 /* ExpenseViewModel.swift in Sources */,
 				B92A745B20D61F130064D75C /* Color.swift in Sources */,
 				B9715D2320CD9CEE007C06E6 /* AppDelegate.swift in Sources */,
 				3C1EFB172144985000C2C802 /* DashViewModel.swift in Sources */,

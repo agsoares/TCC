@@ -4,6 +4,10 @@ import Firebase
 
 class AuthViewController: UIViewController {
 
+    struct Constants {
+        static let nibName = "AuthViewController"
+    }
+
     var disposeBag = DisposeBag()
     var viewModel: AuthViewModel!
 
@@ -13,7 +17,7 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
 
     init(viewModel: AuthViewModel) {
-        super.init(nibName: "AuthViewController", bundle: Bundle.init(for: AuthViewController.self))
+        super.init(nibName: Constants.nibName, bundle: Bundle.init(for: AuthViewController.self))
         self.viewModel = viewModel
     }
 

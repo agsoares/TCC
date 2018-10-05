@@ -125,7 +125,7 @@ PODS:
     - RxSwift (~> 4.0)
   - RxSwift (4.3.1)
   - Sourcery (0.15.0)
-  - SwiftGen (6.0.0)
+  - SwiftGen (6.0.1)
   - SwiftLint (0.27.0)
 
 DEPENDENCIES:
@@ -196,7 +196,7 @@ SPEC CHECKSUMS:
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
   Sourcery: 5895672cae353cdbfa95f3f4aaeb75a664d76f6a
-  SwiftGen: cd0bb0c9838c3fc90b78d35b19f492711b19eb55
+  SwiftGen: 6b3ee807efa0231541a3777c9ed5c5d3130dfdfb
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
 
 PODFILE CHECKSUM: ac7fdaf9ee3654e848b056cd6f72311a822eaf00
