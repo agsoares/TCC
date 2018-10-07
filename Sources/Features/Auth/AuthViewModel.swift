@@ -2,7 +2,7 @@ import Foundation
 import RxSwift
 import Firebase
 
-class AuthViewModel: ViewModel {
+class AuthViewModel {
     let authService: AuthService
 
     init(authService: AuthService) {

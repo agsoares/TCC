@@ -2,9 +2,6 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class DashViewModel: ViewModel {
+class DashViewModel {
 
-    override init() {
-        super.init()
-    }
 }
