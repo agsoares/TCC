@@ -11,6 +11,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         FirebaseApp.configure()
+        self.setupNavigationBar()
+        self.setupTabBar()
 
         let window  = UIWindow(frame: UIScreen.main.bounds)
 
@@ -26,5 +28,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         self.window = window
         return true
+    }
+
+    private func setupNavigationBar() {
+        UINavigationBar.appearance().barTintColor = Asset.Colors.secundary.color
+        UINavigationBar.appearance().tintColor = Asset.Colors.primary.color
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.white
+        ]
+        UINavigationBar.appearance().isTranslucent = false
+    }
+
+    private func setupTabBar() {
+        UITabBar.appearance().barTintColor = Asset.Colors.secundary.color
+        UITabBar.appearance().tintColor = Asset.Colors.primary.color
     }
 }

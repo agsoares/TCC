@@ -1,4 +1,17 @@
 xcassets:
-  paths: Sources/Resources/Assets.xcassets
-  templateName: swift4
-  output: Sources/Resources/Assets.generated.swift
+  inputs: 
+    - Sources/Resources/Assets.xcassets
+    - Sources/Resources/Colors.xcassets
+  outputs: 
+    templateName: swift4
+    output: Sources/Resources/Assets.generated.swift
+strings:
+  inputs: Sources/Resources/Localizables.strings
+  outputs:
+    templateName: structured-swift4
+    output: Sources/Resources/Localizables.generated.swift
+fonts:
+  inputs: Sources/Resources/Fonts
+  outputs:
+    templateName: swift4
+    output: Sources/Resources/Fonts.generated.swift

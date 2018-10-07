@@ -19,6 +19,16 @@
 		3C36B7FA21583DA6000935F3 /* AccountsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36B7F921583DA6000935F3 /* AccountsData.swift */; };
 		3C48696B214DA85900DB9254 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C486969214DA85900DB9254 /* CollectionTableViewCell.swift */; };
 		3C48696C214DA85900DB9254 /* CollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C48696A214DA85900DB9254 /* CollectionTableViewCell.xib */; };
+		3C5B13092169A9BB00E4793F /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5B13082169A9BB00E4793F /* MessageData.swift */; };
+		3C5B130C2169AA3300E4793F /* MonetaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5B130B2169AA3300E4793F /* MonetaryExtensions.swift */; };
+		3C5B130E2169B63100E4793F /* Localizables.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C5B130D2169B63100E4793F /* Localizables.strings */; };
+		3C5B13102169B90800E4793F /* Localizables.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5B130F2169B90700E4793F /* Localizables.generated.swift */; };
+		3C5B13172169C1AD00E4793F /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C5B13122169C1AD00E4793F /* OpenSans-Light.ttf */; };
+		3C5B13182169C1AD00E4793F /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C5B13132169C1AD00E4793F /* OpenSans-ExtraBold.ttf */; };
+		3C5B13192169C1AD00E4793F /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C5B13142169C1AD00E4793F /* OpenSans-Bold.ttf */; };
+		3C5B131A2169C1AD00E4793F /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C5B13152169C1AD00E4793F /* OpenSans-Regular.ttf */; };
+		3C5B131B2169C1AD00E4793F /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C5B13162169C1AD00E4793F /* OpenSans-SemiBold.ttf */; };
+		3C5B131D2169C23600E4793F /* Fonts.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5B131C2169C23600E4793F /* Fonts.generated.swift */; };
 		3C801B6420EDC0C300516FC3 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C801B6320EDC0C300516FC3 /* Spacing.swift */; };
 		3C801B6720EDC68B00516FC3 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C801B6620EDC68B00516FC3 /* Font.swift */; };
 		3CC0BCFF2166EA70000BAEB2 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0BCFE2166EA70000BAEB2 /* ChatViewModel.swift */; };
@@ -74,6 +84,16 @@
 		3C36B7F921583DA6000935F3 /* AccountsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsData.swift; sourceTree = "<group>"; };
 		3C486969214DA85900DB9254 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
 		3C48696A214DA85900DB9254 /* CollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionTableViewCell.xib; sourceTree = "<group>"; };
+		3C5B13082169A9BB00E4793F /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
+		3C5B130B2169AA3300E4793F /* MonetaryExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonetaryExtensions.swift; sourceTree = "<group>"; };
+		3C5B130D2169B63100E4793F /* Localizables.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizables.strings; sourceTree = "<group>"; };
+		3C5B130F2169B90700E4793F /* Localizables.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizables.generated.swift; sourceTree = "<group>"; };
+		3C5B13122169C1AD00E4793F /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		3C5B13132169C1AD00E4793F /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		3C5B13142169C1AD00E4793F /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		3C5B13152169C1AD00E4793F /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		3C5B13162169C1AD00E4793F /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		3C5B131C2169C23600E4793F /* Fonts.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.generated.swift; sourceTree = "<group>"; };
 		3C801B6320EDC0C300516FC3 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		3C801B6620EDC68B00516FC3 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		3CC0BCFE2166EA70000BAEB2 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
@@ -140,6 +160,26 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		3C5B130A2169AA0F00E4793F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3C5B130B2169AA3300E4793F /* MonetaryExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3C5B13112169BFE800E4793F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3C5B13142169C1AD00E4793F /* OpenSans-Bold.ttf */,
+				3C5B13132169C1AD00E4793F /* OpenSans-ExtraBold.ttf */,
+				3C5B13122169C1AD00E4793F /* OpenSans-Light.ttf */,
+				3C5B13152169C1AD00E4793F /* OpenSans-Regular.ttf */,
+				3C5B13162169C1AD00E4793F /* OpenSans-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		3CC0BD002166ED87000BAEB2 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +215,7 @@
 				3C02E14C21581C8500F6697B /* Services */,
 				B92A743D20D59DF90064D75C /* Models */,
 				B92A744120D5A37B0064D75C /* Templates */,
+				3C5B130A2169AA0F00E4793F /* Extensions */,
 				B92A744220D5A8B60064D75C /* Protocols */,
 				B92A743E20D59E010064D75C /* Generated */,
 			);
@@ -186,6 +227,7 @@
 			children = (
 				3C02E14F21581E8500F6697B /* UserData.swift */,
 				3C36B7F921583DA6000935F3 /* AccountsData.swift */,
+				3C5B13082169A9BB00E4793F /* MessageData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -303,10 +345,14 @@
 		B9715D3720CD9EC3007C06E6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3C5B13112169BFE800E4793F /* Fonts */,
 				B9715D2B20CD9CEE007C06E6 /* LaunchScreen.storyboard */,
 				B9715D2920CD9CEE007C06E6 /* Assets.xcassets */,
 				3C1809DA216305CF0022A18A /* Colors.xcassets */,
+				3C5B130D2169B63100E4793F /* Localizables.strings */,
 				B92A743F20D59F580064D75C /* Assets.generated.swift */,
+				3C5B130F2169B90700E4793F /* Localizables.generated.swift */,
+				3C5B131C2169C23600E4793F /* Fonts.generated.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -414,15 +460,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C5B131B2169C1AD00E4793F /* OpenSans-SemiBold.ttf in Resources */,
+				3C5B13172169C1AD00E4793F /* OpenSans-Light.ttf in Resources */,
 				3C1809DB216305CF0022A18A /* Colors.xcassets in Resources */,
 				3C1EFB1B2144986B00C2C802 /* DashViewController.xib in Resources */,
 				B93F61B820CDAB7B00E9D678 /* .swiftlint.yml in Resources */,
 				3CC0BD0B2166FA9A000BAEB2 /* ChatTableViewCell.xib in Resources */,
 				B92A744620D5A9470064D75C /* AutoMappable.stencil in Resources */,
+				3C5B131A2169C1AD00E4793F /* OpenSans-Regular.ttf in Resources */,
 				3C48696C214DA85900DB9254 /* CollectionTableViewCell.xib in Resources */,
 				B93F61C320CDD8AA00E9D678 /* GoogleService-Info.plist in Resources */,
+				3C5B13192169C1AD00E4793F /* OpenSans-Bold.ttf in Resources */,
 				B9715D2D20CD9CEE007C06E6 /* LaunchScreen.storyboard in Resources */,
+				3C5B13182169C1AD00E4793F /* OpenSans-ExtraBold.ttf in Resources */,
 				3C1EFB152144953100C2C802 /* AuthViewController.xib in Resources */,
+				3C5B130E2169B63100E4793F /* Localizables.strings in Resources */,
 				3CC0BD042166EDC1000BAEB2 /* ChatViewController.xib in Resources */,
 				B9715D2A20CD9CEE007C06E6 /* Assets.xcassets in Resources */,
 			);
@@ -550,7 +602,10 @@
 				B93F61C120CDD2A700E9D678 /* AuthViewModel.swift in Sources */,
 				3C1EFB1A2144986B00C2C802 /* DashViewController.swift in Sources */,
 				B92A744420D5A8DE0064D75C /* AutoMappable.swift in Sources */,
+				3C5B13092169A9BB00E4793F /* MessageData.swift in Sources */,
+				3C5B131D2169C23600E4793F /* Fonts.generated.swift in Sources */,
 				B93F61C520CE01F000E9D678 /* AppRouter.swift in Sources */,
+				3C5B13102169B90800E4793F /* Localizables.generated.swift in Sources */,
 				3C801B6420EDC0C300516FC3 /* Spacing.swift in Sources */,
 				3CC0BCFF2166EA70000BAEB2 /* ChatViewModel.swift in Sources */,
 				B92A745720D5DF4D0064D75C /* TextField.swift in Sources */,
@@ -571,6 +626,7 @@
 				3C02E14E21581CB200F6697B /* AccountServices.swift in Sources */,
 				3C48696B214DA85900DB9254 /* CollectionTableViewCell.swift in Sources */,
 				B92A744A20D5AC9E0064D75C /* AutoMappable.generated.swift in Sources */,
+				3C5B130C2169AA3300E4793F /* MonetaryExtensions.swift in Sources */,
 				3C36B7FA21583DA6000935F3 /* AccountsData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,8 +14,8 @@ class ChatTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var messageView: UIView!
     @IBOutlet private weak var messageLabel: UILabel!
-    @IBOutlet private weak var rightConstraint: NSLayoutConstraint!
-    @IBOutlet private weak var leftConstraint: NSLayoutConstraint!
+    @IBOutlet private var rightConstraint: NSLayoutConstraint!
+    @IBOutlet private var leftConstraint: NSLayoutConstraint!
 
     var message: MessageData?
 
@@ -36,11 +36,11 @@ class ChatTableViewCell: UITableViewCell {
 
         if message.isFromUser {
             leftConstraint.isActive = false
-            messageView.backgroundColor = UIColor.blue
+            messageView.backgroundColor = Asset.Colors.primary.color
             messageLabel.textAlignment = .right
         } else {
             rightConstraint.isActive = false
-            messageView.backgroundColor = UIColor.red
+            messageView.backgroundColor = Asset.Colors.secundary.color
             messageLabel.textAlignment = .left
         }
 

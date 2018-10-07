@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashViewController" customModule="TCC" customModuleProvider="target">
             <connections>
+                <outlet property="headerHeightConstraint" destination="EH0-w1-4LV" id="Ecs-AB-GN4"/>
                 <outlet property="tableView" destination="XsZ-22-P01" id="mZY-8M-dzb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,18 +25,40 @@
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XsZ-22-P01">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" name="darkBackground"/>
                 </tableView>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ww5-5I-UCP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
+                    <color key="backgroundColor" name="primary"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" notEnabled="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="1uh-re-aUz"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="top" secondItem="Ww5-5I-UCP" secondAttribute="bottom" constant="-320" id="EH0-w1-4LV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ww5-5I-UCP" secondAttribute="trailing" id="G5C-XN-Ka6"/>
+                <constraint firstItem="Ww5-5I-UCP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="H0z-fq-api"/>
                 <constraint firstItem="XsZ-22-P01" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LPS-Ni-JNY"/>
                 <constraint firstItem="XsZ-22-P01" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Ve3-Or-kg6"/>
                 <constraint firstItem="XsZ-22-P01" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="lon-1Z-tmW"/>
                 <constraint firstItem="XsZ-22-P01" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="v2y-t0-wyy"/>
+                <constraint firstItem="Ww5-5I-UCP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" priority="750" id="vRS-Qe-VGg"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="darkBackground">
+            <color red="0.094117647058823528" green="0.13333333333333333" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.24705882352941178" green="0.41960784313725491" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
