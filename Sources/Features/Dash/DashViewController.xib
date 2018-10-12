@@ -10,10 +10,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashViewController" customModule="TCC" customModuleProvider="target">
             <connections>
+                <outlet property="balanceLabel" destination="qrU-uU-c2E" id="5dm-6a-Swa"/>
                 <outlet property="headerHeightConstraint" destination="EH0-w1-4LV" id="Ecs-AB-GN4"/>
+                <outlet property="refreshControl" destination="4KA-DL-DMR" id="RVl-Xd-brR"/>
                 <outlet property="tableView" destination="XsZ-22-P01" id="mZY-8M-dzb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -29,12 +36,27 @@
                 </tableView>
                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ww5-5I-UCP">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrU-uU-c2E">
+                            <rect key="frame" x="152.5" y="141" width="70.5" height="38.5"/>
+                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="28"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="4KA-DL-DMR">
+                            <rect key="frame" x="177.5" y="150" width="20" height="20"/>
+                        </activityIndicatorView>
+                    </subviews>
                     <color key="backgroundColor" name="primary"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" notEnabled="YES"/>
                     </accessibility>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="1uh-re-aUz"/>
+                        <constraint firstItem="4KA-DL-DMR" firstAttribute="centerX" secondItem="qrU-uU-c2E" secondAttribute="centerX" id="61h-1G-yrI"/>
+                        <constraint firstItem="4KA-DL-DMR" firstAttribute="centerY" secondItem="qrU-uU-c2E" secondAttribute="centerY" id="J9G-FS-wjH"/>
+                        <constraint firstItem="qrU-uU-c2E" firstAttribute="centerY" secondItem="Ww5-5I-UCP" secondAttribute="centerY" id="VLZ-sM-prj"/>
+                        <constraint firstItem="qrU-uU-c2E" firstAttribute="centerX" secondItem="Ww5-5I-UCP" secondAttribute="centerX" id="vAJ-dx-uY7"/>
                     </constraints>
                 </view>
             </subviews>

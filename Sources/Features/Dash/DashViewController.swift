@@ -14,6 +14,8 @@ class DashViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var balanceLabel: UILabel!
+    @IBOutlet weak var refreshControl: UIActivityIndicatorView!
 
     init(viewModel: DashViewModel) {
         super.init(nibName: Constants.nibName, bundle: Bundle.init(for: DashViewController.self))
@@ -33,17 +35,46 @@ class DashViewController: UIViewController {
         setupRx()
     }
 
-    func setupViews() {
+    override func viewWillAppear(_ animated: Bool) {
+        self.reload()
+    }
+
+    @objc func reload() {
+
+        self.viewModel.getUserData()
+            .do(onSubscribe: { [weak self] in
+                self?.refreshControl.startAnimating()
+                self?.balanceLabel.isHidden = true
+            }, onDispose: { [weak self] in
+                self?.refreshControl.stopAnimating()
+                self?.balanceLabel.isHidden = false
+                self?.tableView.refreshControl?.endRefreshing()
+            })
+            .subscribe(onNext: { [weak self] (userData) in
+                self?.balanceLabel.text = userData.balance.currency()
+                self?.tableView.reloadData()
+            }).disposed(by: self.disposeBag)
+    }
+
+    private func setupViews() {
         self.tableView.contentInset.top = Constants.headerHeight
 
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
+
+        self.tableView.refreshControl = UIRefreshControl()
+        self.tableView.refreshControl?.tintColor = .clear
+        self.tableView.refreshControl?
+            .addTarget(self,
+                       action: #selector(self.reload),
+                       for: .valueChanged)
     }
 
-    func setupRx() {
-        Observable.just(["Teste", "Teste"])
+    private func setupRx() {
+        Observable.just(["Teste",
+                         "Teste"])
             .bind(to: tableView.rx.items(cellIdentifier: "Cell",
                                          cellType: UITableViewCell.self)) { _, model, cell in
                 cell.textLabel?.text = model
