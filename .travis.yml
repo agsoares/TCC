@@ -1,4 +1,9 @@
+language: objective-c
+cache:
+  - cocoapods
+
 before_install:
+  - gem install cocoapods
   - bundle install
 install:
   - bundle exec rake
@@ -6,10 +11,6 @@ install:
 script:
   - xcodebuild clean build -sdk iphonesimulator12.0 -workspace TCC.xcworkspace -scheme TCC CODE_SIGNING_REQUIRED=NO | xcpretty && exit ${PIPESTATUS[0]}
 
-language: objective-c
-cache:
-  - bundler
-  - cocoapods
 osx_image: xcode10
 xcode_project: TCC.xcworkspace
 xcode_scheme: TCC
