@@ -4,7 +4,7 @@ install:
   - bundle exec rake
   - bundle exec pod install --repo-update
 script:
-  - xcodebuild clean build -sdk iphonesimulator12.0 -workspace TCC.xcworkspace -scheme TCC CODE_SIGNING_REQUIRED=NO
+  - xcodebuild clean build -sdk iphonesimulator12.0 -workspace TCC.xcworkspace -scheme TCC CODE_SIGNING_REQUIRED=NO | xcpretty && exit ${PIPESTATUS[0]}
 
 language: objective-c
 cache:
