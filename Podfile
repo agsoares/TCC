@@ -17,3 +17,11 @@ target 'TCC' do
   pod 'Sourcery'
   pod 'SwiftLint'
 end
+
+post_install do |installer|
+    installer.pods_project.build_configurations.each do |config|
+        if config.name == 'Release'
+            config.build_settings['SWIFT_COMPILATION_MODE'] = 'wholemodule'
+        end
+    end
+end
