@@ -42,5 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupTabBar() {
         UITabBar.appearance().barTintColor = Asset.Colors.secundary.color
         UITabBar.appearance().tintColor = Asset.Colors.primary.color
+        UITabBar.appearance().isTranslucent = false
     }
 }
