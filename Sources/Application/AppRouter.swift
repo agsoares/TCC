@@ -1,7 +1,9 @@
 import UIKit
 import Firebase
 
-class AppRouter {
+class AppRouter: NSObject {
+
+    static let shared = AppRouter()
 
     class func auth() -> AuthViewController {
 
@@ -15,10 +17,13 @@ class AppRouter {
         let dashViewModel = DashViewModel()
         let dashViewController = DashViewController(viewModel: dashViewModel)
 
-        let viewControllers = [dashViewController]
+        let viewControllers = [dashViewController, AppRouter.expensesChat()]
 
-        let tabBarController = UITabBarController()
-        tabBarController.viewControllers = viewControllers.map { UINavigationController(rootViewController: $0) }
+        let tabBarController = TabBarController(viewControllers: viewControllers.map {
+            UINavigationController(rootViewController: $0)
+        })
+
+        tabBarController.delegate = AppRouter.shared
 
         return tabBarController
     }
@@ -31,5 +36,18 @@ class AppRouter {
 
         return viewController
     }
+}
 
+extension AppRouter: UITabBarControllerDelegate {
+
+    func tabBarController(_ tabBarController: UITabBarController,
+                          shouldSelect viewController: UIViewController) -> Bool {
+        if let navBar = viewController as? UINavigationController, navBar.viewControllers[0] is ChatViewController {
+
+            let vc = UINavigationController(rootViewController: AppRouter.expensesChat())
+            tabBarController.present(vc, animated: true, completion: nil)
+            return false
+        }
+        return true
+    }
 }

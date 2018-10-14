@@ -15,6 +15,7 @@
 		3C1EFB172144985000C2C802 /* DashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EFB162144985000C2C802 /* DashViewModel.swift */; };
 		3C1EFB1A2144986B00C2C802 /* DashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EFB182144986B00C2C802 /* DashViewController.swift */; };
 		3C1EFB1B2144986B00C2C802 /* DashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1EFB192144986B00C2C802 /* DashViewController.xib */; };
+		3C2728202172B26A006052B0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C27281F2172B26A006052B0 /* TabBarController.swift */; };
 		3C36B7FA21583DA6000935F3 /* AccountsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36B7F921583DA6000935F3 /* AccountsData.swift */; };
 		3C5B13092169A9BB00E4793F /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5B13082169A9BB00E4793F /* MessageData.swift */; };
 		3C5B130C2169AA3300E4793F /* MonetaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5B130B2169AA3300E4793F /* MonetaryExtensions.swift */; };
@@ -70,6 +71,7 @@
 		3C1EFB162144985000C2C802 /* DashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashViewModel.swift; sourceTree = "<group>"; };
 		3C1EFB182144986B00C2C802 /* DashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashViewController.swift; sourceTree = "<group>"; };
 		3C1EFB192144986B00C2C802 /* DashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashViewController.xib; sourceTree = "<group>"; };
+		3C27281F2172B26A006052B0 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3C36B7F921583DA6000935F3 /* AccountsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsData.swift; sourceTree = "<group>"; };
 		3C5B13082169A9BB00E4793F /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
 		3C5B130B2169AA3300E4793F /* MonetaryExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonetaryExtensions.swift; sourceTree = "<group>"; };
@@ -124,6 +126,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		3C27281E2172B222006052B0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3C27281F2172B26A006052B0 /* TabBarController.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		3C5B130A2169AA0F00E4793F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +186,7 @@
 		B92A743C20D59DE60064D75C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3C27281E2172B222006052B0 /* Components */,
 				3C02E14C21581C8500F6697B /* Services */,
 				B92A743D20D59DF90064D75C /* Models */,
 				B92A744120D5A37B0064D75C /* Templates */,
@@ -532,6 +543,7 @@
 				3CC0BD0A2166FA9A000BAEB2 /* ChatTableViewCell.swift in Sources */,
 				3C02E15021581E8500F6697B /* UserData.swift in Sources */,
 				3CC0BD072166F515000BAEB2 /* ExpenseViewModel.swift in Sources */,
+				3C2728202172B26A006052B0 /* TabBarController.swift in Sources */,
 				B9715D2320CD9CEE007C06E6 /* AppDelegate.swift in Sources */,
 				3C1EFB172144985000C2C802 /* DashViewModel.swift in Sources */,
 				B92A744E20D5C1980064D75C /* AuthService.swift in Sources */,

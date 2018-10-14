@@ -36,7 +36,13 @@ class DashViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.reload()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.setupNavigationBar()
     }
 
     @objc func reload() {
@@ -58,11 +64,7 @@ class DashViewController: UIViewController {
 
     private func setupViews() {
         self.tableView.contentInset.top = Constants.headerHeight
-
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = .clear
+        self.setupNavigationBar()
 
         self.tableView.refreshControl = UIRefreshControl()
         self.tableView.refreshControl?.tintColor = .clear
@@ -70,6 +72,13 @@ class DashViewController: UIViewController {
             .addTarget(self,
                        action: #selector(self.reload),
                        for: .valueChanged)
+    }
+
+    private func setupNavigationBar() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
     }
 
     private func setupRx() {
