@@ -11,24 +11,6 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
-  /// Some alert body there
-  internal static let alertMessage = L10n.tr("Localizables", "alert_message")
-  /// Title of the alert
-  internal static let alertTitle = L10n.tr("Localizables", "alert_title")
-
-  internal enum Apples {
-    /// You have %d apples
-    internal static func count(_ p1: Int) -> String {
-      return L10n.tr("Localizables", "apples.count", p1)
-    }
-  }
-
-  internal enum Bananas {
-    /// Those %d bananas belong to %@.
-    internal static func owner(_ p1: Int, _ p2: String) -> String {
-      return L10n.tr("Localizables", "bananas.owner", p1, p2)
-    }
-  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name

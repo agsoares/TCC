@@ -14,10 +14,13 @@ class AppRouter: NSObject {
 
     class func home(user: User? = nil) -> UITabBarController {
 
-        let dashViewModel = DashViewModel()
-        let dashViewController = DashViewController(viewModel: dashViewModel)
+        let dashViewController = AppRouter.dashViewController(user: user)
+        let expensesViewController = AppRouter.expensesChat()
+        let configViewController = AppRouter.configViewController(user: user)
 
-        let viewControllers = [dashViewController, AppRouter.expensesChat()]
+        let viewControllers = [dashViewController,
+                               expensesViewController,
+                               configViewController]
 
         let tabBarController = TabBarController(viewControllers: viewControllers.map {
             UINavigationController(rootViewController: $0)
@@ -28,12 +31,23 @@ class AppRouter: NSObject {
         return tabBarController
     }
 
-    class func expensesChat() -> UIViewController {
+    class func dashViewController(user: User? = nil) -> UIViewController {
+        let viewModel = DashViewModel()
+        let viewController = DashViewController(viewModel: viewModel)
+        return viewController
+    }
 
+    class func expensesChat() -> UIViewController {
         let viewModel = ExpenseViewModel()
         let viewController = ChatViewController()
         viewController.viewModel = viewModel
 
+        return viewController
+    }
+
+    class func configViewController(user: User? = nil) -> UIViewController {
+        //let viewModel = DashViewModel()
+        let viewController = ConfigViewController()
         return viewController
     }
 }

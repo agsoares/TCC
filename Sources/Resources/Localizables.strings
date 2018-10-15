@@ -5,8 +5,3 @@
   Created by Adriano Guimarães Soares on 07/10/18.
   Copyright © 2018 Adriano Soares. All rights reserved.
 */
-
-"alert_title"   = "Title of the alert";
-"alert_message" = "Some alert body there";
-"apples.count"  = "You have %d apples";
-"bananas.owner" = "Those %d bananas belong to %@.";

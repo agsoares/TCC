@@ -82,12 +82,21 @@ class DashViewController: UIViewController {
     }
 
     private func setupRx() {
-        Observable.just(["Teste",
-                         "Teste"])
-            .bind(to: tableView.rx.items(cellIdentifier: "Cell",
-                                         cellType: UITableViewCell.self)) { _, model, cell in
-                cell.textLabel?.text = model
-            }
+        let dataSource = RxTableViewSectionedReloadDataSource<DashViewModel.AccountSections> (configureCell: {
+            (section, tableView, indexPath, model) -> UITableViewCell in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+
+            cell.textLabel?.text = model
+
+            return cell
+        })
+
+        dataSource.titleForHeaderInSection = { dataSource, index in
+            return dataSource.sectionModels[index].model
+        }
+
+        viewModel.accountsObservable
+            .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: self.disposeBag)
     }
 }
