@@ -11,6 +11,7 @@ class DashViewController: UIViewController {
 
     var disposeBag = DisposeBag()
     var viewModel: DashViewModel!
+    var dataSource: RxTableViewSectionedReloadDataSource<DashViewModel.AccountSections>?
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
@@ -64,6 +65,7 @@ class DashViewController: UIViewController {
 
     private func setupViews() {
         self.tableView.contentInset.top = Constants.headerHeight
+        self.tableView.contentOffset.y = -Constants.headerHeight
         self.setupNavigationBar()
 
         self.tableView.refreshControl = UIRefreshControl()
@@ -83,17 +85,18 @@ class DashViewController: UIViewController {
 
     private func setupRx() {
         let dataSource = RxTableViewSectionedReloadDataSource<DashViewModel.AccountSections> (configureCell: {
-            (section, tableView, indexPath, model) -> UITableViewCell in
+            (_, tableView, indexPath, model) -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
+            cell.contentView.backgroundColor = Asset.Colors.darkBackground.color
             cell.textLabel?.text = model
+            cell.textLabel?.textColor = UIColor.white
+            cell.selectionStyle = .none
 
             return cell
         })
 
-        dataSource.titleForHeaderInSection = { dataSource, index in
-            return dataSource.sectionModels[index].model
-        }
+        self.dataSource = dataSource
 
         viewModel.accountsObservable
             .bind(to: tableView.rx.items(dataSource: dataSource))
@@ -106,8 +109,23 @@ extension DashViewController: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         headerHeightConstraint.constant = scrollView.contentOffset.y
     }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableCell(withIdentifier: "Cell")
+
+        header?.contentView.backgroundColor = Asset.Colors.secundary.color
+        header?.textLabel?.text = self.dataSource?.sectionModels[section].model
+        header?.textLabel?.textColor = Asset.Colors.grey.color
+
+        return header
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
 }
 
+/*
 extension DashViewController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -122,3 +140,4 @@ extension DashViewController: UITableViewDataSource {
         return UITableViewCell()
     }
 }
+*/
