@@ -124,6 +124,14 @@ PODS:
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - RxSwift (4.3.1)
+  - RxSwiftExt (3.4.0):
+    - RxSwiftExt/Core (= 3.4.0)
+    - RxSwiftExt/RxCocoa (= 3.4.0)
+  - RxSwiftExt/Core (3.4.0):
+    - RxSwift (~> 4.0)
+  - RxSwiftExt/RxCocoa (3.4.0):
+    - RxCocoa (~> 4.0)
+    - RxSwiftExt/Core
   - Sourcery (0.15.0)
   - SwiftGen (6.0.2)
   - SwiftLint (0.27.0)
@@ -136,6 +144,7 @@ DEPENDENCIES:
   - RxCocoa (~> 4.0)
   - RxDataSources
   - RxSwift (~> 4.0)
+  - RxSwiftExt
   - Sourcery
   - SwiftGen
   - SwiftLint
@@ -166,6 +175,7 @@ SPEC REPOS:
     - RxCocoa
     - RxDataSources
     - RxSwift
+    - RxSwiftExt
     - Sourcery
     - SwiftGen
     - SwiftLint
@@ -195,10 +205,11 @@ SPEC CHECKSUMS:
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  RxSwiftExt: 01f8ecbeeb355698e9c75365ebe908b00dacf45d
   Sourcery: 5895672cae353cdbfa95f3f4aaeb75a664d76f6a
   SwiftGen: e5b047067aa84082826a0c4f1c4c2ddc95bcf74c
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
 
-PODFILE CHECKSUM: c0f53f0a0a2c3f75aae3a07d3739b030ee3e493e
+PODFILE CHECKSUM: 43f9caccd4d673d70098579c9717ab77c0956a11
 
 COCOAPODS: 1.5.3

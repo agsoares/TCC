@@ -6,10 +6,7 @@ class AppRouter: NSObject {
     static let shared = AppRouter()
 
     class func auth() -> AuthViewController {
-
-        let viewModel = AuthViewModel(authService: AuthService())
-        let viewController = AuthViewController(viewModel: viewModel)
-        return viewController
+        return AuthViewController()
     }
 
     class func home(user: User? = nil) -> UITabBarController {

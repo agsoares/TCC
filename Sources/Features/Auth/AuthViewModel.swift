@@ -1,21 +1,36 @@
 import Foundation
 import RxSwift
+import RxSwiftExt
 import Firebase
 
-class AuthViewModel {
-    let authService: AuthService
+func authViewModel (
+    email: Observable<String?>,
+    password: Observable<String?>,
+    signInButton: Observable<()>,
+    signUpButton: Observable<()>
+) -> (
+    isValid: Observable<Bool>,
+    userLoggedIn: Observable<User>
+) {
 
-    init(authService: AuthService) {
-        self.authService = authService
-    }
+    let credentials = Observable.combineLatest(email, password)
+    let isValid = credentials
+        .map({ !($0.0?.isEmpty ?? true) && !($0.1?.isEmpty ?? true) })
+        .startWith(false)
 
-    func signUp(withEmail email: String?, andPassword password: String?) -> Observable<User> {
+    let signIn = signInButton
+        .flatMap({ credentials })
+        .flatMap({ AuthService().signIn(withEmail: $0.0, andPassword: $0.1) })
 
-        return authService.signUp(withEmail: email, andPassword: password)
-    }
+    let signUp = signUpButton
+        .flatMap({ credentials })
+        .flatMap({ AuthService().signUp(withEmail: $0.0, andPassword: $0.1) })
 
-    func signIn(withEmail email: String?, andPassword password: String?) -> Observable<User> {
 
-        return authService.signIn(withEmail: email, andPassword: password)
-    }
+    let userLoggedIn = Observable.merge(signIn, signUp)
+
+    return (
+        isValid: isValid,
+        userLoggedIn: userLoggedIn
+    )
 }

@@ -6,6 +6,7 @@ target 'TCC' do
   pod 'ObjectMapper',   '~> 3.3'
 
   pod 'RxSwift',        '~> 4.0'
+  pod 'RxSwiftExt'
   pod 'RxCocoa',        '~> 4.0'
   pod 'RxDataSources'
 
