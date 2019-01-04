@@ -12,7 +12,6 @@ func authViewModel (
     isValid: Observable<Bool>,
     userLoggedIn: Observable<User>
 ) {
-
     let credentials = Observable.combineLatest(email, password)
     let isValid = credentials
         .map({ !($0.0?.isEmpty ?? true) && !($0.1?.isEmpty ?? true) })
@@ -25,7 +24,6 @@ func authViewModel (
     let signUp = signUpButton
         .flatMap({ credentials })
         .flatMap({ AuthService().signUp(withEmail: $0.0, andPassword: $0.1) })
-
 
     let userLoggedIn = Observable.merge(signIn, signUp)
 

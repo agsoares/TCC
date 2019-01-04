@@ -32,7 +32,6 @@ class AuthViewController: UIViewController {
         )
 
         isValid
-            .debug()
             .subscribe()
             .disposed(by: self.disposeBag)
 
