@@ -1,18 +1,26 @@
 import Foundation
+import XCoordinator
 import RxSwift
 
 class ExpenseViewModel: ChatViewModel {
-    var messageDataSource: Observable<[MessageData]>
+    var messageDataSource: Observable<[MessageSection]>
 
-    private let messages = BehaviorSubject<[MessageData]>(value: [])
+    private let messages = BehaviorSubject<[MessageSection]>(value: [])
 
-    init() {
+    private let router: AnyRouter<ChatRoute>
 
-       messageDataSource = messages.asObserver()
+    init(router: AnyRouter<ChatRoute>) {
+        self.router = router
 
-       messages.onNext([
-        MessageData(text: "text", isFromUser: false),
-        MessageData(text: "Lorem ipsum dolor sit amet", isFromUser: true)
-       ])
+        messageDataSource = messages.asObserver()
+
+        let messageData = [
+            MessageData(text: "text", isFromUser: false),
+            MessageData(text: "Lorem ipsum dolor sit amet", isFromUser: true)
+        ]
+        .map({ MessageDataItem(messageData: $0) })
+
+        messages.onNext([ MessageSection(model: "", items: messageData ) ])
+
     }
 }

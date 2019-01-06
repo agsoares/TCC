@@ -8,12 +8,23 @@ class AuthViewController: UIViewController {
         static let nibName = "AuthViewController"
     }
 
+    private let viewModel: AuthViewModel
+
     var disposeBag = DisposeBag()
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
+
+    init(viewModel: AuthViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +35,7 @@ class AuthViewController: UIViewController {
         let (
             isValid,
             userLoggedIn
-        ) = authViewModel(
+        ) = viewModel.bind(
             email: emailTextField.rx.text.asObservable(),
             password: passwordTextField.rx.text.asObservable(),
             signInButton: signInButton.rx.tap.asObservable().throttle(0.5, scheduler: MainScheduler.instance),
@@ -36,11 +47,8 @@ class AuthViewController: UIViewController {
             .disposed(by: self.disposeBag)
 
         userLoggedIn
-            .subscribeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] user in
-                let vc = AppRouter.home(user: user)
-                self?.present(vc, animated: true, completion: nil)
-            })
+            .debug()
+            .subscribe()
             .disposed(by: self.disposeBag)
     }
 }

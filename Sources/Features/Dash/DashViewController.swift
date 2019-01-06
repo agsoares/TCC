@@ -10,7 +10,7 @@ class DashViewController: UIViewController {
     }
 
     var disposeBag = DisposeBag()
-    var viewModel: DashViewModel!
+    var viewModel: DashViewModel
     var dataSource: RxTableViewSectionedReloadDataSource<DashViewModel.AccountSections>?
 
     @IBOutlet weak var tableView: UITableView!
@@ -19,8 +19,8 @@ class DashViewController: UIViewController {
     @IBOutlet weak var refreshControl: UIActivityIndicatorView!
 
     init(viewModel: DashViewModel) {
-        super.init(nibName: Constants.nibName, bundle: Bundle.init(for: DashViewController.self))
         self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -33,6 +33,7 @@ class DashViewController: UIViewController {
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
 
         setupViews()
+        bindViewModel()
         setupRx()
     }
 
@@ -83,6 +84,10 @@ class DashViewController: UIViewController {
         self.navigationController?.view.backgroundColor = .clear
     }
 
+    private func bindViewModel() {
+
+    }
+
     private func setupRx() {
         let dataSource = RxTableViewSectionedReloadDataSource<DashViewModel.AccountSections> (configureCell: {
             (_, tableView, indexPath, model) -> UITableViewCell in
@@ -124,20 +129,3 @@ extension DashViewController: UITableViewDelegate {
         return 40
     }
 }
-
-/*
-extension DashViewController: UITableViewDataSource {
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
-}
-*/

@@ -5,28 +5,17 @@ import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    var window: UIWindow? = UIWindow()
+    let router = AppCoordinator().anyRouter
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        FirebaseApp.configure()
         self.setupNavigationBar()
         self.setupTabBar()
 
-        let window  = UIWindow(frame: UIScreen.main.bounds)
+        router.setRoot(for: window ?? UIWindow())
 
-        let initialViewController: UIViewController
-        if let firebaseUser = Auth.auth().currentUser {
-            initialViewController = AppRouter.home(user: firebaseUser)
-        } else {
-            initialViewController = AppRouter.auth()
-        }
-
-        window.rootViewController = initialViewController
-        window.makeKeyAndVisible()
-
-        self.window = window
         return true
     }
 

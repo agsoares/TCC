@@ -4,11 +4,19 @@ import RxDataSources
 
 class ChatViewController: UIViewController {
 
-    var viewModel: ChatViewModel!
-
+    private let viewModel: ChatViewModel
     private let disposeBag = DisposeBag()
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
+
+    init(viewModel: ChatViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,16 +34,21 @@ class ChatViewController: UIViewController {
     }
 
     private func setupRx() {
+        let dataSource = RxTableViewSectionedReloadDataSource<ChatViewModel.MessageSection>(configureCell: {
+            (_, tableView, indexPath, item) -> UITableViewCell in
+
+            let cell = tableView.dequeueReusableCell(withIdentifier: item.identifier, for: indexPath) as? Cell
+            cell?.configure(withItem: item)
+            return (cell as? UITableViewCell) ?? UITableViewCell()
+        })
+
         viewModel.messageDataSource
-            .debug()
-            .bind(to: tableView.rx.items(cellIdentifier: ChatTableViewCell.identifier,
-                                         cellType: ChatTableViewCell.self)) { _, model, cell in
-                cell.configureCell(withMessage: model)
-            }
+            .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: self.disposeBag)
     }
 
     @objc private func close() {
+
         self.dismiss(animated: true, completion: nil)
     }
 }

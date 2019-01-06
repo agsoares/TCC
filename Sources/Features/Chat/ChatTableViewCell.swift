@@ -10,26 +10,20 @@ import UIKit
 
 class ChatTableViewCell: UITableViewCell {
 
-    static let identifier = "ChatTableViewCell"
-
     @IBOutlet private weak var messageView: UIView!
     @IBOutlet private weak var messageLabel: UILabel!
     @IBOutlet private var rightConstraint: NSLayoutConstraint!
     @IBOutlet private var leftConstraint: NSLayoutConstraint!
+}
 
-    var message: MessageData?
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-
+extension ChatTableViewCell: Cell {
+    static var identifier: String {
+        return "ChatTableViewCell"
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
-    func configureCell(withMessage message: MessageData) {
-        self.message = message
+    func configure(withItem item: CellItem) {
+        guard let item = item as? MessageDataItem else { return }
+        let message = item.messageData
 
         rightConstraint.isActive = true
         leftConstraint.isActive  = true
@@ -45,6 +39,13 @@ class ChatTableViewCell: UITableViewCell {
         }
 
         messageLabel.text = message.text
-
     }
+}
+
+struct MessageDataItem: CellItem {
+    let identifier: String = {
+        return ChatTableViewCell.identifier
+    }()
+
+    var messageData: MessageData
 }

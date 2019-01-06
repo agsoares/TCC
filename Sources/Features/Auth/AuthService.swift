@@ -13,7 +13,6 @@ class AuthService {
                 }
                 if let result = result {
                     observer.onNext(result.user)
-                    observer.onCompleted()
                 }
             }
             return Disposables.create()
@@ -29,7 +28,6 @@ class AuthService {
                 }
                 if let result = result {
                     observer.onNext(result.user)
-                    observer.onCompleted()
                 }
             }
             return Disposables.create()
