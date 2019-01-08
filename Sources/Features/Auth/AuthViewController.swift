@@ -4,10 +4,6 @@ import Firebase
 
 class AuthViewController: UIViewController {
 
-    struct Constants {
-        static let nibName = "AuthViewController"
-    }
-
     private let viewModel: AuthViewModel
 
     var disposeBag = DisposeBag()
@@ -47,7 +43,6 @@ class AuthViewController: UIViewController {
             .disposed(by: self.disposeBag)
 
         userLoggedIn
-            .debug()
             .subscribe()
             .disposed(by: self.disposeBag)
     }

@@ -15,8 +15,8 @@ class AuthViewModel {
     func bind(
         email: Observable<String?>,
         password: Observable<String?>,
-        signInButton: Observable<()>,
-        signUpButton: Observable<()>
+        signInButton: Observable<Void>,
+        signUpButton: Observable<Void>
     ) -> (
         isValid: Observable<Bool>,
         userLoggedIn: Observable<Void>
