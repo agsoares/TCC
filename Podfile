@@ -3,18 +3,21 @@ inhibit_all_warnings!
 use_frameworks!
 
 target 'TCC' do
-  pod 'ObjectMapper',   '~> 3.3'
+  pod 'ObjectMapper',   '~> 3.0'
+  pod 'SnapKit',        '~> 4.0'
 
   pod 'RxSwift',        '~> 4.0'
   pod 'RxSwiftExt'
   pod 'RxCocoa',        '~> 4.0'
-  pod 'RxDataSources'
+  pod 'RxDataSources',  '~> 3.0'
 
-  pod 'XCoordinator', '~> 1.0'
+  pod 'Action',         '~> 3.0'
+
+  pod 'XCoordinator',         '~> 1.0'
   pod 'XCoordinator/RxSwift', '~> 1.0'
   
-  pod 'Firebase/Core',  '~> 5.0'
-  pod 'Firebase/Auth',  '~> 5.0'
+  pod 'Firebase/Core',        '~> 5.0'
+  pod 'Firebase/Auth',        '~> 5.0'
   pod 'Firebase/Firestore'
 
   pod 'SwiftGen'
