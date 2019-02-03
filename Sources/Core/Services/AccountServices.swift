@@ -14,7 +14,6 @@ class AccountServices {
 
     init() {
         let settings = db.settings
-        settings.areTimestampsInSnapshotsEnabled = true
         db.settings = settings
     }
 
