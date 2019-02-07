@@ -494,7 +494,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TCC/Pods-TCC-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TCC/Pods-TCC-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
@@ -537,7 +537,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TCC/Pods-TCC-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TCC/Pods-TCC-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B92A744C20D5AD3B0064D75C /* Sourcery */ = {
