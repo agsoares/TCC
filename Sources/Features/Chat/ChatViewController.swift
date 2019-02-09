@@ -23,9 +23,7 @@ class ChatViewController: UIViewController {
         self.setupRx()
         self.setupViews()
 
-        tableView.register(UINib(nibName: ChatTableViewCell.identifier, bundle: nil),
-                           forCellReuseIdentifier: ChatTableViewCell.identifier)
-
+        tableView.registerNib(ChatTableViewCell.self)
     }
 
     private func setupViews() {
@@ -37,9 +35,7 @@ class ChatViewController: UIViewController {
         let dataSource = RxTableViewSectionedReloadDataSource<ChatViewModel.MessageSection>(configureCell: {
             (_, tableView, indexPath, item) -> UITableViewCell in
 
-            let cell = tableView.dequeueReusableCell(withIdentifier: item.identifier, for: indexPath) as? Cell
-            cell?.configure(withItem: item)
-            return (cell as? UITableViewCell) ?? UITableViewCell()
+            return tableView.dequeueAndConfigure(withItem: item, forIndexPath: indexPath)
         })
 
         viewModel.messageDataSource

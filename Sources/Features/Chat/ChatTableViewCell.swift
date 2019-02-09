@@ -16,10 +16,7 @@ class ChatTableViewCell: UITableViewCell {
     @IBOutlet private var leftConstraint: NSLayoutConstraint!
 }
 
-extension ChatTableViewCell: Cell {
-    static var identifier: String {
-        return "ChatTableViewCell"
-    }
+extension ChatTableViewCell: ConfigurableTableViewCell {
 
     func configure(withItem item: CellItem) {
         guard let item = item as? MessageDataItem else { return }
@@ -43,9 +40,9 @@ extension ChatTableViewCell: Cell {
 }
 
 struct MessageDataItem: CellItem {
-    let identifier: String = {
+    var identifier: String {
         return ChatTableViewCell.identifier
-    }()
+    }
 
     var messageData: MessageData
 }
