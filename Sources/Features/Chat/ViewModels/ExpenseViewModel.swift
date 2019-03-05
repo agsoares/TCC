@@ -1,5 +1,4 @@
 import Foundation
-import XCoordinator
 import RxSwift
 
 class ExpenseViewModel: ChatViewModel {
@@ -7,10 +6,7 @@ class ExpenseViewModel: ChatViewModel {
 
     private let messages = BehaviorSubject<[MessageSection]>(value: [])
 
-    private let router: AnyRouter<ChatRoute>
-
-    init(router: AnyRouter<ChatRoute>) {
-        self.router = router
+    init() {
 
         messageDataSource = messages.asObserver()
 

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3C02E14E21581CB200F6697B /* AccountServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C02E14D21581CB200F6697B /* AccountServices.swift */; };
 		3C02E15021581E8500F6697B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C02E14F21581E8500F6697B /* UserData.swift */; };
+		3C162885222366E90004109D /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C162884222366E90004109D /* AppRouter.swift */; };
+		3C16288722236BA40004109D /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C16288622236BA40004109D /* UIViewController+Extensions.swift */; };
 		3C1809DB216305CF0022A18A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C1809DA216305CF0022A18A /* Colors.xcassets */; };
 		3C1EFB142144953100C2C802 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EFB122144953100C2C802 /* AuthViewController.swift */; };
 		3C1EFB152144953100C2C802 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1EFB132144953100C2C802 /* AuthViewController.xib */; };
@@ -31,8 +33,6 @@
 		3C6211EC220E89800010AE43 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6211EB220E897F0010AE43 /* Cell.swift */; };
 		3C7B0EC8219FE0F7004FADC3 /* MonetaryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B0EC5219FE0F7004FADC3 /* MonetaryHelper.swift */; };
 		3C7B0EC9219FE0F7004FADC3 /* SafetyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B0EC6219FE0F7004FADC3 /* SafetyHelper.swift */; };
-		3CA389D621DEFAD0003DEA31 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA389D521DEFAD0003DEA31 /* AppCoordinator.swift */; };
-		3CA389D821DF0172003DEA31 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA389D721DF0172003DEA31 /* HomeCoordinator.swift */; };
 		3CC0BCFF2166EA70000BAEB2 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0BCFE2166EA70000BAEB2 /* ChatViewModel.swift */; };
 		3CC0BD032166EDC1000BAEB2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0BD012166EDC1000BAEB2 /* ChatViewController.swift */; };
 		3CC0BD042166EDC1000BAEB2 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC0BD022166EDC1000BAEB2 /* ChatViewController.xib */; };
@@ -40,9 +40,7 @@
 		3CC0BD0A2166FA9A000BAEB2 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0BD082166FA9A000BAEB2 /* ChatTableViewCell.swift */; };
 		3CC0BD0B2166FA9A000BAEB2 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC0BD092166FA9A000BAEB2 /* ChatTableViewCell.xib */; };
 		3CCD1BDC21FFDA8200FC09F4 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCD1BDB21FFDA8200FC09F4 /* Operators.swift */; };
-		3CE666AD21E0FDBF00C970EB /* ChatCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE666AC21E0FDBF00C970EB /* ChatCoordinator.swift */; };
 		3CE666B021E12CEF00C970EB /* AnyRouter+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE666AF21E12CEF00C970EB /* AnyRouter+Error.swift */; };
-		3CE666B321E1459600C970EB /* DashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE666B221E1459600C970EB /* DashCoordinator.swift */; };
 		3CE666B521E179D400C970EB /* CellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE666B421E179D400C970EB /* CellItem.swift */; };
 		74D8A3204C42DD05BA5C463E /* Pods_TCC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB084F10BB0315B84309F56 /* Pods_TCC.framework */; };
 		B92A744020D59F580064D75C /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A743F20D59F580064D75C /* Assets.generated.swift */; };
@@ -75,6 +73,8 @@
 		1D2839A0BF1E54773E0E9C17 /* Pods-TCC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCC/Pods-TCC.debug.xcconfig"; sourceTree = "<group>"; };
 		3C02E14D21581CB200F6697B /* AccountServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServices.swift; sourceTree = "<group>"; };
 		3C02E14F21581E8500F6697B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		3C162884222366E90004109D /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		3C16288622236BA40004109D /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		3C1809DA216305CF0022A18A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		3C1EFB122144953100C2C802 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		3C1EFB132144953100C2C802 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
@@ -97,8 +97,6 @@
 		3C6211EB220E897F0010AE43 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		3C7B0EC5219FE0F7004FADC3 /* MonetaryHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonetaryHelper.swift; sourceTree = "<group>"; };
 		3C7B0EC6219FE0F7004FADC3 /* SafetyHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafetyHelper.swift; sourceTree = "<group>"; };
-		3CA389D521DEFAD0003DEA31 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		3CA389D721DF0172003DEA31 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		3CC0BCFE2166EA70000BAEB2 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		3CC0BD012166EDC1000BAEB2 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		3CC0BD022166EDC1000BAEB2 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
@@ -106,9 +104,7 @@
 		3CC0BD082166FA9A000BAEB2 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		3CC0BD092166FA9A000BAEB2 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		3CCD1BDB21FFDA8200FC09F4 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
-		3CE666AC21E0FDBF00C970EB /* ChatCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCoordinator.swift; sourceTree = "<group>"; };
 		3CE666AF21E12CEF00C970EB /* AnyRouter+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyRouter+Error.swift"; sourceTree = "<group>"; };
-		3CE666B221E1459600C970EB /* DashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashCoordinator.swift; sourceTree = "<group>"; };
 		3CE666B421E179D400C970EB /* CellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellItem.swift; sourceTree = "<group>"; };
 		4BB084F10BB0315B84309F56 /* Pods_TCC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92A743F20D59F580064D75C /* Assets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.generated.swift; sourceTree = "<group>"; };
@@ -189,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				3CC0BD052166F4F2000BAEB2 /* ViewModels */,
-				3CE666AC21E0FDBF00C970EB /* ChatCoordinator.swift */,
 				3CC0BD012166EDC1000BAEB2 /* ChatViewController.swift */,
 				3CC0BD022166EDC1000BAEB2 /* ChatViewController.xib */,
 				3CC0BD082166FA9A000BAEB2 /* ChatTableViewCell.swift */,
@@ -210,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				3CE666AF21E12CEF00C970EB /* AnyRouter+Error.swift */,
+				3C16288622236BA40004109D /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -217,7 +213,6 @@
 		3CE666B121E1314000C970EB /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3CA389D721DF0172003DEA31 /* HomeCoordinator.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -287,7 +282,6 @@
 			isa = PBXGroup;
 			children = (
 				3C1EFB192144986B00C2C802 /* DashViewController.xib */,
-				3CE666B221E1459600C970EB /* DashCoordinator.swift */,
 				3C1EFB182144986B00C2C802 /* DashViewController.swift */,
 				3C1EFB162144985000C2C802 /* DashViewModel.swift */,
 			);
@@ -339,7 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				B9715D2220CD9CEE007C06E6 /* AppDelegate.swift */,
-				3CA389D521DEFAD0003DEA31 /* AppCoordinator.swift */,
+				3C162884222366E90004109D /* AppRouter.swift */,
 				B9715D2E20CD9CEE007C06E6 /* Info.plist */,
 				B93F61C220CDD8AA00E9D678 /* GoogleService-Info.plist */,
 			);
@@ -508,7 +502,6 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/XCoordinator/XCoordinator.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -529,7 +522,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCoordinator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -593,7 +585,6 @@
 				3CE666B521E179D400C970EB /* CellItem.swift in Sources */,
 				3C7B0EC9219FE0F7004FADC3 /* SafetyHelper.swift in Sources */,
 				3C6211EC220E89800010AE43 /* Cell.swift in Sources */,
-				3CA389D621DEFAD0003DEA31 /* AppCoordinator.swift in Sources */,
 				3CCD1BDC21FFDA8200FC09F4 /* Operators.swift in Sources */,
 				3C1EFB142144953100C2C802 /* AuthViewController.swift in Sources */,
 				B93F61C120CDD2A700E9D678 /* AuthViewModel.swift in Sources */,
@@ -601,22 +592,21 @@
 				B92A744420D5A8DE0064D75C /* AutoMappable.swift in Sources */,
 				3C7B0EC8219FE0F7004FADC3 /* MonetaryHelper.swift in Sources */,
 				3C5B13092169A9BB00E4793F /* MessageData.swift in Sources */,
+				3C162885222366E90004109D /* AppRouter.swift in Sources */,
 				3C5B131D2169C23600E4793F /* Fonts.generated.swift in Sources */,
 				3C5B13102169B90800E4793F /* Localizables.generated.swift in Sources */,
 				3CC0BCFF2166EA70000BAEB2 /* ChatViewModel.swift in Sources */,
 				3CC0BD032166EDC1000BAEB2 /* ChatViewController.swift in Sources */,
 				3CC0BD0A2166FA9A000BAEB2 /* ChatTableViewCell.swift in Sources */,
-				3CE666B321E1459600C970EB /* DashCoordinator.swift in Sources */,
-				3CE666AD21E0FDBF00C970EB /* ChatCoordinator.swift in Sources */,
 				3C02E15021581E8500F6697B /* UserData.swift in Sources */,
 				3CC0BD072166F515000BAEB2 /* ExpenseViewModel.swift in Sources */,
 				3CE666B021E12CEF00C970EB /* AnyRouter+Error.swift in Sources */,
 				3C2728202172B26A006052B0 /* TabBarController.swift in Sources */,
 				B9715D2320CD9CEE007C06E6 /* AppDelegate.swift in Sources */,
-				3CA389D821DF0172003DEA31 /* HomeCoordinator.swift in Sources */,
 				3C1EFB172144985000C2C802 /* DashViewModel.swift in Sources */,
 				B92A744E20D5C1980064D75C /* AuthService.swift in Sources */,
 				B92A744020D59F580064D75C /* Assets.generated.swift in Sources */,
+				3C16288722236BA40004109D /* UIViewController+Extensions.swift in Sources */,
 				3C02E14E21581CB200F6697B /* AccountServices.swift in Sources */,
 				B92A744A20D5AC9E0064D75C /* AutoMappable.generated.swift in Sources */,
 				3C36B7FA21583DA6000935F3 /* AccountsData.swift in Sources */,

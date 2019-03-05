@@ -12,9 +12,6 @@ target 'TCC' do
   pod 'RxDataSources',  '~> 3.0'
 
   pod 'Action',         '~> 3.0'
-
-  pod 'XCoordinator',         '~> 1.0'
-  pod 'XCoordinator/RxSwift', '~> 1.0'
   
   pod 'Firebase/Core',        '~> 5.0'
   pod 'Firebase/Auth',        '~> 5.0'

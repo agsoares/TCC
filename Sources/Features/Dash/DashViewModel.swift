@@ -1,5 +1,4 @@
 import Foundation
-import XCoordinator
 import Firebase
 import RxSwift
 import RxDataSources
@@ -10,13 +9,11 @@ class DashViewModel {
     let accountServices = AccountServices()
     let accountsObservable: Observable<[AccountSections]>
 
-    private let user: User
-    private let router: AnyRouter<DashRoute>
+    private let user: User?
 
     private let accountsSubject = BehaviorSubject<[AccountSections]>(value: [])
 
-    init(router: AnyRouter<DashRoute>, user: User) {
-        self.router = router
+    init(user: User?) {
         self.user = user
         accountsObservable = accountsSubject.asObserver()
     }

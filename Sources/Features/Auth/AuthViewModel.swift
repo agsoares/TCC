@@ -1,16 +1,9 @@
 import Foundation
-import XCoordinator
 import RxSwift
 import RxSwiftExt
 import Firebase
 
 class AuthViewModel {
-
-    let router: AnyRouter<AppRoute>
-
-    init(router: AnyRouter<AppRoute>) {
-        self.router = router
-    }
 
     func bind(
         email: Observable<String?>,
@@ -19,7 +12,7 @@ class AuthViewModel {
         signUpButton: Observable<Void>
     ) -> (
         isValid: Observable<Bool>,
-        userLoggedIn: Observable<Void>
+        userLoggedIn: Observable<Event<User>>
     ) {
         let credentials = Observable.combineLatest(email, password)
 
@@ -38,17 +31,6 @@ class AuthViewModel {
             .share(replay: 1)
 
         let userLoggedIn = Observable.merge(signIn, signUp)
-            .do(onNext: { [weak self] event in
-                switch event {
-                case .next(let user):
-                    self?.router.trigger(.home(user))
-                case .error(let error):
-                    self?.router.showError(message: error.localizedDescription)
-                default:
-                    break
-                }
-            })
-            .mapTo(())
 
         return (
             isValid: isValid,

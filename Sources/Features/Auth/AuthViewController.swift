@@ -43,7 +43,21 @@ class AuthViewController: UIViewController {
             .disposed(by: self.disposeBag)
 
         userLoggedIn
-            .subscribe()
+            .subscribe(onNext: { [weak self] event in
+                switch event {
+
+                case .next(let user):
+                    let home = AppRouter.home(user: user)
+                    home.modalTransitionStyle = .crossDissolve
+                    self?.present(home, animated: true, completion: nil)
+
+                case .error(let error):
+                    self?.showError(message: error.localizedDescription)
+
+                case .completed:
+                    break
+                }
+            })
             .disposed(by: self.disposeBag)
     }
 }
