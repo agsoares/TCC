@@ -34,8 +34,8 @@ class AuthViewController: UIViewController {
         ) = viewModel.bind(
             email: emailTextField.rx.text.asObservable(),
             password: passwordTextField.rx.text.asObservable(),
-            signInButton: signInButton.rx.tap.asObservable().throttle(0.5, scheduler: MainScheduler.instance),
-            signUpButton: signUpButton.rx.tap.asObservable().throttle(0.5, scheduler: MainScheduler.instance)
+            signInButton: signInButton.rx.tapWithThrottle.asObservable(),
+            signUpButton: signUpButton.rx.tapWithThrottle.asObservable()
         )
 
         isValid
