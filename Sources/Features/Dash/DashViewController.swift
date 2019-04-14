@@ -119,9 +119,9 @@ extension DashViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableCell(withIdentifier: "Cell")
 
-        header?.contentView.backgroundColor = Asset.Colors.secundary.color
+        //header?.contentView.backgroundColor = Asset.Colors.secundary.color
         header?.textLabel?.text = self.dataSource?.sectionModels[section].model
-        header?.textLabel?.textColor = Asset.Colors.grey.color
+        //header?.textLabel?.textColor = Asset.Colors.grey.color
 
         return header
     }

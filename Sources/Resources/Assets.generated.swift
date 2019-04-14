@@ -24,11 +24,15 @@ internal enum Asset {
     internal static let earnings = ImageAsset(name: "earnings")
   }
   internal enum Colors {
+    internal static let greenAccent = ColorAsset(name: "greenAccent")
+    internal static let orangeAccent = ColorAsset(name: "orangeAccent")
+    internal static let redAccent = ColorAsset(name: "redAccent")
     internal static let darkBackground = ColorAsset(name: "darkBackground")
-    internal static let darkerBackground = ColorAsset(name: "darkerBackground")
-    internal static let grey = ColorAsset(name: "grey")
-    internal static let primary = ColorAsset(name: "primary")
-    internal static let secundary = ColorAsset(name: "secundary")
+    internal static let mediumBackground = ColorAsset(name: "mediumBackground")
+    internal static let green = ColorAsset(name: "green")
+    internal static let red = ColorAsset(name: "red")
+    internal static let lightText = ColorAsset(name: "lightText")
+    internal static let mediumText = ColorAsset(name: "mediumText")
   }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

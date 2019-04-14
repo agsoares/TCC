@@ -27,11 +27,11 @@ extension ChatTableViewCell: ConfigurableTableViewCell {
 
         if message.isFromUser {
             leftConstraint.isActive = false
-            messageView.backgroundColor = Asset.Colors.primary.color
+            //messageView.backgroundColor = Asset.Colors.primary.color
             messageLabel.textAlignment = .right
         } else {
             rightConstraint.isActive = false
-            messageView.backgroundColor = Asset.Colors.secundary.color
+            //ßmessageView.backgroundColor = Asset.Colors.secundary.color
             messageLabel.textAlignment = .left
         }
 

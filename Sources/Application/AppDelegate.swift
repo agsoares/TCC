@@ -29,8 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func setupNavigationBar() {
-        UINavigationBar.appearance().barTintColor = Asset.Colors.secundary.color
-        UINavigationBar.appearance().tintColor = Asset.Colors.primary.color
+        //UINavigationBar.appearance().barTintColor = Asset.Colors.secundary.color
+        //UINavigationBar.appearance().tintColor = Asset.Colors.primary.color
         UINavigationBar.appearance().titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.white
         ]
@@ -38,8 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func setupTabBar() {
-        UITabBar.appearance().barTintColor = Asset.Colors.secundary.color
-        UITabBar.appearance().tintColor = Asset.Colors.primary.color
+        //UITabBar.appearance().barTintColor = Asset.Colors.secundary.color
+        //UITabBar.appearance().tintColor = Asset.Colors.primary.color
         UITabBar.appearance().isTranslucent = false
     }
 }

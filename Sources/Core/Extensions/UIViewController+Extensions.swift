@@ -1,6 +1,7 @@
 import UIKit
 
 extension UIViewController {
+
     func topMostViewController() -> UIViewController {
         if self.presentedViewController == nil {
             return self

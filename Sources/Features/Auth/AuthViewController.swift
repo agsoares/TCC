@@ -1,17 +1,38 @@
 import UIKit
 import RxSwift
+import SnapKit
 import Firebase
 
 class AuthViewController: UIViewController {
 
     private let viewModel: AuthViewModel
+    private var disposeBag = DisposeBag()
 
-    var disposeBag = DisposeBag()
+    private var emailTextField: TextField = {
+        return TextField(frame: .zero)
+            .placeholder("Email")
+    }()
 
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var signInButton: UIButton!
-    @IBOutlet weak var signUpButton: UIButton!
+    private var passwordTextField: TextField = {
+        return TextField(frame: .zero)
+            .placeholder("Senha")
+            .secure()
+    }()
+
+    private var signInButton: ActionButton = {
+        return ActionButton(frame: .zero)
+            .title("Entrar")
+            .rounded()
+            .green()
+    }()
+
+    private var signUpButton: ActionButton = {
+        return ActionButton(frame: .zero)
+            .title("Cadastrar")
+            .rounded()
+            .green()
+            .text()
+    }()
 
     init(viewModel: AuthViewModel) {
         self.viewModel = viewModel
@@ -24,10 +45,50 @@ class AuthViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
+        setupConstraints()
         bindViewModel()
     }
 
-    func bindViewModel() {
+    private func setupViews() {
+        view.backgroundColor = Asset.Colors.darkBackground.color
+
+        view.addSubviews([emailTextField, passwordTextField])
+        view.addSubviews([signInButton, signUpButton])
+    }
+
+    private func setupConstraints() {
+
+        emailTextField.snp.makeConstraints { make in
+            make.height.equalTo(44)
+            make.centerY.equalToSuperview().dividedBy(1.5)
+            make.left.equalTo(self.view).offset(24)
+            make.right.equalTo(self.view)
+        }
+
+        passwordTextField.snp.makeConstraints { make in
+            make.height.equalTo(44)
+            make.top.equalTo(self.emailTextField.snp.bottom).offset(10)
+            make.left.equalTo(self.view).offset(24)
+            make.right.equalTo(self.view)
+        }
+
+        signUpButton.snp.makeConstraints { make in
+            make.height.equalTo(44)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-20)
+            make.left.equalTo(self.view).offset(20)
+            make.right.equalTo(self.view).offset(-20)
+        }
+
+        signInButton.snp.makeConstraints { make in
+            make.height.equalTo(44)
+            make.bottom.equalTo(signUpButton.snp.top).offset(-10)
+            make.left.equalTo(self.view).offset(20)
+            make.right.equalTo(self.view).offset(-20)
+        }
+    }
+
+    private func bindViewModel() {
         let (
             isValid,
             userLoggedIn
