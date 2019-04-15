@@ -55,7 +55,7 @@ class AuthViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        if let bottomConstraint = self.bottomConstraint {
+        if let bottomConstraint = self.bottomConstraint?.layoutConstraints.first {
             KeyboardObserver.addConstraint(bottomConstraint, noKeyboardConst: 20, keyboardConst: 8)
         }
     }
@@ -63,7 +63,7 @@ class AuthViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
-        if let bottomConstraint = self.bottomConstraint {
+        if let bottomConstraint = self.bottomConstraint?.layoutConstraints.first {
             KeyboardObserver.removeConstraint(bottomConstraint)
         }
     }
