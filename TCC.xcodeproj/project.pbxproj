@@ -23,6 +23,7 @@
 		3C3332872262F4B40079EAB8 /* RxSwift+Extenions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3332862262F4B40079EAB8 /* RxSwift+Extenions.swift */; };
 		3C333289226307960079EAB8 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C333288226307960079EAB8 /* TextField.swift */; };
 		3C36B7FA21583DA6000935F3 /* AccountsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36B7F921583DA6000935F3 /* AccountsData.swift */; };
+		3C43F62B22642DF5005E2A95 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C43F62A22642DF5005E2A95 /* KeyboardObserver.swift */; };
 		3C5B13092169A9BB00E4793F /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5B13082169A9BB00E4793F /* MessageData.swift */; };
 		3C5B130E2169B63100E4793F /* Localizables.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C5B130D2169B63100E4793F /* Localizables.strings */; };
 		3C5B13102169B90800E4793F /* Localizables.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5B130F2169B90700E4793F /* Localizables.generated.swift */; };
@@ -91,6 +92,7 @@
 		3C3332862262F4B40079EAB8 /* RxSwift+Extenions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+Extenions.swift"; sourceTree = "<group>"; };
 		3C333288226307960079EAB8 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		3C36B7F921583DA6000935F3 /* AccountsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsData.swift; sourceTree = "<group>"; };
+		3C43F62A22642DF5005E2A95 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 		3C5B13082169A9BB00E4793F /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
 		3C5B130D2169B63100E4793F /* Localizables.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizables.strings; sourceTree = "<group>"; };
 		3C5B130F2169B90700E4793F /* Localizables.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizables.generated.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				3C7B0EC5219FE0F7004FADC3 /* MonetaryHelper.swift */,
 				3C7B0EC6219FE0F7004FADC3 /* SafetyHelper.swift */,
 				3CCD1BDB21FFDA8200FC09F4 /* Operators.swift */,
+				3C43F62A22642DF5005E2A95 /* KeyboardObserver.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -628,6 +631,7 @@
 				3C1EFB172144985000C2C802 /* DashViewModel.swift in Sources */,
 				B92A744E20D5C1980064D75C /* AuthService.swift in Sources */,
 				B92A744020D59F580064D75C /* Assets.generated.swift in Sources */,
+				3C43F62B22642DF5005E2A95 /* KeyboardObserver.swift in Sources */,
 				3C16288722236BA40004109D /* UIViewController+Extensions.swift in Sources */,
 				3C02E14E21581CB200F6697B /* AccountServices.swift in Sources */,
 				B92A744A20D5AC9E0064D75C /* AutoMappable.generated.swift in Sources */,

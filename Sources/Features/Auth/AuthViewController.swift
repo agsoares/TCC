@@ -34,6 +34,8 @@ class AuthViewController: UIViewController {
             .text()
     }()
 
+    private var bottomConstraint: Constraint?
+
     init(viewModel: AuthViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -50,8 +52,28 @@ class AuthViewController: UIViewController {
         bindViewModel()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        if let bottomConstraint = self.bottomConstraint {
+            KeyboardObserver.addConstraint(bottomConstraint, noKeyboardConst: 20, keyboardConst: 8)
+        }
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        if let bottomConstraint = self.bottomConstraint {
+            KeyboardObserver.removeConstraint(bottomConstraint)
+        }
+    }
+
     private func setupViews() {
         view.backgroundColor = Asset.Colors.darkBackground.color
+        emailTextField.keyboardType = .emailAddress
+        emailTextField.autocapitalizationType = .none
+        emailTextField.autocorrectionType = .no
+        passwordTextField.keyboardType = .default
 
         view.addSubviews([emailTextField, passwordTextField])
         view.addSubviews([signInButton, signUpButton])
@@ -75,7 +97,7 @@ class AuthViewController: UIViewController {
 
         signUpButton.snp.makeConstraints { make in
             make.height.equalTo(44)
-            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-20)
+            self.bottomConstraint = make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-20).constraint
             make.left.equalTo(self.view).offset(20)
             make.right.equalTo(self.view).offset(-20)
         }
