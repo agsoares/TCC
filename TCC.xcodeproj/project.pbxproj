@@ -16,13 +16,13 @@
 		3C1EFB142144953100C2C802 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EFB122144953100C2C802 /* AuthViewController.swift */; };
 		3C1EFB172144985000C2C802 /* DashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EFB162144985000C2C802 /* DashViewModel.swift */; };
 		3C1EFB1A2144986B00C2C802 /* DashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EFB182144986B00C2C802 /* DashViewController.swift */; };
-		3C1EFB1B2144986B00C2C802 /* DashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1EFB192144986B00C2C802 /* DashViewController.xib */; };
 		3C2728202172B26A006052B0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C27281F2172B26A006052B0 /* TabBarController.swift */; };
 		3C3332832262F0FF0079EAB8 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3332822262F0FF0079EAB8 /* Buttons.swift */; };
 		3C3332852262F34F0079EAB8 /* VIews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3332842262F34F0079EAB8 /* VIews.swift */; };
 		3C3332872262F4B40079EAB8 /* RxSwift+Extenions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3332862262F4B40079EAB8 /* RxSwift+Extenions.swift */; };
 		3C333289226307960079EAB8 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C333288226307960079EAB8 /* TextField.swift */; };
 		3C36B7FA21583DA6000935F3 /* AccountsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36B7F921583DA6000935F3 /* AccountsData.swift */; };
+		3C3C996B2265932600068783 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C996A2265932600068783 /* Label.swift */; };
 		3C43F62B22642DF5005E2A95 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C43F62A22642DF5005E2A95 /* KeyboardObserver.swift */; };
 		3C5B13092169A9BB00E4793F /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5B13082169A9BB00E4793F /* MessageData.swift */; };
 		3C5B130E2169B63100E4793F /* Localizables.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C5B130D2169B63100E4793F /* Localizables.strings */; };
@@ -85,13 +85,13 @@
 		3C1EFB122144953100C2C802 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		3C1EFB162144985000C2C802 /* DashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashViewModel.swift; sourceTree = "<group>"; };
 		3C1EFB182144986B00C2C802 /* DashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashViewController.swift; sourceTree = "<group>"; };
-		3C1EFB192144986B00C2C802 /* DashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashViewController.xib; sourceTree = "<group>"; };
 		3C27281F2172B26A006052B0 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3C3332822262F0FF0079EAB8 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		3C3332842262F34F0079EAB8 /* VIews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIews.swift; sourceTree = "<group>"; };
 		3C3332862262F4B40079EAB8 /* RxSwift+Extenions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+Extenions.swift"; sourceTree = "<group>"; };
 		3C333288226307960079EAB8 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		3C36B7F921583DA6000935F3 /* AccountsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsData.swift; sourceTree = "<group>"; };
+		3C3C996A2265932600068783 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		3C43F62A22642DF5005E2A95 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 		3C5B13082169A9BB00E4793F /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
 		3C5B130D2169B63100E4793F /* Localizables.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizables.strings; sourceTree = "<group>"; };
@@ -166,6 +166,7 @@
 				3C3332842262F34F0079EAB8 /* VIews.swift */,
 				3C3332822262F0FF0079EAB8 /* Buttons.swift */,
 				3C333288226307960079EAB8 /* TextField.swift */,
+				3C3C996A2265932600068783 /* Label.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -304,7 +305,6 @@
 		B92A744F20D5D4300064D75C /* Dash */ = {
 			isa = PBXGroup;
 			children = (
-				3C1EFB192144986B00C2C802 /* DashViewController.xib */,
 				3C1EFB182144986B00C2C802 /* DashViewController.swift */,
 				3C1EFB162144985000C2C802 /* DashViewModel.swift */,
 			);
@@ -467,7 +467,6 @@
 				3C5B131B2169C1AD00E4793F /* OpenSans-SemiBold.ttf in Resources */,
 				3C5B13172169C1AD00E4793F /* OpenSans-Light.ttf in Resources */,
 				3C1809DB216305CF0022A18A /* Colors.xcassets in Resources */,
-				3C1EFB1B2144986B00C2C802 /* DashViewController.xib in Resources */,
 				B93F61B820CDAB7B00E9D678 /* .swiftlint.yml in Resources */,
 				3CC0BD0B2166FA9A000BAEB2 /* ChatTableViewCell.xib in Resources */,
 				B92A744620D5A9470064D75C /* AutoMappable.stencil in Resources */,
@@ -615,6 +614,7 @@
 				3C5B13092169A9BB00E4793F /* MessageData.swift in Sources */,
 				3C049DD322508E2100EAAA47 /* RxCocoa+Extensions.swift in Sources */,
 				3C3332872262F4B40079EAB8 /* RxSwift+Extenions.swift in Sources */,
+				3C3C996B2265932600068783 /* Label.swift in Sources */,
 				3C162885222366E90004109D /* AppRouter.swift in Sources */,
 				3C5B131D2169C23600E4793F /* Fonts.generated.swift in Sources */,
 				3C5B13102169B90800E4793F /* Localizables.generated.swift in Sources */,
