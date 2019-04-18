@@ -2,6 +2,8 @@ import UIKit
 import RxSwift
 import Firebase
 
+// All hope abandon, ye who enter here! ~ Dante Alighieri
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -11,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         FirebaseApp.configure()
-
         self.setupNavigationBar()
         self.setupTabBar()
 
@@ -29,8 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func setupNavigationBar() {
-        //UINavigationBar.appearance().barTintColor = Asset.Colors.secundary.color
-        //UINavigationBar.appearance().tintColor = Asset.Colors.primary.color
+        UINavigationBar.appearance().barTintColor = Asset.Colors.mediumBackground.color
+        UINavigationBar.appearance().tintColor = Asset.Colors.greenAccent.color
         UINavigationBar.appearance().titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.white
         ]
@@ -38,8 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func setupTabBar() {
-        //UITabBar.appearance().barTintColor = Asset.Colors.secundary.color
-        //UITabBar.appearance().tintColor = Asset.Colors.primary.color
+        UITabBar.appearance().barTintColor = Asset.Colors.mediumBackground.color
+        UITabBar.appearance().tintColor = Asset.Colors.greenAccent.color
         UITabBar.appearance().isTranslucent = false
     }
 }

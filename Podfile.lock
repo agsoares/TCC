@@ -128,7 +128,7 @@ PODS:
 
 DEPENDENCIES:
   - Action (~> 3.0)
-  - Firebase/Auth (~> 5.0)
+  - Firebase/Auth
   - Firebase/Core (~> 5.0)
   - Firebase/Firestore
   - ObjectMapper (~> 3.0)
@@ -200,6 +200,6 @@ SPEC CHECKSUMS:
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
 
-PODFILE CHECKSUM: 809a7cfec9568458c7f956a37f7d8cc760be353d
+PODFILE CHECKSUM: d8669ab6c0bbf56aee980c624633cb5c8cbd52d6
 
 COCOAPODS: 1.6.0

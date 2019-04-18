@@ -24,6 +24,8 @@
 		3C36B7FA21583DA6000935F3 /* AccountsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36B7F921583DA6000935F3 /* AccountsData.swift */; };
 		3C3C996B2265932600068783 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C996A2265932600068783 /* Label.swift */; };
 		3C43F62B22642DF5005E2A95 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C43F62A22642DF5005E2A95 /* KeyboardObserver.swift */; };
+		3C48F7482266DE6A004E1D1D /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C48F7472266DE6A004E1D1D /* AccountCell.swift */; };
+		3C48F74A2266DE7B004E1D1D /* AccountCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C48F7492266DE7B004E1D1D /* AccountCellItem.swift */; };
 		3C5B13092169A9BB00E4793F /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5B13082169A9BB00E4793F /* MessageData.swift */; };
 		3C5B130E2169B63100E4793F /* Localizables.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C5B130D2169B63100E4793F /* Localizables.strings */; };
 		3C5B13102169B90800E4793F /* Localizables.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5B130F2169B90700E4793F /* Localizables.generated.swift */; };
@@ -93,6 +95,8 @@
 		3C36B7F921583DA6000935F3 /* AccountsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsData.swift; sourceTree = "<group>"; };
 		3C3C996A2265932600068783 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		3C43F62A22642DF5005E2A95 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
+		3C48F7472266DE6A004E1D1D /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		3C48F7492266DE7B004E1D1D /* AccountCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCellItem.swift; sourceTree = "<group>"; };
 		3C5B13082169A9BB00E4793F /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
 		3C5B130D2169B63100E4793F /* Localizables.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizables.strings; sourceTree = "<group>"; };
 		3C5B130F2169B90700E4793F /* Localizables.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizables.generated.swift; sourceTree = "<group>"; };
@@ -169,6 +173,15 @@
 				3C3C996A2265932600068783 /* Label.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		3C48F7462266DE1C004E1D1D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3C48F7472266DE6A004E1D1D /* AccountCell.swift */,
+				3C48F7492266DE7B004E1D1D /* AccountCellItem.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		3C5B13112169BFE800E4793F /* Fonts */ = {
@@ -305,6 +318,7 @@
 		B92A744F20D5D4300064D75C /* Dash */ = {
 			isa = PBXGroup;
 			children = (
+				3C48F7462266DE1C004E1D1D /* Cells */,
 				3C1EFB182144986B00C2C802 /* DashViewController.swift */,
 				3C1EFB162144985000C2C802 /* DashViewModel.swift */,
 			);
@@ -608,6 +622,7 @@
 				3C1EFB142144953100C2C802 /* AuthViewController.swift in Sources */,
 				B93F61C120CDD2A700E9D678 /* AuthViewModel.swift in Sources */,
 				3C1EFB1A2144986B00C2C802 /* DashViewController.swift in Sources */,
+				3C48F74A2266DE7B004E1D1D /* AccountCellItem.swift in Sources */,
 				B92A744420D5A8DE0064D75C /* AutoMappable.swift in Sources */,
 				3C7B0EC8219FE0F7004FADC3 /* MonetaryHelper.swift in Sources */,
 				3C3332832262F0FF0079EAB8 /* Buttons.swift in Sources */,
@@ -620,6 +635,7 @@
 				3C5B13102169B90800E4793F /* Localizables.generated.swift in Sources */,
 				3CC0BCFF2166EA70000BAEB2 /* ChatViewModel.swift in Sources */,
 				3CC0BD032166EDC1000BAEB2 /* ChatViewController.swift in Sources */,
+				3C48F7482266DE6A004E1D1D /* AccountCell.swift in Sources */,
 				3CC0BD0A2166FA9A000BAEB2 /* ChatTableViewCell.swift in Sources */,
 				3C02E15021581E8500F6697B /* UserData.swift in Sources */,
 				3C3332852262F34F0079EAB8 /* VIews.swift in Sources */,

@@ -103,7 +103,6 @@ class DashViewController: UIViewController {
 
         tableView.panGestureRecognizer.addTarget(self, action: #selector(self.panTableView(_:)))
 
-
 //        tableView.refreshControl = UIRefreshControl()
 //        tableView.refreshControl?.tintColor = .clear
 //        tableView.refreshControl?

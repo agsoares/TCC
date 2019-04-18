@@ -13,8 +13,8 @@ target 'TCC' do
 
   pod 'Action',         '~> 3.0'
   
-  pod 'Firebase/Core',        '~> 5.0'
-  pod 'Firebase/Auth',        '~> 5.0'
+  pod 'Firebase/Core',  '~> 5.0'
+  pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
 
   pod 'SwiftGen'
@@ -24,6 +24,8 @@ end
 
 post_install do |installer|
     installer.pods_project.build_configurations.each do |config|
+        config.build_settings['GCC_OPTIMIZATION_LEVEL'] = 's'
+        config.build_settings['SWIFT_OPTIMIZATION_LEVEL'] = '-O'
         if config.name == 'Release'
             config.build_settings['SWIFT_COMPILATION_MODE'] = 'wholemodule'
         end

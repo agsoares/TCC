@@ -70,6 +70,8 @@ class AuthViewController: UIViewController {
 
     private func setupViews() {
         view.backgroundColor = Asset.Colors.darkBackground.color
+
+        addTapToDismiss()
         emailTextField.keyboardType = .emailAddress
         emailTextField.autocapitalizationType = .none
         emailTextField.autocorrectionType = .no
