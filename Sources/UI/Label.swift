@@ -29,4 +29,10 @@ class Label: UILabel {
         self.textColor = color.color
         return self
     }
+
+    @discardableResult
+    func text(_ text: String?) -> Self {
+        self.text = text
+        return self
+    }
 }

@@ -4,7 +4,7 @@ import RxCocoa
 import RxDataSources
 import SnapKit
 
-struct Constants {
+private struct Constants {
     static let maxHeader: CGFloat = 200
     static let minHeader: CGFloat = 20
 }
@@ -13,7 +13,6 @@ class DashViewController: UIViewController {
 
     private var disposeBag = DisposeBag()
     private var viewModel: DashViewModel
-    private var dataSource: RxTableViewSectionedReloadDataSource<DashViewModel.AccountSections>?
 
     private var isPanEnabled: Bool = false
 
@@ -50,7 +49,7 @@ class DashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(AccountCell.self, forCellReuseIdentifier: AccountCell.identifier)
 
         setupViews()
         setupConstraints()
@@ -115,16 +114,16 @@ class DashViewController: UIViewController {
 
         self.balanceLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(self.view.safeAreaLayoutGuide).offset(20)
+            make.top.equalTo(self.view.safeAreaLayoutGuide).inset(20)
         }
 
         self.tableViewContainer.snp.makeConstraints { make in
-            self.headerHeightConstraint = make.top.equalTo(self.view.safeAreaLayoutGuide).offset(Constants.maxHeader).constraint
+            self.headerHeightConstraint = make.top.equalTo(self.view.safeAreaLayoutGuide).inset(Constants.maxHeader).constraint
             make.left.bottom.right.equalTo(self.view.safeAreaLayoutGuide)
         }
 
         self.tableView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(20)
+            make.top.equalToSuperview().inset(20)
             make.left.bottom.right.equalToSuperview()
         }
     }
@@ -176,18 +175,11 @@ class DashViewController: UIViewController {
     private func bindViewModel() {
 
         let dataSource = RxTableViewSectionedReloadDataSource<DashViewModel.AccountSections> (configureCell: {
-            (_, tableView, indexPath, model) -> UITableViewCell in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-
-            cell.contentView.backgroundColor = Asset.Colors.darkBackground.color
-            cell.textLabel?.text = model
-            cell.textLabel?.textColor = UIColor.white
-            cell.selectionStyle = .none
-
+            (_, tableView, indexPath, item) -> UITableViewCell in
+            let cell = tableView.dequeueReusableCell(withIdentifier: item.identifier, for: indexPath)
+            (cell as? ConfigurableTableViewCell)?.configure(withItem: item)
             return cell
         })
-
-        self.dataSource = dataSource
 
         viewModel.accountsObservable
             .bind(to: tableView.rx.items(dataSource: dataSource))

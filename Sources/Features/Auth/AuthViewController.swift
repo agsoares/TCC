@@ -100,15 +100,13 @@ class AuthViewController: UIViewController {
         signUpButton.snp.makeConstraints { make in
             make.height.equalTo(44)
             self.bottomConstraint = make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-20).constraint
-            make.left.equalTo(self.view).offset(20)
-            make.right.equalTo(self.view).offset(-20)
+            make.left.right.equalTo(self.view).inset(20)
         }
 
         signInButton.snp.makeConstraints { make in
             make.height.equalTo(44)
             make.bottom.equalTo(signUpButton.snp.top).offset(-10)
-            make.left.equalTo(self.view).offset(20)
-            make.right.equalTo(self.view).offset(-20)
+            make.left.right.equalTo(self.view).inset(20)
         }
     }
 
