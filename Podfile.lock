@@ -135,7 +135,7 @@ DEPENDENCIES:
   - RxCocoa (~> 4.0)
   - RxDataSources (~> 3.0)
   - RxSwift (~> 4.0)
-  - RxSwiftExt
+  - RxSwiftExt (from `https://github.com/RxSwiftCommunity/RxSwiftExt.git`, branch `master`)
   - SnapKit (~> 4.0)
   - Sourcery
   - SwiftGen
@@ -165,11 +165,20 @@ SPEC REPOS:
     - RxCocoa
     - RxDataSources
     - RxSwift
-    - RxSwiftExt
     - SnapKit
     - Sourcery
     - SwiftGen
     - SwiftLint
+
+EXTERNAL SOURCES:
+  RxSwiftExt:
+    :branch: master
+    :git: https://github.com/RxSwiftCommunity/RxSwiftExt.git
+
+CHECKOUT OPTIONS:
+  RxSwiftExt:
+    :commit: c19e1914be20c99ad921e9f500eb18c81a8debd3
+    :git: https://github.com/RxSwiftCommunity/RxSwiftExt.git
 
 SPEC CHECKSUMS:
   Action: 689181e4c3f6566844178d8a7da6fef39a9597fc
@@ -200,6 +209,6 @@ SPEC CHECKSUMS:
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
 
-PODFILE CHECKSUM: d8669ab6c0bbf56aee980c624633cb5c8cbd52d6
+PODFILE CHECKSUM: 45e277a87ad29a0b9f82bc47928e04f59ce61d93
 
 COCOAPODS: 1.6.0

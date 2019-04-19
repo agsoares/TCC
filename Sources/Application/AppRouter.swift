@@ -43,7 +43,6 @@ class AppRouter: NSObject {
     }
 
     class func configViewController(user: User? = nil) -> UIViewController {
-        //let viewModel = DashViewModel()
         let viewController = ConfigViewController()
         return viewController
     }
@@ -55,7 +54,8 @@ extension AppRouter: UITabBarControllerDelegate {
                           shouldSelect viewController: UIViewController) -> Bool {
         if let navBar = viewController as? UINavigationController, navBar.viewControllers[0] is ChatViewController {
 
-            let vc = UINavigationController(rootViewController: AppRouter.expensesChat())
+            let vc = AppRouter.expensesChat()
+            vc.modalPresentationStyle = .overCurrentContext
             tabBarController.present(vc, animated: true, completion: nil)
             return false
         }

@@ -2,7 +2,7 @@ import UIKit
 import SnapKit
 
 private struct Constants {
-    static let imageSize: CGFloat = 24
+    static let imageSize: CGFloat = 32
 }
 
 class AccountCell: UITableViewCell {
@@ -24,11 +24,14 @@ class AccountCell: UITableViewCell {
             .style(style: .r16)
     }()
 
-    private var iconView: UIImageView = {
-        return UIImageView(frame: .zero)
+    private var iconContainer: UIView = {
+        return UIView(frame: .zero)
             .background(color: Asset.Colors.darkBackground)
             .rounded()
+    }()
 
+    private var iconView: UIImageView = {
+        return UIImageView(frame: .zero)
     }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -49,7 +52,8 @@ class AccountCell: UITableViewCell {
         background(color: Asset.Colors.darkBackground)
 
         contentView.addSubviews([containerView])
-        containerView.addSubviews([iconView, nameLabel, balanceLabel])
+        iconContainer.addSubviews([iconView])
+        containerView.addSubviews([iconContainer, nameLabel, balanceLabel])
     }
 
     private func setupConstraints() {
@@ -58,17 +62,20 @@ class AccountCell: UITableViewCell {
             make.edges.equalToSuperview().inset(8)
         }
 
-        iconView.snp.makeConstraints { (make) in
+        iconContainer.snp.makeConstraints { (make) in
             make.width.equalTo(Constants.imageSize)
             make.height.equalTo(Constants.imageSize)
-            make.left.bottom.equalToSuperview().inset(24)
-            make.top.equalToSuperview().inset(8)
-            make.bottom.equalToSuperview().inset(24)
+            make.top.bottom.equalToSuperview().inset(8)
+            make.left.equalToSuperview().inset(16)
+        }
+
+        iconView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview().inset(8)
         }
 
         nameLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(iconView.snp.right).offset(16)
-            make.centerY.equalTo(iconView.snp.centerY)
+            make.left.equalTo(iconContainer.snp.right).offset(8)
+            make.top.equalToSuperview().inset(8)
         }
 
         balanceLabel.snp.makeConstraints { (make) in
@@ -80,8 +87,11 @@ class AccountCell: UITableViewCell {
 
 extension AccountCell: ConfigurableTableViewCell {
     func configure(withItem item: CellItem) {
-        
+
         guard let accountItem = item as? AccountCellItem else { return }
+        iconView.contentMode = .scaleAspectFit
+        iconView.image = Asset.Assets.earnings.image.withRenderingMode(.alwaysTemplate)
+        iconView.tintColor = Asset.Colors.greenAccent.color
         nameLabel.text(accountItem.name)
         let balanceColor = accountItem.balance >= 0 ? Asset.Colors.green : Asset.Colors.red
         balanceLabel

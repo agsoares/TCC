@@ -7,7 +7,7 @@ target 'TCC' do
   pod 'SnapKit',        '~> 4.0'
 
   pod 'RxSwift',        '~> 4.0'
-  pod 'RxSwiftExt'
+  pod 'RxSwiftExt',     :git => 'https://github.com/RxSwiftCommunity/RxSwiftExt.git', :branch => 'master'
   pod 'RxCocoa',        '~> 4.0'
   pod 'RxDataSources',  '~> 3.0'
 

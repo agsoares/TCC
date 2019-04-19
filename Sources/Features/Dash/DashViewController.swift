@@ -1,6 +1,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxSwiftExt
 import RxDataSources
 import SnapKit
 
@@ -11,10 +12,8 @@ private struct Constants {
 
 class DashViewController: UIViewController {
 
-    private var disposeBag = DisposeBag()
-    private var viewModel: DashViewModel
-
-    private var isPanEnabled: Bool = false
+    private let viewModel: DashViewModel
+    private let reloadPublish = PublishSubject<Void>()
 
     private var balanceLabel: Label = {
         return Label()
@@ -23,20 +22,30 @@ class DashViewController: UIViewController {
     }()
 
     private var tableViewContainer: UIView = {
-        let view = UIView()
-        view.backgroundColor = Asset.Colors.darkBackground.color
-        return view
+        return UIView()
+            .rounded(corners: [.layerMinXMinYCorner, .layerMaxXMinYCorner], radius: 8)
+            .background(color: Asset.Colors.darkBackground)
     }()
 
     private var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.backgroundColor = Asset.Colors.darkBackground.color
+            .background(color: Asset.Colors.darkBackground)
+
+        tableView.separatorStyle = .none
+        tableView.estimatedRowHeight = 85
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.isScrollEnabled = true
+
         return tableView
     }()
 
-    private var headerHeightConstraint: Constraint?
+    private var refreshControl: UIActivityIndicatorView = {
+        let refreshControl = UIActivityIndicatorView()
 
-    //private var refreshControl: UIActivityIndicatorView!
+        return refreshControl
+    }()
+
+    private var headerHeightConstraint: Constraint?
 
     init(viewModel: DashViewModel) {
         self.viewModel = viewModel
@@ -49,7 +58,6 @@ class DashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(AccountCell.self, forCellReuseIdentifier: AccountCell.identifier)
 
         setupViews()
         setupConstraints()
@@ -58,7 +66,6 @@ class DashViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        reload()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -66,51 +73,34 @@ class DashViewController: UIViewController {
         setupNavigationBar()
     }
 
-    @objc func reload() {
-
-        self.viewModel.getUserData()
-            .do(onSubscribe: { [weak self] in
-                //self?.refreshControl.startAnimating()
-                self?.balanceLabel.isHidden = true
-            }, onDispose: { [weak self] in
-                //self?.refreshControl.stopAnimating()
-                self?.balanceLabel.isHidden = false
-                self?.tableView.refreshControl?.endRefreshing()
-            })
-            .subscribe(onNext: { [weak self] (userData) in
-                self?.balanceLabel.text = userData.balance.currency()
-                self?.tableView.reloadData()
-            }).disposed(by: self.disposeBag)
-    }
-
     private func setupViews() {
-        setupNavigationBar()
+        tableView.register(AccountCell.self, forCellReuseIdentifier: AccountCell.identifier)
 
         view.backgroundColor = Asset.Colors.greenAccent.color
 
-        view.addSubviews([balanceLabel, tableViewContainer])
+        view.addSubviews([refreshControl, balanceLabel, tableViewContainer])
         tableViewContainer.addSubviews([tableView])
-
-        tableView.separatorStyle = .none
-        tableView.estimatedRowHeight = 85
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.isScrollEnabled = true
 
         tableView.rx
             .setDelegate(self)
-            .disposed(by: self.disposeBag)
+            .disposed(by: rx.disposeBag)
 
         tableView.panGestureRecognizer.addTarget(self, action: #selector(self.panTableView(_:)))
 
-//        tableView.refreshControl = UIRefreshControl()
-//        tableView.refreshControl?.tintColor = .clear
-//        tableView.refreshControl?
-//            .addTarget(self,
-//                       action: #selector(self.reload),
-//                       for: .valueChanged)
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.tintColor = Asset.Colors.greenAccent.color
+        tableView.refreshControl?.addTarget(
+            self,
+            action: #selector(self.reload),
+            for: .valueChanged
+        )
     }
 
     private func setupConstraints() {
+
+        self.refreshControl.snp.makeConstraints { make in
+            make.center.equalTo(balanceLabel)
+        }
 
         self.balanceLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -165,14 +155,33 @@ class DashViewController: UIViewController {
         })
     }
 
-    private func setupNavigationBar() {
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = true
-        navigationController?.view.backgroundColor = .clear
-    }
-
     private func bindViewModel() {
+
+        let viewDidAppear = rx.methodInvoked(#selector(viewDidAppear(_:))).mapTo(())
+
+        let reloadData = reloadPublish.asObserver()
+
+        let didSelectAccount = tableView.rx.itemSelected
+            .asObservable()
+            .filter({ $0.section == 0 })
+            .map({ $0.row })
+
+        let didSelectCard = tableView.rx.itemSelected
+            .asObservable()
+            .filter({ $0.section == 1 })
+            .map({ $0.row })
+
+        let (
+            isLoading,
+            userData,
+            userAccounts,
+            viewControllerEvents
+        ) = viewModel.bind(
+            viewDidAppear: viewDidAppear,
+            reloadData: reloadData,
+            didSelectAccount: didSelectAccount,
+            didSelectCard: didSelectCard
+        )
 
         let dataSource = RxTableViewSectionedReloadDataSource<DashViewModel.AccountSections> (configureCell: {
             (_, tableView, indexPath, item) -> UITableViewCell in
@@ -181,9 +190,42 @@ class DashViewController: UIViewController {
             return cell
         })
 
-        viewModel.accountsObservable
+        isLoading
+            .observeOn(MainScheduler.asyncInstance)
+            .do(onNext: { [weak self] isLoading in
+                self?.balanceLabel.isHidden = isLoading
+                self?.tableView.refreshControl?.endRefreshing()
+            })
+            .bind(to: self.refreshControl.rx.isAnimating)
+            .disposed(by: rx.disposeBag)
+
+        userData
+            .observeOn(MainScheduler.asyncInstance)
+            .do(onNext: { [weak self] _ in self?.balanceLabel.isHidden = false  })
+            .map({ $0.balance.currency() })
+            .bind(to: self.balanceLabel.rx.text)
+            .disposed(by: rx.disposeBag)
+
+        userAccounts
+            .observeOn(MainScheduler.asyncInstance)
             .bind(to: tableView.rx.items(dataSource: dataSource))
-            .disposed(by: self.disposeBag)
+            .disposed(by: rx.disposeBag)
+
+        viewControllerEvents
+            .observeOn(MainScheduler.asyncInstance)
+            .subscribe()
+            .disposed(by: rx.disposeBag)
+    }
+
+    @objc private func reload() {
+        self.reloadPublish.onNext(())
+    }
+
+    private func setupNavigationBar() {
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.view.backgroundColor = .clear
     }
 }
 
