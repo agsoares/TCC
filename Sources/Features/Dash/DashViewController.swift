@@ -23,7 +23,7 @@ class DashViewController: UIViewController {
 
     private var tableViewContainer: UIView = {
         return UIView()
-            .rounded(corners: [.layerMinXMinYCorner, .layerMaxXMinYCorner], radius: 8)
+            .rounded(corners: [.layerMinXMinYCorner, .layerMaxXMinYCorner], radius: 16)
             .background(color: Asset.Colors.darkBackground)
     }()
 
@@ -98,21 +98,21 @@ class DashViewController: UIViewController {
 
     private func setupConstraints() {
 
-        self.refreshControl.snp.makeConstraints { make in
+        refreshControl.snp.makeConstraints { make in
             make.center.equalTo(balanceLabel)
         }
 
-        self.balanceLabel.snp.makeConstraints { make in
+        balanceLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(self.view.safeAreaLayoutGuide).inset(20)
         }
 
-        self.tableViewContainer.snp.makeConstraints { make in
+        tableViewContainer.snp.makeConstraints { make in
             self.headerHeightConstraint = make.top.equalTo(self.view.safeAreaLayoutGuide).inset(Constants.maxHeader).constraint
             make.left.bottom.right.equalTo(self.view.safeAreaLayoutGuide)
         }
 
-        self.tableView.snp.makeConstraints { make in
+        tableView.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(20)
             make.left.bottom.right.equalToSuperview()
         }

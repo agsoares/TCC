@@ -1,22 +1,27 @@
 import Foundation
+import RxDataSources
 import RxSwift
 
+// TODO: ExpenseFlow
+
 class ExpenseViewModel: ChatViewModel {
-    var messageDataSource: Observable<[MessageSection]>
 
-    private let messages = BehaviorSubject<[MessageSection]>(value: [])
-
-    init() {
-
-        messageDataSource = messages.asObserver()
+    func bind(
+        didSendMessage: Observable<String?>
+    ) -> (
+        messagesDatasource: Observable<[MessageSection]>,
+        viewControllerEvents: Observable<Void>
+    ) {
 
         let messageData = [
             MessageData(text: "text", isFromUser: false),
             MessageData(text: "Lorem ipsum dolor sit amet", isFromUser: true)
         ]
-        .map({ MessageDataItem(messageData: $0) })
+        .map({ MessageCellItem(messageData: $0) })
 
-        messages.onNext([ MessageSection(model: "", items: messageData ) ])
-
+        return (
+            messagesDatasource: Observable<[MessageSection]>.just([MessageSection(model: "", items: messageData)]),
+            viewControllerEvents: Observable<Void>.never()
+        )
     }
 }

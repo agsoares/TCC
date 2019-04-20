@@ -20,6 +20,7 @@ class Label: UILabel {
 
     @discardableResult
     func style(style: FontStyle) -> Self {
+        self.numberOfLines = 0
         self.font = style.font
         return self
     }
