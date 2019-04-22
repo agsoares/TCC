@@ -14,6 +14,12 @@ class ChatViewController: UIViewController {
 
     private let viewModel: ChatViewModel
 
+    private var handleView: UIView = {
+        return UIView()
+            .rounded()
+            .background(color: Asset.Colors.mediumText)
+    }()
+
     private var tableViewContainer: UIView = {
         return UIView()
             .rounded(corners: [.layerMinXMinYCorner, .layerMaxXMinYCorner], radius: 16)
@@ -83,7 +89,7 @@ class ChatViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
+        self.setEditing(false, animated: false)
         if let bottomConstraint = self.bottomConstraint?.layoutConstraints.first {
             KeyboardObserver.removeConstraint(bottomConstraint)
         }
@@ -96,10 +102,14 @@ class ChatViewController: UIViewController {
         messageTextField.autocorrectionType = .no
 
         view.addSubviews([tableViewContainer, textFieldContainer])
-        tableViewContainer.addSubviews([tableView])
+        tableViewContainer.addSubviews([handleView, tableView])
         textFieldContainer.addSubviews([messageTextField, sendMessageButton])
 
         tableView.panGestureRecognizer.addTarget(self, action: #selector(self.panTableView(_:)))
+        [tableViewContainer].forEach {
+            let panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.panTableView(_:)))
+            $0.addGestureRecognizer(panGesture)
+        }
     }
 
     private func setupConstraints() {
@@ -108,6 +118,13 @@ class ChatViewController: UIViewController {
             self.topConstraint = make.top.equalTo(self.view.safeAreaLayoutGuide).inset(Constants.minTop).constraint
             make.left.right.equalTo(self.view.safeAreaLayoutGuide)
             make.bottom.equalTo(textFieldContainer.snp.bottom)
+        }
+
+        handleView.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(8)
+            make.height.equalTo(4)
+            make.width.equalTo(32)
+            make.centerX.equalToSuperview()
         }
 
         textFieldContainer.snp.makeConstraints { make in
@@ -173,6 +190,8 @@ class ChatViewController: UIViewController {
 
     private func bindViewModel() {
 
+        let viewDidAppear = rx.methodInvoked(#selector(viewDidAppear(_:))).mapTo(())
+
         let didChangeText = messageTextField.rx.text.asObservable()
 
         let didSendMessage = sendMessageButton.rx.tapWithThrottle
@@ -184,6 +203,7 @@ class ChatViewController: UIViewController {
             textFieldValue,
             viewControllerEvents
         ) = viewModel.bind(
+            viewDidAppear: viewDidAppear,
             didChangeText: didChangeText,
             didSendMessage: didSendMessage
         )

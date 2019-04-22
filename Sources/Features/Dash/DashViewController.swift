@@ -86,6 +86,10 @@ class DashViewController: UIViewController {
             .disposed(by: rx.disposeBag)
 
         tableView.panGestureRecognizer.addTarget(self, action: #selector(self.panTableView(_:)))
+        [tableViewContainer].forEach {
+            let panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.panTableView(_:)))
+            $0.addGestureRecognizer(panGesture)
+        }
 
         tableView.refreshControl = UIRefreshControl()
         tableView.refreshControl?.tintColor = Asset.Colors.greenAccent.color

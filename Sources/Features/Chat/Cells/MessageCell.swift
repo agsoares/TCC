@@ -37,11 +37,12 @@ class MessageCell: UITableViewCell {
     private func setupConstraints() {
 
         messageLabel.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(8)
+            make.top.bottom.equalToSuperview().inset(8)
+            make.left.right.equalToSuperview().inset(16)
         }
 
         messageView.snp.makeConstraints { make in
-            make.width.equalTo(240)
+            make.width.lessThanOrEqualTo(240)
             make.bottom.top.equalToSuperview().inset(8)
             self.leftConstraint = make.left.equalToSuperview().inset(8).constraint
             self.rightConstraint = make.right.equalToSuperview().inset(8).constraint

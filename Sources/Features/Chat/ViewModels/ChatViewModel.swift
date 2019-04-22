@@ -18,6 +18,7 @@ protocol ChatViewModel {
     var chatState: ChatState? { get set }
 
     func bind(
+        viewDidAppear: Observable<Void>,
         didChangeText: Observable<String?>,
         didSendMessage: Observable<String?>
     ) -> (
@@ -41,7 +42,5 @@ extension ChatViewModel {
         default:
             return text ?? ""
         }
-
-
     }
 }

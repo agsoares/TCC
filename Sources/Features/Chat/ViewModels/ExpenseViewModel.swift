@@ -7,6 +7,7 @@ class ExpenseViewModel: ChatViewModel {
     var chatState: ChatState?
 
     func bind(
+        viewDidAppear: Observable<Void>,
         didChangeText: Observable<String?>,
         didSendMessage: Observable<String?>
     ) -> (
@@ -20,7 +21,7 @@ class ExpenseViewModel: ChatViewModel {
 
         let messageData = [
             MessageData(text: "text", isFromUser: false),
-            MessageData(text: "Lorem ipsum dolor sit amet", isFromUser: true)
+            MessageData(text: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet", isFromUser: true)
         ]
         .map({ MessageCellItem(messageData: $0) })
 
