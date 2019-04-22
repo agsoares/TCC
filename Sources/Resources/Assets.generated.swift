@@ -22,8 +22,10 @@ internal enum Asset {
     internal static let chat = ImageAsset(name: "chat")
     internal static let configuration = ImageAsset(name: "configuration")
     internal static let earnings = ImageAsset(name: "earnings")
+    internal static let send = ImageAsset(name: "send")
   }
   internal enum Colors {
+    internal static let blueAccent = ColorAsset(name: "blueAccent")
     internal static let greenAccent = ColorAsset(name: "greenAccent")
     internal static let orangeAccent = ColorAsset(name: "orangeAccent")
     internal static let redAccent = ColorAsset(name: "redAccent")

@@ -64,7 +64,7 @@ extension MessageCell: ConfigurableTableViewCell {
             messageLabel.textAlignment = .right
         } else {
             rightConstraint?.deactivate()
-            messageView.background(color: Asset.Colors.redAccent)
+            messageView.background(color: Asset.Colors.blueAccent)
             messageLabel.textAlignment = .left
         }
 

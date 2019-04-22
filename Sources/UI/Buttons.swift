@@ -53,4 +53,17 @@ class ActionButton: UIButton {
         backgroundColor = .clear
         return self
     }
+
+    @discardableResult
+    func tint(_ color: ColorAsset) -> Self {
+        self.tintColor = color.color
+        return self
+    }
+
+    @discardableResult
+    func image(_ image: UIImage) -> Self {
+        contentMode = .scaleAspectFit
+        setImage(image.withRenderingMode(.alwaysTemplate), for: .normal)
+        return self
+    }
 }

@@ -40,6 +40,7 @@
 		3C6211EC220E89800010AE43 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6211EB220E897F0010AE43 /* Cell.swift */; };
 		3C7B0EC8219FE0F7004FADC3 /* MonetaryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B0EC5219FE0F7004FADC3 /* MonetaryHelper.swift */; };
 		3C7B0EC9219FE0F7004FADC3 /* SafetyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B0EC6219FE0F7004FADC3 /* SafetyHelper.swift */; };
+		3CB37917226D4FAB009583D6 /* ExpenseFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB37916226D4FAB009583D6 /* ExpenseFlow.swift */; };
 		3CC0BCFF2166EA70000BAEB2 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0BCFE2166EA70000BAEB2 /* ChatViewModel.swift */; };
 		3CC0BD032166EDC1000BAEB2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0BD012166EDC1000BAEB2 /* ChatViewController.swift */; };
 		3CC0BD072166F515000BAEB2 /* ExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0BD062166F515000BAEB2 /* ExpenseViewModel.swift */; };
@@ -110,6 +111,7 @@
 		3C6211EB220E897F0010AE43 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		3C7B0EC5219FE0F7004FADC3 /* MonetaryHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonetaryHelper.swift; sourceTree = "<group>"; };
 		3C7B0EC6219FE0F7004FADC3 /* SafetyHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafetyHelper.swift; sourceTree = "<group>"; };
+		3CB37916226D4FAB009583D6 /* ExpenseFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseFlow.swift; sourceTree = "<group>"; };
 		3CC0BCFE2166EA70000BAEB2 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		3CC0BD012166EDC1000BAEB2 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		3CC0BD062166F515000BAEB2 /* ExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewModel.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			children = (
 				3CC0BCFE2166EA70000BAEB2 /* ChatViewModel.swift */,
 				3CC0BD062166F515000BAEB2 /* ExpenseViewModel.swift */,
+				3CB37916226D4FAB009583D6 /* ExpenseFlow.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 				B92A744420D5A8DE0064D75C /* AutoMappable.swift in Sources */,
 				3C7B0EC8219FE0F7004FADC3 /* MonetaryHelper.swift in Sources */,
 				3C3332832262F0FF0079EAB8 /* Buttons.swift in Sources */,
+				3CB37917226D4FAB009583D6 /* ExpenseFlow.swift in Sources */,
 				3C5B13092169A9BB00E4793F /* MessageData.swift in Sources */,
 				3C049DD322508E2100EAAA47 /* RxCocoa+Extensions.swift in Sources */,
 				3C3332872262F4B40079EAB8 /* RxSwift+Extenions.swift in Sources */,
