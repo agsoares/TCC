@@ -21,7 +21,7 @@
 		3C3332852262F34F0079EAB8 /* VIews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3332842262F34F0079EAB8 /* VIews.swift */; };
 		3C3332872262F4B40079EAB8 /* RxSwift+Extenions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3332862262F4B40079EAB8 /* RxSwift+Extenions.swift */; };
 		3C333289226307960079EAB8 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C333288226307960079EAB8 /* TextField.swift */; };
-		3C36B7FA21583DA6000935F3 /* AccountsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36B7F921583DA6000935F3 /* AccountsData.swift */; };
+		3C36B7FA21583DA6000935F3 /* AccountData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36B7F921583DA6000935F3 /* AccountData.swift */; };
 		3C3C996B2265932600068783 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C996A2265932600068783 /* Label.swift */; };
 		3C43F62B22642DF5005E2A95 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C43F62A22642DF5005E2A95 /* KeyboardObserver.swift */; };
 		3C48F7482266DE6A004E1D1D /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C48F7472266DE6A004E1D1D /* AccountCell.swift */; };
@@ -46,6 +46,9 @@
 		3CC0BD072166F515000BAEB2 /* ExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0BD062166F515000BAEB2 /* ExpenseViewModel.swift */; };
 		3CC0BD0A2166FA9A000BAEB2 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0BD082166FA9A000BAEB2 /* MessageCell.swift */; };
 		3CCD1BDC21FFDA8200FC09F4 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCD1BDB21FFDA8200FC09F4 /* Operators.swift */; };
+		3CD2667A227146840019CA2D /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD26679227146840019CA2D /* CardData.swift */; };
+		3CD2667C227147540019CA2D /* TransactionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2667B227147540019CA2D /* TransactionData.swift */; };
+		3CD2667E227148070019CA2D /* StatementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2667D227148070019CA2D /* StatementData.swift */; };
 		3CD4A0BA226A97BC000F233A /* MessageCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD4A0B9226A97BC000F233A /* MessageCellItem.swift */; };
 		3CE666B021E12CEF00C970EB /* AnyRouter+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE666AF21E12CEF00C970EB /* AnyRouter+Error.swift */; };
 		3CE666B521E179D400C970EB /* CellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE666B421E179D400C970EB /* CellItem.swift */; };
@@ -92,7 +95,7 @@
 		3C3332842262F34F0079EAB8 /* VIews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIews.swift; sourceTree = "<group>"; };
 		3C3332862262F4B40079EAB8 /* RxSwift+Extenions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+Extenions.swift"; sourceTree = "<group>"; };
 		3C333288226307960079EAB8 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
-		3C36B7F921583DA6000935F3 /* AccountsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsData.swift; sourceTree = "<group>"; };
+		3C36B7F921583DA6000935F3 /* AccountData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountData.swift; sourceTree = "<group>"; };
 		3C3C996A2265932600068783 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		3C43F62A22642DF5005E2A95 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 		3C48F7472266DE6A004E1D1D /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
@@ -117,6 +120,9 @@
 		3CC0BD062166F515000BAEB2 /* ExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewModel.swift; sourceTree = "<group>"; };
 		3CC0BD082166FA9A000BAEB2 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		3CCD1BDB21FFDA8200FC09F4 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		3CD26679227146840019CA2D /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
+		3CD2667B227147540019CA2D /* TransactionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionData.swift; sourceTree = "<group>"; };
+		3CD2667D227148070019CA2D /* StatementData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementData.swift; sourceTree = "<group>"; };
 		3CD4A0B9226A97BC000F233A /* MessageCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellItem.swift; sourceTree = "<group>"; };
 		3CE666AF21E12CEF00C970EB /* AnyRouter+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyRouter+Error.swift"; sourceTree = "<group>"; };
 		3CE666B421E179D400C970EB /* CellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellItem.swift; sourceTree = "<group>"; };
@@ -291,7 +297,10 @@
 			isa = PBXGroup;
 			children = (
 				3C02E14F21581E8500F6697B /* UserData.swift */,
-				3C36B7F921583DA6000935F3 /* AccountsData.swift */,
+				3C36B7F921583DA6000935F3 /* AccountData.swift */,
+				3CD26679227146840019CA2D /* CardData.swift */,
+				3CD2667D227148070019CA2D /* StatementData.swift */,
+				3CD2667B227147540019CA2D /* TransactionData.swift */,
 				3C5B13082169A9BB00E4793F /* MessageData.swift */,
 			);
 			path = Models;
@@ -627,6 +636,7 @@
 				3CCD1BDC21FFDA8200FC09F4 /* Operators.swift in Sources */,
 				3C1EFB142144953100C2C802 /* AuthViewController.swift in Sources */,
 				B93F61C120CDD2A700E9D678 /* AuthViewModel.swift in Sources */,
+				3CD2667E227148070019CA2D /* StatementData.swift in Sources */,
 				3C1EFB1A2144986B00C2C802 /* DashViewController.swift in Sources */,
 				3C48F74A2266DE7B004E1D1D /* AccountCellItem.swift in Sources */,
 				B92A744420D5A8DE0064D75C /* AutoMappable.swift in Sources */,
@@ -638,11 +648,13 @@
 				3C3332872262F4B40079EAB8 /* RxSwift+Extenions.swift in Sources */,
 				3C3C996B2265932600068783 /* Label.swift in Sources */,
 				3C162885222366E90004109D /* AppRouter.swift in Sources */,
+				3CD2667C227147540019CA2D /* TransactionData.swift in Sources */,
 				3C5B131D2169C23600E4793F /* Fonts.generated.swift in Sources */,
 				3C5B13102169B90800E4793F /* Localizables.generated.swift in Sources */,
 				3CD4A0BA226A97BC000F233A /* MessageCellItem.swift in Sources */,
 				3CC0BCFF2166EA70000BAEB2 /* ChatViewModel.swift in Sources */,
 				3CC0BD032166EDC1000BAEB2 /* ChatViewController.swift in Sources */,
+				3CD2667A227146840019CA2D /* CardData.swift in Sources */,
 				3C48F7482266DE6A004E1D1D /* AccountCell.swift in Sources */,
 				3CC0BD0A2166FA9A000BAEB2 /* MessageCell.swift in Sources */,
 				3C02E15021581E8500F6697B /* UserData.swift in Sources */,
@@ -659,7 +671,7 @@
 				3C16288722236BA40004109D /* UIViewController+Extensions.swift in Sources */,
 				3C02E14E21581CB200F6697B /* AccountServices.swift in Sources */,
 				B92A744A20D5AC9E0064D75C /* AutoMappable.generated.swift in Sources */,
-				3C36B7FA21583DA6000935F3 /* AccountsData.swift in Sources */,
+				3C36B7FA21583DA6000935F3 /* AccountData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

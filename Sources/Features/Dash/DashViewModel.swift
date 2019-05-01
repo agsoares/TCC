@@ -31,6 +31,14 @@ class DashViewModel {
         })
     }
 
+    func getUserCards() -> Observable<[AccountSections]> {
+        return accountServices.getCardsData().map({
+            [AccountSections(model: "Cartões", items: $0.map({
+                AccountCellItem(name: $0.name ?? "Conta", balance: $0.limit)
+            }))]
+        })
+    }
+
     func bind(
         viewDidAppear: Observable<Void>,
         reloadData: Observable<Void>,
@@ -46,8 +54,11 @@ class DashViewModel {
         let userData = Observable.merge(viewDidAppear, reloadData)
             .flatMapLatest({ [weak self] in self?.getUserData() ?? Observable.never() })
 
+        let accounts = Observable.zip(self.getUserAccounts(), self.getUserCards())
+            .map({ $0 + $1 })
+
         let userAccounts = Observable.merge(viewDidAppear, reloadData)
-            .flatMapLatest({ [weak self] in self?.getUserAccounts() ?? Observable.never() })
+            .flatMapLatest({ accounts })
 
         let isLoading = Observable.merge(
             Observable.merge(viewDidAppear, reloadData).mapTo(true),

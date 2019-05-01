@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 
-struct AccountsData: AutoMappable {
+struct AccountData: AutoMappable {
     var documentId: String = ""
     var name: String?
     var balance: Double = 0.0
