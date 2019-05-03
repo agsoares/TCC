@@ -3,15 +3,13 @@ inhibit_all_warnings!
 use_frameworks!
 
 target 'TCC' do
-  pod 'ObjectMapper',   '~> 3.0'
-  pod 'SnapKit',        '~> 4.0'
+  pod 'ObjectMapper'
+  pod 'SnapKit'
 
-  pod 'RxSwift',        '~> 4.0'
-  pod 'RxSwiftExt',     :git => 'https://github.com/RxSwiftCommunity/RxSwiftExt.git', :branch => 'master'
-  pod 'RxCocoa',        '~> 4.0'
-  pod 'RxDataSources',  '~> 3.0'
-
-  pod 'Action',         '~> 3.0'
+  pod 'RxSwift'
+  pod 'RxSwiftExt'
+  pod 'RxCocoa'
+  pod 'RxDataSources'
   
   pod 'Firebase/Core',  '~> 5.0'
   pod 'Firebase/Auth'

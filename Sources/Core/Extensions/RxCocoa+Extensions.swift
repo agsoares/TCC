@@ -14,6 +14,6 @@ extension Reactive where Base: UIButton {
 
     /// Reactive wrapper for `TouchUpInside` control event with default throttle.
     public var tapWithThrottle: ControlEvent<Void> {
-        return ControlEvent<Void>(events: self.tap.throttle(0.5, scheduler: MainScheduler.asyncInstance))
+        return ControlEvent<Void>(events: self.tap.throttle(.milliseconds(300), scheduler: MainScheduler.asyncInstance))
     }
 }

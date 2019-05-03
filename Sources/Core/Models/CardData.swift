@@ -6,7 +6,7 @@ struct CardData: AutoMappable {
 
     var closingDay: Int = 0
     var dueDay: Int = 0
-    
+
     var limit: Double = 0.0
     var usedLimit: Double = 0.0
 
