@@ -38,6 +38,9 @@
 		3C62032F21741B880027146D /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C62032D21741B880027146D /* ConfigViewController.swift */; };
 		3C62033021741B880027146D /* ConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C62032E21741B880027146D /* ConfigViewController.xib */; };
 		3C6211EC220E89800010AE43 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6211EB220E897F0010AE43 /* Cell.swift */; };
+		3C6900E822B1D5A60071B999 /* AccountHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6900E722B1D5A60071B999 /* AccountHeaderView.swift */; };
+		3C6900EA22B1F5910071B999 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6900E922B1F5910071B999 /* CardCell.swift */; };
+		3C6900EC22B1F7C10071B999 /* CardCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6900EB22B1F7C10071B999 /* CardCellItem.swift */; };
 		3C7B0EC8219FE0F7004FADC3 /* MonetaryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B0EC5219FE0F7004FADC3 /* MonetaryHelper.swift */; };
 		3C7B0EC9219FE0F7004FADC3 /* SafetyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B0EC6219FE0F7004FADC3 /* SafetyHelper.swift */; };
 		3CB37917226D4FAB009583D6 /* ExpenseFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB37916226D4FAB009583D6 /* ExpenseFlow.swift */; };
@@ -112,6 +115,9 @@
 		3C62032D21741B880027146D /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		3C62032E21741B880027146D /* ConfigViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigViewController.xib; sourceTree = "<group>"; };
 		3C6211EB220E897F0010AE43 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		3C6900E722B1D5A60071B999 /* AccountHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHeaderView.swift; sourceTree = "<group>"; };
+		3C6900E922B1F5910071B999 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		3C6900EB22B1F7C10071B999 /* CardCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellItem.swift; sourceTree = "<group>"; };
 		3C7B0EC5219FE0F7004FADC3 /* MonetaryHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonetaryHelper.swift; sourceTree = "<group>"; };
 		3C7B0EC6219FE0F7004FADC3 /* SafetyHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafetyHelper.swift; sourceTree = "<group>"; };
 		3CB37916226D4FAB009583D6 /* ExpenseFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseFlow.swift; sourceTree = "<group>"; };
@@ -135,7 +141,7 @@
 		B93F61B720CDAB7B00E9D678 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B93F61C020CDD2A700E9D678 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		B93F61C220CDD8AA00E9D678 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B9715D1F20CD9CEE007C06E6 /* TCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9715D1F20CD9CEE007C06E6 /* PoupaGrana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoupaGrana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9715D2220CD9CEE007C06E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9715D2920CD9CEE007C06E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9715D2C20CD9CEE007C06E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -184,8 +190,11 @@
 		3C48F7462266DE1C004E1D1D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3C6900E722B1D5A60071B999 /* AccountHeaderView.swift */,
 				3C48F7472266DE6A004E1D1D /* AccountCell.swift */,
 				3C48F7492266DE7B004E1D1D /* AccountCellItem.swift */,
+				3C6900E922B1F5910071B999 /* CardCell.swift */,
+				3C6900EB22B1F7C10071B999 /* CardCellItem.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -260,13 +269,6 @@
 				3C16288622236BA40004109D /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		3CE666B121E1314000C970EB /* Home */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		4D933C33753E241BDE99D5A7 /* Pods */ = {
@@ -366,7 +368,7 @@
 		B9715D2020CD9CEE007C06E6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9715D1F20CD9CEE007C06E6 /* TCC.app */,
+				B9715D1F20CD9CEE007C06E6 /* PoupaGrana.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -398,7 +400,6 @@
 			isa = PBXGroup;
 			children = (
 				B93F61BD20CDD1B900E9D678 /* Auth */,
-				3CE666B121E1314000C970EB /* Home */,
 				B92A744F20D5D4300064D75C /* Dash */,
 				3CC0BD002166ED87000BAEB2 /* Chat */,
 				3C62032C21741B4B0027146D /* Config */,
@@ -432,9 +433,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B9715D1E20CD9CEE007C06E6 /* TCC */ = {
+		B9715D1E20CD9CEE007C06E6 /* PoupaGrana */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9715D3120CD9CEE007C06E6 /* Build configuration list for PBXNativeTarget "TCC" */;
+			buildConfigurationList = B9715D3120CD9CEE007C06E6 /* Build configuration list for PBXNativeTarget "PoupaGrana" */;
 			buildPhases = (
 				095834FAC3E0745385712E20 /* [CP] Check Pods Manifest.lock */,
 				B92A744C20D5AD3B0064D75C /* Sourcery */,
@@ -450,9 +451,9 @@
 			);
 			dependencies = (
 			);
-			name = TCC;
+			name = PoupaGrana;
 			productName = TCC;
-			productReference = B9715D1F20CD9CEE007C06E6 /* TCC.app */;
+			productReference = B9715D1F20CD9CEE007C06E6 /* PoupaGrana.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -485,7 +486,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9715D1E20CD9CEE007C06E6 /* TCC */,
+				B9715D1E20CD9CEE007C06E6 /* PoupaGrana */,
 			);
 		};
 /* End PBXProject section */
@@ -643,7 +644,9 @@
 				3C7B0EC8219FE0F7004FADC3 /* MonetaryHelper.swift in Sources */,
 				3C3332832262F0FF0079EAB8 /* Buttons.swift in Sources */,
 				3CB37917226D4FAB009583D6 /* ExpenseFlow.swift in Sources */,
+				3C6900EC22B1F7C10071B999 /* CardCellItem.swift in Sources */,
 				3C5B13092169A9BB00E4793F /* MessageData.swift in Sources */,
+				3C6900E822B1D5A60071B999 /* AccountHeaderView.swift in Sources */,
 				3C049DD322508E2100EAAA47 /* RxCocoa+Extensions.swift in Sources */,
 				3C3332872262F4B40079EAB8 /* RxSwift+Extenions.swift in Sources */,
 				3C3C996B2265932600068783 /* Label.swift in Sources */,
@@ -663,6 +666,7 @@
 				3C333289226307960079EAB8 /* TextField.swift in Sources */,
 				3CE666B021E12CEF00C970EB /* AnyRouter+Error.swift in Sources */,
 				3C2728202172B26A006052B0 /* TabBarController.swift in Sources */,
+				3C6900EA22B1F5910071B999 /* CardCell.swift in Sources */,
 				B9715D2320CD9CEE007C06E6 /* AppDelegate.swift in Sources */,
 				3C1EFB172144985000C2C802 /* DashViewModel.swift in Sources */,
 				B92A744E20D5C1980064D75C /* AuthService.swift in Sources */,
@@ -844,7 +848,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9715D3120CD9CEE007C06E6 /* Build configuration list for PBXNativeTarget "TCC" */ = {
+		B9715D3120CD9CEE007C06E6 /* Build configuration list for PBXNativeTarget "PoupaGrana" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9715D3220CD9CEE007C06E6 /* Debug */,

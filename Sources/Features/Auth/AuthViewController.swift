@@ -8,6 +8,14 @@ class AuthViewController: UIViewController {
     private let viewModel: AuthViewModel
     private var disposeBag = DisposeBag()
 
+    private var logoImageView: UIImageView = {
+        let logo = UIImageView(frame: .zero)
+        logo.image = Asset.Assets.logo.image.withRenderingMode(.alwaysTemplate)
+        logo.tintColor = Asset.Colors.greenAccent.color
+        logo.contentMode = .scaleAspectFit
+        return logo
+    }()
+
     private var emailTextField: TextField = {
         return TextField(frame: .zero)
             .placeholder("Email")
@@ -78,11 +86,19 @@ class AuthViewController: UIViewController {
         emailTextField.autocorrectionType = .no
         passwordTextField.keyboardType = .default
 
+        view.addSubviews([logoImageView])
         view.addSubviews([emailTextField, passwordTextField])
         view.addSubviews([signInButton, signUpButton])
     }
 
     private func setupConstraints() {
+
+        logoImageView.snp.makeConstraints { make in
+            make.height.equalTo(51)
+            make.width.equalTo(214)
+            make.centerX.equalToSuperview()
+            make.bottom.equalTo(emailTextField.snp.top).offset(-20)
+        }
 
         emailTextField.snp.makeConstraints { make in
             make.height.equalTo(44)
@@ -123,7 +139,12 @@ class AuthViewController: UIViewController {
         )
 
         isValid
-            .subscribe()
+            .do(afterNext: { [weak self] isValid in
+                let alpha: CGFloat = isValid ? 1.0 : 0.5
+                self?.signInButton.alpha = alpha
+                self?.signUpButton.alpha = alpha
+            })
+            .bind(to: signInButton.rx.isEnabled, signUpButton.rx.isEnabled)
             .disposed(by: self.disposeBag)
 
         userLoggedIn

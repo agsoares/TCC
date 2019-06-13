@@ -2,14 +2,20 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "wallet.pdf"
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "earnings-1.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
     "version" : 1,
     "author" : "xcode"
-  },
-  "properties" : {
-    "preserves-vector-representation" : true
   }
 }

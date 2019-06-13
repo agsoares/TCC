@@ -34,7 +34,7 @@ class DashViewModel {
     func getUserCards() -> Observable<[AccountSections]> {
         return accountServices.getCardsData().map({
             [AccountSections(model: "Cartões", items: $0.map({
-                AccountCellItem(name: $0.name ?? "Conta", balance: $0.limit)
+                CardCellItem(name: $0.name ?? "Conta", owed: $0.owedValue, availableLimit: ($0.limit - $0.usedLimit))
             }))]
         })
     }

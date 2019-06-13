@@ -26,6 +26,7 @@ extension CardData {
         case closingDay 
         case dueDay 
         case limit 
+        case owedValue 
         case usedLimit 
     }
 
@@ -35,6 +36,7 @@ extension CardData {
         closingDay <- map[Parameter.closingDay.rawValue]
         dueDay <- map[Parameter.dueDay.rawValue]
         limit <- map[Parameter.limit.rawValue]
+        owedValue <- map[Parameter.owedValue.rawValue]
         usedLimit <- map[Parameter.usedLimit.rawValue]
     }
 }

@@ -37,6 +37,15 @@ class ActionButton: UIButton {
     }
 
     @discardableResult
+    func dark() -> Self {
+        setTitleColor(Asset.Colors.mediumText.color, for: .normal)
+        layer.borderColor = UIColor.clear.cgColor
+        layer.borderWidth = 0
+        backgroundColor = Asset.Colors.mediumBackground.color
+        return self
+    }
+
+    @discardableResult
     func outline() -> Self {
         setTitleColor(backgroundColor, for: .normal)
         layer.borderColor = backgroundColor?.cgColor

@@ -7,13 +7,20 @@ import SnapKit
 
 private struct Constants {
     static let maxHeader: CGFloat = 200
-    static let minHeader: CGFloat = 20
+    static let minHeader: CGFloat = 0
 }
 
 class DashViewController: UIViewController {
 
     private let viewModel: DashViewModel
     private let reloadPublish = PublishSubject<Void>()
+
+    private var balancetitleLabel: Label = {
+        return Label()
+            .style(style: .r14)
+            .color(Asset.Colors.lightText)
+            .text("Saldo atual")
+    }()
 
     private var balanceLabel: Label = {
         return Label()
@@ -75,10 +82,11 @@ class DashViewController: UIViewController {
 
     private func setupViews() {
         tableView.register(AccountCell.self, forCellReuseIdentifier: AccountCell.identifier)
+        tableView.register(CardCell.self, forCellReuseIdentifier: CardCell.identifier)
 
         view.backgroundColor = Asset.Colors.greenAccent.color
 
-        view.addSubviews([refreshControl, balanceLabel, tableViewContainer])
+        view.addSubviews([refreshControl, balancetitleLabel, balanceLabel, tableViewContainer])
         tableViewContainer.addSubviews([tableView])
 
         tableView.rx
@@ -106,9 +114,14 @@ class DashViewController: UIViewController {
             make.center.equalTo(balanceLabel)
         }
 
+        balancetitleLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.bottom.equalTo(self.balanceLabel.snp.top)
+        }
+
         balanceLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(self.view.safeAreaLayoutGuide).inset(20)
+            make.top.equalTo(self.view.safeAreaLayoutGuide).inset(30)
         }
 
         tableViewContainer.snp.makeConstraints { make in
@@ -197,6 +210,7 @@ class DashViewController: UIViewController {
         isLoading
             .observeOn(MainScheduler.asyncInstance)
             .do(onNext: { [weak self] isLoading in
+                self?.balancetitleLabel.isHidden = isLoading
                 self?.balanceLabel.isHidden = isLoading
                 self?.tableView.refreshControl?.endRefreshing()
             })
@@ -260,5 +274,12 @@ extension DashViewController: UITableViewDelegate {
             let percentage = (constraintSize - Constants.minHeader) / (Constants.maxHeader - Constants.minHeader)
             snapHeader(percentage)
         }
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+
+        let headerInfo = ["Contas", "Cartões"]
+
+        return AccountHeaderView(title: headerInfo[section])
     }
 }

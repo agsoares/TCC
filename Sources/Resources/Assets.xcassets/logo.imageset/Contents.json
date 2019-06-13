@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "Logo.pdf",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "configuration.png",
       "scale" : "2x"
     },
     {
