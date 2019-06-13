@@ -7,6 +7,17 @@ enum FormatterType {
     case none
 }
 
+enum InputType {
+    case textField(keyboard:UIKeyboardType, placeholder: String)
+    case buttons([ChatButton])
+    case none
+}
+
+struct ChatButton {
+    var text: String
+    var answer: String
+}
+
 protocol ChatState {
 
     var formatter: FormatterType { get }
@@ -23,7 +34,7 @@ protocol ChatViewModel {
         didSendMessage: Observable<String?>
     ) -> (
         messagesDatasource: Observable<[MessageSection]>,
-        shouldShowTextField: Observable<Bool>,
+        shouldShowTextField: Observable<InputType>,
         textFieldValue: Observable<String>,
         viewControllerEvents: Observable<Void>
     )

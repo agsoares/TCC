@@ -12,16 +12,18 @@ class ExpenseViewModel: ChatViewModel {
         didSendMessage: Observable<String?>
     ) -> (
         messagesDatasource: Observable<[MessageSection]>,
-        shouldShowTextField: Observable<Bool>,
+        shouldShowTextField: Observable<InputType>,
         textFieldValue: Observable<String>,
         viewControllerEvents: Observable<Void>
     ) {
 
-        chatState = ExpenseFlow.other
+        chatState = ExpenseFlow.initial
 
         let messageData = [
-            MessageData(text: "text", isFromUser: false),
-            MessageData(text: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet", isFromUser: true)
+            MessageData(text: "Olá :)", isFromUser: false),
+            MessageData(text: "Qual o tipo de transação que você quer registrar?", isFromUser: false),
+            MessageData(text: "Despesa", isFromUser: true),
+            MessageData(text: "Qual o valor da despesa?", isFromUser: false)
         ]
         .map({ MessageCellItem(messageData: $0) })
 
@@ -30,7 +32,7 @@ class ExpenseViewModel: ChatViewModel {
 
         return (
             messagesDatasource: Observable<[MessageSection]>.just([MessageSection(model: "", items: messageData)]),
-            shouldShowTextField: Observable<Bool>.just(true),
+            shouldShowTextField: Observable<InputType>.just(InputType.textField(keyboard: .numberPad, placeholder: "R$ 0,00")), //.just(.buttons([ChatButton(text: "Receita", answer: ""), ChatButton(text: "Despesa", answer: ""), ChatButton(text: "Transferência", answer: "")])),
             textFieldValue: textFieldValue,
             viewControllerEvents: Observable<Void>.never()
         )

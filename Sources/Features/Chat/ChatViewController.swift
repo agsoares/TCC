@@ -41,6 +41,19 @@ class ChatViewController: UIViewController {
         return tableView
     }()
 
+    private var buttonContainer: UIView = {
+        return UIView()
+            .background(color: Asset.Colors.darkBackground)
+    }()
+
+    private var buttonStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [])
+        stackView.alignment = .center
+        stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
+        return stackView
+    }()
+
     private var textFieldContainer: UIView = {
         return UIView()
             .background(color: Asset.Colors.darkBackground)
@@ -60,6 +73,7 @@ class ChatViewController: UIViewController {
     }()
 
     private var bottomConstraint: Constraint?
+    private var buttonContainerConstraint: Constraint?
     private var topConstraint: Constraint?
 
     init(viewModel: ChatViewModel) {
@@ -101,9 +115,10 @@ class ChatViewController: UIViewController {
         messageTextField.autocapitalizationType = .none
         messageTextField.autocorrectionType = .no
 
-        view.addSubviews([tableViewContainer, textFieldContainer])
+        view.addSubviews([tableViewContainer, buttonContainer, textFieldContainer])
         tableViewContainer.addSubviews([handleView, tableView])
         textFieldContainer.addSubviews([messageTextField, sendMessageButton])
+        buttonContainer.addSubviews([buttonStackView])
 
         tableView.panGestureRecognizer.addTarget(self, action: #selector(self.panTableView(_:)))
         [tableViewContainer].forEach {
@@ -125,6 +140,16 @@ class ChatViewController: UIViewController {
             make.height.equalTo(4)
             make.width.equalTo(32)
             make.centerX.equalToSuperview()
+        }
+
+        buttonContainer.snp.makeConstraints { make in
+            self.buttonContainerConstraint = make.height.equalTo(0).constraint
+            make.left.right.equalTo(self.view.safeAreaLayoutGuide)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide)
+        }
+
+        buttonStackView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
         }
 
         textFieldContainer.snp.makeConstraints { make in
@@ -221,8 +246,8 @@ class ChatViewController: UIViewController {
 
         shouldShowTextField
             .observeOn(MainScheduler.asyncInstance)
-            .map({ !$0 })
-            .bind(to: textFieldContainer.rx.isHidden)
+            .do(onNext: { [weak self] type in self?.handleInputType(type) })
+            .subscribe()
             .disposed(by: rx.disposeBag)
 
         textFieldValue
@@ -233,6 +258,42 @@ class ChatViewController: UIViewController {
         viewControllerEvents
             .subscribe()
             .disposed(by: rx.disposeBag)
+    }
+
+    private func handleInputType(_ type: InputType) {
+        switch type {
+
+        case .textField(let keyboard, let placeholder):
+            self.messageTextField.keyboardType = keyboard
+            self.messageTextField.placeholder(placeholder)
+            self.textFieldContainer.isHidden = false
+            self.buttonContainer.isHidden = true
+
+        case .buttons(let buttons):
+
+            self.buttonStackView.arrangedSubviews.forEach({ $0.removeFromSuperview() })
+            let constraintSize = buttons.count * 44 + 2 * (buttons.count - 1) //bear with me
+            self.buttonContainerConstraint?.update(offset: constraintSize)
+            buttons.forEach { button in
+                let b = ActionButton(frame: .zero)
+                    .rounded()
+                    .green()
+                    .title(button.text)
+
+                self.buttonStackView.addArrangedSubview(b)
+
+                b.snp.makeConstraints { make in
+                    make.width.equalToSuperview()
+                    make.height.equalTo(44)
+                }
+            }
+            self.textFieldContainer.isHidden = true
+            self.buttonContainer.isHidden = false
+
+        case .none:
+            self.textFieldContainer.isHidden = true
+            self.buttonContainer.isHidden = true
+        }
     }
 
     @objc private func close() {
